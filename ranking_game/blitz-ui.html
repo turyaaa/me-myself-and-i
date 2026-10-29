@@ -1,0 +1,29 @@
+<section id="blitz" hidden>
+  <h2 class="title" id="btitle">Блітз</h2>
+  <div id="bsetup">
+    <p class="sub">10 питань · 10 секунд на кожне · 4 варіанти відповіді.<br>Грай сам або виклич друга на дуель.</p>
+    <button class="wbtn" id="bsolo">Грати самому</button>
+    <div class="bdivider">Дуель онлайн</div>
+    <label for="bname">Твій нік</label>
+    <input class="fld" id="bname" maxlength="24" autocomplete="nickname" placeholder="Гравець">
+    <button class="wbtn" id="bcreate">Створити дуель</button>
+    <div class="bjoin"><input class="fld" id="bcode" maxlength="6" autocomplete="off" aria-label="Код кімнати" placeholder="Код кімнати"><button class="wbtn alt" id="bjoin">Приєднатись</button></div>
+    <button class="wbtn alt" id="bresume" hidden>Повернутися в дуель</button>
+  </div>
+  <div id="barena" hidden>
+    <div class="broom" id="broom" hidden><span id="broomcode"></span><button type="button" id="bcopy">Скопіювати запрошення</button></div>
+    <div id="bplayers" class="bplayers"></div>
+    <p id="bstatus" class="gcap" aria-live="polite"></p>
+    <div id="bround" hidden>
+      <div class="bclock"><span id="bprogress"></span><strong id="bseconds" role="timer" aria-label="Залишилось секунд"></strong></div>
+      <div class="btimer"><div id="btimebar"></div></div>
+      <p id="bcategory" class="gcap"></p>
+      <h3 id="bquestion" class="gq"></h3>
+      <div id="boptions" class="boptions"></div>
+      <div id="bfeedback" class="bfeedback" aria-live="polite"></div>
+    </div>
+    <button class="wbtn" id="bnext" hidden>Далі</button>
+    <button class="wbtn alt" id="breplay" hidden>Зіграти ще раз</button>
+  </div>
+  <p id="berror" class="gerr" role="alert"></p>
+</section>

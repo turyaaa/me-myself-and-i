@@ -1,0 +1,8 @@
+{
+  "name": "the-ranking-game",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.12"},
+  "scripts": {"build": "node build.mjs", "test": "node build.mjs && node verify-game.cjs && node test-duel.cjs"},
+  "dependencies": {"@netlify/blobs": "11.1.7"}
+}

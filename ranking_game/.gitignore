@@ -1,0 +1,7 @@
+node_modules/
+.netlify/
+dist/
+netlify/lib/question-bank.mjs
+*.log
+.env
+.env.*

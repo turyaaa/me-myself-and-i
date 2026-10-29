@@ -1,0 +1,1 @@
+{"duelRounds":10,"concurrentReady":true,"privacy":true,"strictDeadline":true,"idempotentAnswers":true,"reconnect":true,"expiry":true,"storageFailures":true,"casConflicts":10}
