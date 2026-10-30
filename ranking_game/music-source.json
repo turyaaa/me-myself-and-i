@@ -1,0 +1,1177 @@
+[
+  {
+    "artist": "Kendrick Lamar",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Kendrick+Lamar%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Section.80",
+        "year": 2011,
+        "id": "ceccd668-a928-4041-a3c3-99a5ce880de9"
+      },
+      {
+        "title": "good kid, m.A.A.d city",
+        "year": 2012,
+        "id": "499c19c8-0dab-4824-884b-6191d145e95b"
+      },
+      {
+        "title": "Dedicated",
+        "year": 2013,
+        "id": "99071cbc-22c2-47c1-ac08-f82a8a91421e"
+      },
+      {
+        "title": "To Pimp a Butterfly",
+        "year": 2015,
+        "id": "d9103c72-3807-4378-9ce7-b6f3e8fdd547"
+      },
+      {
+        "title": "DAMN.",
+        "year": 2017,
+        "id": "b88655ba-7469-48b8-a296-b9011ab73ef3"
+      },
+      {
+        "title": "Mr. Morale & the Big Steppers",
+        "year": 2022,
+        "id": "6bd70eee-bd46-4738-851a-f50c19d8d6db"
+      }
+    ]
+  },
+  {
+    "artist": "Drake",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Drake%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "I'm Back",
+        "year": 2005,
+        "id": "5783b0e7-9f42-458a-8da7-32a25125e2c3"
+      },
+      {
+        "title": "The Drake LP",
+        "year": 2005,
+        "id": "19fe9401-cb75-44e1-acdd-1ca188b373aa"
+      },
+      {
+        "title": "Dead Perspective",
+        "year": 2009,
+        "id": "ed3bba5d-2497-4305-bea0-9cc934a86f15"
+      },
+      {
+        "title": "Thank Me Later",
+        "year": 2010,
+        "id": "7c0efd43-6023-400d-8d5c-d808b1cb4094"
+      },
+      {
+        "title": "Take Care",
+        "year": 2011,
+        "id": "47809021-4515-4215-beea-db3f5dfb6267"
+      },
+      {
+        "title": "Entre el inconsciente y lo real",
+        "year": 2013,
+        "id": "6b5febc6-c8b6-4fa7-bea7-a1376bb51226"
+      }
+    ]
+  },
+  {
+    "artist": "JAY-Z",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22JAY-Z%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Nas",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Nas%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Illmatic",
+        "year": 1994,
+        "id": "28298e2c-4d70-3eed-a0f5-a3280c662b3d"
+      },
+      {
+        "title": "It Was Written",
+        "year": 1996,
+        "id": "f4dde59b-9a1d-3e74-9dee-c734435d9ea0"
+      },
+      {
+        "title": "I Am…",
+        "year": 1999,
+        "id": "c8c517b2-48b9-3d65-9547-e177fd6762c6"
+      },
+      {
+        "title": "Nastradamus",
+        "year": 1999,
+        "id": "8aee5229-615d-301a-bf82-50d93af2f404"
+      },
+      {
+        "title": "Stillmatic",
+        "year": 2001,
+        "id": "f6893893-e58c-3224-83d9-fe30c3938cd1"
+      },
+      {
+        "title": "God’s Son",
+        "year": 2002,
+        "id": "ee377b52-d425-383e-9cf3-c3a958a190cf"
+      }
+    ]
+  },
+  {
+    "artist": "2Pac",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%222Pac%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "2Pacalypse Now",
+        "year": 1991,
+        "id": "df0a9165-0d95-3541-9479-b3f22b188453"
+      },
+      {
+        "title": "Troublesome 21",
+        "year": 1992,
+        "id": "dcaf2486-a11f-4bd1-8489-f318e8d2cd97"
+      },
+      {
+        "title": "Strictly 4 My N.I.G.G.A.Z…",
+        "year": 1993,
+        "id": "41667bb1-8357-3c10-b8e0-e9db66aceebc"
+      },
+      {
+        "title": "Me Against the World",
+        "year": 1995,
+        "id": "cfc98a2a-6aaa-3dda-a01d-e034e56c4fec"
+      },
+      {
+        "title": "All Eyez on Me",
+        "year": 1996,
+        "id": "e2621417-9236-36b4-9f9e-376c416dc4b0"
+      },
+      {
+        "title": "R U Still Down? (Remember Me)",
+        "year": 1997,
+        "id": "1707088d-7938-3b91-995c-9a112a2b4f34"
+      }
+    ]
+  },
+  {
+    "artist": "The Notorious B.I.G.",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22The+Notorious+B.I.G.%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Ready to Die",
+        "year": 1994,
+        "id": "5afcfeac-118a-35e6-af0d-35ec9003354d"
+      },
+      {
+        "title": "Life After Death",
+        "year": 1997,
+        "id": "132d78be-baa5-3301-aba5-933409e3f848"
+      },
+      {
+        "title": "Duets: The Final Chapter",
+        "year": 2005,
+        "id": "6c52d03f-a43b-492c-a407-452e14be5139"
+      },
+      {
+        "title": "Notorious B.I.G.",
+        "year": 2019,
+        "id": "35f26709-a6ab-414e-931f-59cce3e7970b"
+      }
+    ]
+  },
+  {
+    "artist": "Snoop Dogg",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Snoop+Dogg%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Da Game Is to Be Sold, Not to Be Told",
+        "year": 1998,
+        "id": "3b7bf5e6-a6b0-3f7c-a32a-5b3b998cda27"
+      },
+      {
+        "title": "SmokeFest World Tour",
+        "year": 1998,
+        "id": "7a9f1897-e316-46db-885e-2b38827b581c"
+      },
+      {
+        "title": "No Limit Top Dogg",
+        "year": 1999,
+        "id": "c252d9d5-1ead-334d-b391-3f6828c6bb6b"
+      },
+      {
+        "title": "Tha Last Meal",
+        "year": 2000,
+        "id": "7b45c670-84fd-3552-b833-85047fc481c3"
+      },
+      {
+        "title": "Paid tha Cost to Be da Bo$$",
+        "year": 2002,
+        "id": "9ceca561-db09-3502-8490-40c95fce96f7"
+      },
+      {
+        "title": "R&G (Rhythm & Gangsta): The Masterpiece",
+        "year": 2004,
+        "id": "f1eeb194-a5f7-31c9-adb5-d3b067cd22aa"
+      }
+    ]
+  },
+  {
+    "artist": "Dr. Dre",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Dr.+Dre%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "The Chronic",
+        "year": 1992,
+        "id": "ad444843-7160-33d7-b0c9-fc99f2c14a99"
+      },
+      {
+        "title": "2001",
+        "year": 1999,
+        "id": "f28e065d-fd56-3929-b0a4-6aa1b4c78bdb"
+      },
+      {
+        "title": "The Classic Collection",
+        "year": 1999,
+        "id": "c91222b5-5674-496a-835d-052e756c7c2f"
+      },
+      {
+        "title": "Detox Nation",
+        "year": 2013,
+        "id": "c523413d-fb08-4bd0-a0ff-161f643b0faf"
+      },
+      {
+        "title": "Compton",
+        "year": 2015,
+        "id": "0f7a9bb0-c99a-48ea-93fb-ecdcc0ed636e"
+      },
+      {
+        "title": "Legendary",
+        "year": 2021,
+        "id": "fade9d86-5c8c-405c-bcd8-d7664b0bae4b"
+      }
+    ]
+  },
+  {
+    "artist": "Kanye West",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Kanye+West%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "J. Cole",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22J.+Cole%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Cole World: The Sideline Story",
+        "year": 2011,
+        "id": "5aadf6f8-bbf7-4675-8b83-771c1e0fb08f"
+      },
+      {
+        "title": "Born Sinner",
+        "year": 2013,
+        "id": "57db9419-f0a0-4060-8003-b7737b9dab4d"
+      },
+      {
+        "title": "2014 Forest Hills Drive",
+        "year": 2014,
+        "id": "5995738d-4b6f-4db6-847b-310a9dc67085"
+      },
+      {
+        "title": "4 Your Eyez Only",
+        "year": 2016,
+        "id": "acd4faf8-73c4-41f2-906d-e0d014d7e863"
+      },
+      {
+        "title": "KOD",
+        "year": 2018,
+        "id": "16cc33ac-c71a-4be9-a42d-cdf75995156e"
+      },
+      {
+        "title": "The Off‐Season",
+        "year": 2021,
+        "id": "e9ba6755-583a-449a-951f-b42855f5c55e"
+      }
+    ]
+  },
+  {
+    "artist": "Travis Scott",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Travis+Scott%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "XX",
+        "year": 2013,
+        "id": "d472e7a0-d266-49ac-bce9-fc9e5741cbfa"
+      },
+      {
+        "title": "Rodeo",
+        "year": 2015,
+        "id": "e6c9fd37-0211-48a2-8927-d7ef284218c4"
+      },
+      {
+        "title": "Birds in the Trap Sing McKnight",
+        "year": 2016,
+        "id": "2d87c53b-5e6b-40c6-9c37-d7fe7bec08bd"
+      },
+      {
+        "title": "Days Before Astroworld",
+        "year": 2017,
+        "id": "2df67d00-a6cc-4b05-bc05-aea3a9a4be73"
+      },
+      {
+        "title": "ASTROWORLD",
+        "year": 2018,
+        "id": "c0704c7d-dc5b-43cd-b372-8056a3bf7bb2"
+      },
+      {
+        "title": "UTOPIA",
+        "year": 2023,
+        "id": "eac07d92-86b1-4fa7-906d-ec3177f8ebc2"
+      }
+    ]
+  },
+  {
+    "artist": "50 Cent",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%2250+Cent%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Power of the Dollar",
+        "year": 1999,
+        "id": "d9968f55-1199-3d5f-8200-0053f2a50330"
+      },
+      {
+        "title": "Get Rich or Die Tryin’",
+        "year": 2003,
+        "id": "f624ead2-e4ba-4e52-bea5-4362b1c67b14"
+      },
+      {
+        "title": "The Massacre",
+        "year": 2005,
+        "id": "7cf9ea18-827d-362d-858e-26faab3242ee"
+      },
+      {
+        "title": "Curtis",
+        "year": 2007,
+        "id": "64057bd1-ac2c-3a65-94b8-7540037c4a09"
+      },
+      {
+        "title": "Before I Self Destruct",
+        "year": 2009,
+        "id": "f79c54a1-080b-468a-9ddc-943a65bf77d1"
+      },
+      {
+        "title": "Animal Ambition: An Untamed Desire to Win",
+        "year": 2014,
+        "id": "a558a6b3-a5e2-4b64-9097-e55551b9306a"
+      }
+    ]
+  },
+  {
+    "artist": "Tyler, The Creator",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Tyler%2C+The+Creator%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "At Your Own Risk",
+        "year": 2007,
+        "id": "31454b2b-1099-4007-9d24-61e37b75676e"
+      },
+      {
+        "title": "Bastard",
+        "year": 2009,
+        "id": "27881759-88c1-48df-aa72-1ec149f1b5c9"
+      },
+      {
+        "title": "DINОSAUR",
+        "year": 2009,
+        "id": "033929e6-a58a-4141-9619-414eda166feb"
+      },
+      {
+        "title": "Goblin",
+        "year": 2011,
+        "id": "5bc030ca-10f1-4d61-bfd2-846873cd9e1b"
+      },
+      {
+        "title": "Wolf",
+        "year": 2013,
+        "id": "accf15ec-9dd2-4b26-989e-d3814f5d95c7"
+      },
+      {
+        "title": "Cherry Bomb",
+        "year": 2015,
+        "id": "1ea9701e-f93e-4d88-9eda-16d01c155ff6"
+      }
+    ]
+  },
+  {
+    "artist": "Nicki Minaj",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Nicki+Minaj%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Pink Friday",
+        "year": 2010,
+        "id": "c91d9596-dfa8-482d-b3ab-706e937fd3ec"
+      },
+      {
+        "title": "Pink Friday: Roman Reloaded",
+        "year": 2012,
+        "id": "78a4ac64-298f-45ec-ac69-832a68830a6a"
+      },
+      {
+        "title": "Next Friday",
+        "year": 2013,
+        "id": "81d423ef-adcf-4fdf-a198-240ab5b186b0"
+      },
+      {
+        "title": "The Pinkprint",
+        "year": 2014,
+        "id": "75c1375c-1311-4cd0-b5cd-182c42e357e7"
+      },
+      {
+        "title": "Queen",
+        "year": 2018,
+        "id": "eda0fd8e-c281-4173-9bed-8e505184d399"
+      },
+      {
+        "title": "Pink Friday 2",
+        "year": 2023,
+        "id": "016d0958-01da-4d16-8da1-8328f891a3a1"
+      }
+    ]
+  },
+  {
+    "artist": "Missy Elliott",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Missy+Elliott%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Miss E …So Addictive",
+        "year": 2001,
+        "id": "9e4f5c7a-0bec-3c68-bd21-d368145f34e3"
+      },
+      {
+        "title": "Under Construction",
+        "year": 2002,
+        "id": "596090bc-cdfa-347e-96a5-d253848d3b37"
+      },
+      {
+        "title": "This Is Not a Test!",
+        "year": 2003,
+        "id": "cd244e57-1acb-3354-a389-6aa025dfe4e5"
+      },
+      {
+        "title": "The Cookbook",
+        "year": 2005,
+        "id": "84ee8a8d-efae-390c-8b6c-742709a8295d"
+      }
+    ]
+  },
+  {
+    "artist": "OutKast",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22OutKast%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Southernplayalisticadillacmuzik",
+        "year": 1994,
+        "id": "2ee919fe-eab8-3fb5-a069-ef0220c29e09"
+      },
+      {
+        "title": "ATLiens",
+        "year": 1996,
+        "id": "672fa6be-ae6a-38a2-a0d3-6a393a3929bf"
+      },
+      {
+        "title": "Aquemini",
+        "year": 1998,
+        "id": "eb655897-6cc5-3fc1-b9ed-5008eb80c682"
+      },
+      {
+        "title": "Stankonia",
+        "year": 2000,
+        "id": "00d2cd53-21c9-3738-b683-56847b7b0040"
+      },
+      {
+        "title": "Speakerboxxx / The Love Below",
+        "year": 2003,
+        "id": "fa64febd-61e0-346e-aaa2-04564ed4f0a3"
+      },
+      {
+        "title": "Speakerboxxx / The Love Below - Album Sampler",
+        "year": 2003,
+        "id": "fd3be64e-76d0-4146-84ab-a79e246a5080"
+      }
+    ]
+  },
+  {
+    "artist": "Wu-Tang Clan",
+    "genre": "rap",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Wu-Tang+Clan%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Queen",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Queen%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "A Night at the Opera",
+        "year": 1975,
+        "id": "6b47c9a0-b9e1-3df9-a5e8-50a6ce0dbdbd"
+      },
+      {
+        "title": "A Kind of Magic",
+        "year": 1986,
+        "id": "84f508a9-beae-3e97-b59e-3a8886c6e901"
+      },
+      {
+        "title": "The Miracle",
+        "year": 1989,
+        "id": "0c3067cd-0fc6-34fa-8611-cf3324b29c8a"
+      },
+      {
+        "title": "Unadorned",
+        "year": 2012,
+        "id": "9249d778-33a0-41b1-8586-6ac3d0b173cb"
+      }
+    ]
+  },
+  {
+    "artist": "The Beatles",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22The+Beatles%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Please Please Me",
+        "year": 1963,
+        "id": "de208292-8db5-3aed-a14a-b37a84d8c521"
+      },
+      {
+        "title": "Beatles ’65",
+        "year": 1964,
+        "id": "2d111aea-50f8-33cc-ab63-780bc57068c0"
+      },
+      {
+        "title": "Introducing… The Beatles",
+        "year": 1964,
+        "id": "653895d1-b592-3758-8bb1-8b9ba2bd6cb0"
+      },
+      {
+        "title": "The Beatles’ Long Tall Sally",
+        "year": 1964,
+        "id": "d0c93a59-fc4d-3d76-ac38-9c1d11071802"
+      },
+      {
+        "title": "Rubber Soul",
+        "year": 1965,
+        "id": "dca03435-8adb-30a5-ba82-5a162267ff38"
+      },
+      {
+        "title": "Abbey Road",
+        "year": 1969,
+        "id": "9162580e-5df4-32de-80cc-f45a8d8a9b1d"
+      }
+    ]
+  },
+  {
+    "artist": "Pink Floyd",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Pink+Floyd%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Led Zeppelin",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Led+Zeppelin%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "The Lost Sessions, Vol. 4",
+        "year": 2004,
+        "id": "097af7bf-4ce0-4c33-8d8b-a467ddc1dee2"
+      },
+      {
+        "title": "The Lost Sessions, Vol. 5",
+        "year": 2005,
+        "id": "2ec0dda7-15dd-4a05-83c9-694e93f0e1af"
+      },
+      {
+        "title": "The Lost Sessions, Vol. 10: All Roads Lead to Headley Grange II",
+        "year": 2007,
+        "id": "dbd22b5c-758f-4d8c-982d-d33cea0ae92d"
+      },
+      {
+        "title": "The Lost Sessions, Vol. 12: All Roads Lead to Headley Grange III",
+        "year": 2008,
+        "id": "b6470bb0-0617-4cee-84cf-c21071c0f7b3"
+      }
+    ]
+  },
+  {
+    "artist": "Metallica",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Metallica%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Nirvana",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Nirvana%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "The Story of Simon Simopath",
+        "year": 1967,
+        "id": "a79e430c-6ee9-3b7e-a263-b15661bdffcf"
+      },
+      {
+        "title": "Dedicated to Markos III",
+        "year": 1969,
+        "id": "c20b7c5f-bd85-366c-97db-cb99024e7b8b"
+      },
+      {
+        "title": "Local Anaesthetic",
+        "year": 1971,
+        "id": "87c54166-426a-3d15-a52d-9848423ecb33"
+      }
+    ]
+  },
+  {
+    "artist": "AC/DC",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22AC%2FDC%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Radiohead",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Radiohead%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Radiotick Tracks 2",
+        "year": 1997,
+        "id": "9c5abe48-3918-40e9-84da-c843d147da4a"
+      },
+      {
+        "title": "The King of Limbs",
+        "year": 2011,
+        "id": "899b6d09-807e-4c18-a6d4-3642e00d6a3d"
+      }
+    ]
+  },
+  {
+    "artist": "Red Hot Chili Peppers",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Red+Hot+Chili+Peppers%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": []
+  },
+  {
+    "artist": "Green Day",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Green+Day%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "39/Smooth",
+        "year": 1990,
+        "id": "c58228d1-05e9-3ce0-83f6-b0d33ffcaa90"
+      },
+      {
+        "title": "Kerplunk!",
+        "year": 1991,
+        "id": "a0603694-2422-3a40-b946-d0bcea5e8254"
+      },
+      {
+        "title": "Dookie",
+        "year": 1994,
+        "id": "314cffd4-daa5-3337-85e5-e54165a96113"
+      },
+      {
+        "title": "Insomniac",
+        "year": 1995,
+        "id": "061f572e-7660-3c6b-b4cd-cf66d46da93c"
+      },
+      {
+        "title": "nimrod.",
+        "year": 1997,
+        "id": "4f1d08f2-d4bd-3ef2-ba72-eb348ae4c332"
+      },
+      {
+        "title": "Warning:",
+        "year": 2000,
+        "id": "c1604b20-37b8-3fc7-8726-73f41090b8e2"
+      }
+    ]
+  },
+  {
+    "artist": "Foo Fighters",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Foo+Fighters%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Foo Fighters",
+        "year": 1995,
+        "id": "440c9ce8-8ce4-3103-a745-0b385ae70a34"
+      },
+      {
+        "title": "The Colour and the Shape",
+        "year": 1997,
+        "id": "7822977a-984d-358d-823f-426139c0eaba"
+      },
+      {
+        "title": "There Is Nothing Left to Lose",
+        "year": 1999,
+        "id": "1cfc9a17-1fdb-30dd-83ca-dce93c481492"
+      },
+      {
+        "title": "One by One",
+        "year": 2002,
+        "id": "a9f6787f-0c0b-39e2-aaf7-befba34727b4"
+      },
+      {
+        "title": "Concrete and Gold",
+        "year": 2017,
+        "id": "e0335c44-58cd-433c-86d3-e114b14b7111"
+      },
+      {
+        "title": "But Here We Are",
+        "year": 2023,
+        "id": "b8b9df75-b781-4363-9ec1-2520a4445a09"
+      }
+    ]
+  },
+  {
+    "artist": "The Rolling Stones",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22The+Rolling+Stones%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Voodoo Brew",
+        "year": 1994,
+        "id": "d440fccb-e234-3a94-997d-a5921c96b631"
+      },
+      {
+        "title": "A Bigger Bang",
+        "year": 2005,
+        "id": "6d1a87c3-9e11-36d8-8c41-3e11b974fde7"
+      }
+    ]
+  },
+  {
+    "artist": "Black Sabbath",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Black+Sabbath%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Technical Ecstasy",
+        "year": 1976,
+        "id": "de117377-2f09-3502-8959-e1eca1b583a8"
+      },
+      {
+        "title": "Never Say Die!",
+        "year": 1978,
+        "id": "eb8c8e6c-b554-31d3-bae0-1c4ea64336d0"
+      },
+      {
+        "title": "Headless Cross",
+        "year": 1989,
+        "id": "230fa643-0fdf-34a4-b6e4-3cf8563dcf11"
+      },
+      {
+        "title": "TYR",
+        "year": 1990,
+        "id": "00f64d57-aeaf-3925-ac5e-072fdcb7c3f6"
+      },
+      {
+        "title": "Cross Purposes",
+        "year": 1994,
+        "id": "0a321887-9d3d-3600-90d1-67540a409177"
+      },
+      {
+        "title": "Studio Outtakes 1969",
+        "year": 2024,
+        "id": "7ac28c31-ed36-4176-bc98-7f20c54c85b4"
+      }
+    ]
+  },
+  {
+    "artist": "System of a Down",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22System+of+a+Down%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "System of a Down",
+        "year": 1998,
+        "id": "97f37409-b91a-3495-8e70-56fd9f7658c2"
+      },
+      {
+        "title": "Toxicity",
+        "year": 2001,
+        "id": "f50fbcb4-bfcd-3784-b4c9-44f4793e66b2"
+      },
+      {
+        "title": "Steal This Album!",
+        "year": 2002,
+        "id": "3351730c-7853-38f3-8d56-1bf627de4523"
+      },
+      {
+        "title": "Hypnotize",
+        "year": 2005,
+        "id": "72035143-d6ec-308b-8ee5-070b8703902a"
+      },
+      {
+        "title": "Mezmerize",
+        "year": 2005,
+        "id": "8d18c070-adea-353f-a089-cbd2543342dd"
+      }
+    ]
+  },
+  {
+    "artist": "Muse",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Muse%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Arcana",
+        "year": 1997,
+        "id": "133f03c7-e6de-3c3b-ac52-ac783289b4c8"
+      },
+      {
+        "title": "Innocent Voices",
+        "year": 1997,
+        "id": "72458499-bea1-3a01-8155-b4a578752217"
+      },
+      {
+        "title": "Showbiz",
+        "year": 1999,
+        "id": "a842d860-a023-3a71-ad2e-a3a94cffabd7"
+      },
+      {
+        "title": "Origin of Symmetry",
+        "year": 2001,
+        "id": "ef03fe86-b54c-3667-8768-029833e7e1cd"
+      },
+      {
+        "title": "Absolution",
+        "year": 2003,
+        "id": "6f151223-f3a3-3e57-810f-598f7897006c"
+      },
+      {
+        "title": "Black Holes and Revelations",
+        "year": 2006,
+        "id": "af2e8e23-e9c3-4e67-8ad8-66387c5898fd"
+      }
+    ]
+  },
+  {
+    "artist": "Arctic Monkeys",
+    "genre": "rock",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Arctic+Monkeys%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Whatever People Say I Am, That’s What I’m Not",
+        "year": 2005,
+        "id": "6c9c4985-3628-3070-b956-b538f30c9bea"
+      },
+      {
+        "title": "Favourite Worst Nightmare",
+        "year": 2007,
+        "id": "f113fa38-7908-3ec9-8145-d2455e78a8b2"
+      },
+      {
+        "title": "Humbug",
+        "year": 2009,
+        "id": "23b7e9e9-8820-4a49-b44f-a7a60e0a7e81"
+      },
+      {
+        "title": "Suck It and See",
+        "year": 2011,
+        "id": "ffdc0fd3-e726-4e98-af19-d3274ede2311"
+      },
+      {
+        "title": "AM",
+        "year": 2013,
+        "id": "a348ba2f-f8b3-4686-b928-e63d8d94d543"
+      },
+      {
+        "title": "Tranquility Base Hotel & Casino",
+        "year": 2018,
+        "id": "97ee3a0f-183b-4830-aa5c-45507a084d37"
+      }
+    ]
+  },
+  {
+    "artist": "Michael Jackson",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Michael+Jackson%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Ben",
+        "year": 1972,
+        "id": "51343255-0ad3-3635-9aa2-548ba939b23e"
+      },
+      {
+        "title": "Music & Me",
+        "year": 1973,
+        "id": "06b064b9-01e7-32d8-b585-86404584e795"
+      },
+      {
+        "title": "Forever, Michael",
+        "year": 1975,
+        "id": "50b9d7de-9124-33c0-83a3-76722bf346e5"
+      },
+      {
+        "title": "Moonwalker Soundtrack",
+        "year": 1988,
+        "id": "42f93268-0c85-4a98-9fcb-6c7166349531"
+      },
+      {
+        "title": "HIStory LIFEstyle Promo CD",
+        "year": 1995,
+        "id": "2c96a806-53fd-41c9-81c2-0e00335ca569"
+      },
+      {
+        "title": "Invincible",
+        "year": 2001,
+        "id": "c24c5313-da47-3155-8277-a6a1a4237966"
+      }
+    ]
+  },
+  {
+    "artist": "Madonna",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Madonna%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "X-Ray Mixes",
+        "year": 1999,
+        "id": "a1793aa0-9c36-4fa6-a952-0db01e1904a6"
+      },
+      {
+        "title": "Music Mix 2001 Part 2",
+        "year": 2001,
+        "id": "6c99547f-aef4-4631-ac4b-a4d8fd5b611f"
+      },
+      {
+        "title": "Music Mix 2001 Part 3",
+        "year": 2001,
+        "id": "e9e21d1f-3b23-4f8e-9d55-df8baf0c8dfd"
+      },
+      {
+        "title": "Into The Hollywood Groove",
+        "year": 2003,
+        "id": "6bb3f5f0-044f-4c96-bf7b-fea5426bb55b"
+      },
+      {
+        "title": "Candy Shop",
+        "year": 2007,
+        "id": "769c756f-5763-4475-8f73-6f68ce36f627"
+      },
+      {
+        "title": "Al Mazamir",
+        "year": 2014,
+        "id": "b4cae6c5-bf07-4b37-bf69-f81805f522c8"
+      }
+    ]
+  },
+  {
+    "artist": "Taylor Swift",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Taylor+Swift%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Taylor Swift",
+        "year": 2006,
+        "id": "ba1d0c2a-bb07-38bc-835c-a880f76f1309"
+      },
+      {
+        "title": "Fearless",
+        "year": 2008,
+        "id": "63eba062-847c-3b73-8b0f-6baf27bba6fa"
+      },
+      {
+        "title": "Speak Now",
+        "year": 2010,
+        "id": "ba1259eb-d41e-41c5-a70c-0e6fa73e6708"
+      },
+      {
+        "title": "Red",
+        "year": 2012,
+        "id": "a73cecde-0923-40ad-aad1-e8c24ba6c3d2"
+      },
+      {
+        "title": "1989",
+        "year": 2014,
+        "id": "4d9ec1c2-58ec-48a4-aa0a-916718adead0"
+      },
+      {
+        "title": "reputation",
+        "year": 2017,
+        "id": "f060c8fd-bec9-426e-800e-8efc040a71e6"
+      }
+    ]
+  },
+  {
+    "artist": "Adele",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Adele%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "19",
+        "year": 2008,
+        "id": "9796da06-2d59-3176-8598-2105f31ee54a"
+      },
+      {
+        "title": "21",
+        "year": 2011,
+        "id": "e4174758-d333-4a8e-a31f-dd0edd51518e"
+      },
+      {
+        "title": "25",
+        "year": 2015,
+        "id": "5537624c-3d2f-4f5c-8099-df916082c85c"
+      },
+      {
+        "title": "30",
+        "year": 2021,
+        "id": "d8a99910-33c2-481d-9b96-085ece5545f6"
+      }
+    ]
+  },
+  {
+    "artist": "Beyoncé",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Beyonc%C3%A9%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "Dangerously in Love",
+        "year": 2003,
+        "id": "f639ba46-b371-3262-b494-5f2dbee36f5c"
+      },
+      {
+        "title": "B’Day",
+        "year": 2006,
+        "id": "9fdbccb2-9b51-36b7-b643-c7ae586b797d"
+      },
+      {
+        "title": "I Am… Sasha Fierce",
+        "year": 2008,
+        "id": "6f8e8119-de1b-39f0-85ca-b5252cb9211d"
+      },
+      {
+        "title": "4",
+        "year": 2011,
+        "id": "40eaa07b-7542-48e7-887c-b5e686964a7a"
+      },
+      {
+        "title": "BEYONCÉ",
+        "year": 2013,
+        "id": "8596171e-23b2-4bdd-8f1c-11960df0ecbe"
+      },
+      {
+        "title": "Lemonade",
+        "year": 2016,
+        "id": "c1f22e07-7bdf-4a4f-8b50-7747c1091ef6"
+      }
+    ]
+  },
+  {
+    "artist": "Lady Gaga",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Lady+Gaga%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "The Fame",
+        "year": 2008,
+        "id": "e5495719-b3ad-3eea-a533-fb70af43c23d"
+      },
+      {
+        "title": "Born This Way",
+        "year": 2011,
+        "id": "2e3b231b-ab9f-4d85-950a-48708a1cc2fb"
+      },
+      {
+        "title": "ARTPOP",
+        "year": 2013,
+        "id": "815b31d8-b972-48a7-b74a-38c49a277676"
+      },
+      {
+        "title": "Joanne",
+        "year": 2016,
+        "id": "b3d4aef6-749f-40c1-b8f0-e763bde8cfdc"
+      },
+      {
+        "title": "Chromatica",
+        "year": 2020,
+        "id": "accd791c-5948-4414-8ae2-16b71f487863"
+      }
+    ]
+  },
+  {
+    "artist": "ABBA",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22ABBA%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "The Album",
+        "year": 1977,
+        "id": "819a08ac-170e-3c0e-8a1d-8e3138d56f77"
+      },
+      {
+        "title": "Voulez‐vous",
+        "year": 1979,
+        "id": "7401fb97-46e6-32cd-bd59-6c49debaa3ae"
+      },
+      {
+        "title": "Super Trouper",
+        "year": 1980,
+        "id": "24944755-2f68-3778-974e-f572a9e30108"
+      },
+      {
+        "title": "Voyage",
+        "year": 2021,
+        "id": "9077617d-b73f-4498-b415-175d5b843790"
+      }
+    ]
+  },
+  {
+    "artist": "Britney Spears",
+    "genre": "pop",
+    "source": "https://musicbrainz.org/ws/2/release-group/?query=artist%3A%22Britney+Spears%22+AND+primarytype%3Aalbum&fmt=json&limit=100",
+    "albums": [
+      {
+        "title": "…Baby One More Time",
+        "year": 1999,
+        "id": "faeb8741-2ca0-3ca6-8a1a-70bab1e67c82"
+      },
+      {
+        "title": "Oops!…I Did It Again",
+        "year": 2000,
+        "id": "f2708dcf-14e6-31f1-90e0-b3e933a0c8a3"
+      },
+      {
+        "title": "Britney",
+        "year": 2001,
+        "id": "f850adcc-4f9f-365c-bc44-fdc0d5eaa565"
+      },
+      {
+        "title": "In the Zone",
+        "year": 2003,
+        "id": "add6cf16-f4c1-3d50-9b28-633b35ca8189"
+      },
+      {
+        "title": "Blackout",
+        "year": 2007,
+        "id": "0b8e14e1-d44d-3770-8617-5c6137a444a8"
+      },
+      {
+        "title": "Circus",
+        "year": 2008,
+        "id": "1e5f92e0-913c-3202-a72c-b068b9f34ce1"
+      }
+    ]
+  }
+]

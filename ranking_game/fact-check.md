@@ -127,3 +127,34 @@
 [MDN: Web Audio та вимога запуску з дії користувача](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices).
 
 Автотести перевіряють 1050 раундів, усі 1259 карток, усі рівні 380 питань, покриття тем SVG-іконками, початкову тишу, увімкнення, збереження налаштування, негайне вимкнення та роботу без AudioContext. Аудіотести використовують підставний аудіоконтекст; фактичне звучання у браузері не прослуховувалося.
+
+## Уточнення 30 жовтня 2026
+
+Київ: 2 952 тис. наявного населення на 01.01.2022 замість грубо округлених 2 950 тис. Офіційне значення — 2 952 301 осіб; постійне населення — інший показник (2 910 994). Джерело: [документ КМДА, таблиця 2.8.1, с. 38](https://minio.kyivcity.gov.ua/kyivcity/sites/28/uploaded-files/plan_kyiv29_.pdf). Дата й округлення залишені у назві категорії.
+
+
+## Daily Edition та добірки — 30 жовтня 2026
+
+Числовий банк тепер містить 112 категорій і 1322 картки; вікторина — 455 питань у 27 добірках. Початкові матеріали не видалені. Нові добірки вікторини частково утворені з наявних числових фактів.
+
+- Аніме: [каталог Studio Ghibli](https://www.ghibli.jp/works/) — роки та тривалість фільмів; [Toei Animation](https://www.toei-animation-usa.com/dragon-ball.html) — кількість серій Dragon Ball, Z, GT, Super, DAIMA без спецвипусків.
+- Кіно: [Lucasfilm](https://www.lucasfilm.com/productions/) та [StarWars.com](https://www.starwars.com/news/star-wars-movies-and-series-guide); [FAQ Дж. К. Ролінґ](https://stories.jkrowling.com/faqs/) — роки фільмів Гаррі Поттера; [Disney](https://www.disney.com.au/news/a-marvel-movie-timeline-of-every-film-in-order-of-release) — роки Marvel.
+- Музика: [Shady Records](https://www.shadyrecords.com/artist/eminem-2/) — роки альбомів Eminem; офіційні сторінки [Dangerous](https://www.michaeljackson.com/albums/dangerous/) та [Invincible](https://www.michaeljackson.com/albums/invincible/). Жанрові позначки — редакційні, виконавці можуть перетинати жанри; добірки не претендують на строгий музикознавчий поділ.
+- ВВП: World Bank, NY.GDP.MKTP.CD, 2023, поточні долари США. Дані отримані 30.10.2026; повний отриманий знімок — `gdp-source.json`. Частки країн поділені на опубліковане значення WLD, а не на суму лише обраних країн.
+- Сухе повітря: [NOAA](https://www.noaa.gov/jetstream/atmosphere); Марс: [ESA](https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Facts_about_Mars). Об’ємні частки, не масові.
+- Вода: [USGS](https://www.usgs.gov/water-science-school/science/where-earths-water). Окремо весь об’єм води Землі та лише прісна вода, історичні узагальнені оцінки.
+- Їжа: [Nutella UK](https://www.nutella.com/uk/en/products/nutella), [FAGE Total 5%](https://home.fage/yogurts/fage-total-5). БЖВ у 100 г конкретного продукту; залишок не названо лише водою, бо він також містить інші складники. Частки калорійності не змішуються з масовими.
+- «Золотий м’яч»: [UEFA, лауреати](https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/). Два історичні проміжки: 2000–2019 і 2010–2019; чоловіча нагорода, кількість вручень, а не різних переможців. За 2000–2019: Аргентина 6, Португалія 6, Бразилія 3, решта 5; за 2010–2019: 5, 4, 1 у Аргентини, Португалії й Хорватії відповідно.
+
+
+## Велике розширення кіно, серіалів і музики
+
+Додано 570 питань та 187 числових карток. Новий підсумок — 116 числових категорій, 1509 карток, 1025 питань вікторини.
+
+Музика: 42 артисти/гурти, оригінальні роки альбомів. `music-curated.json` містить відібрану таблицю; `music-source.json` — необроблені результати каталожного пошуку MusicBrainz для перевірки, а не автоматично схвалений банк. Пошук містив тезок, промоматеріали й неофіційні релізи, тому їх не переносили автоматично. Зокрема, англійський гурт Nirvana 1960-х відділено від американської Nirvana; перший альбом Arctic Monkeys датовано 2006 роком, а не роком раннього промоматеріалу 2005. Каталог не є незалежним підтвердженням кожного запису вручну відібраної таблиці.
+
+Додаткові першоджерела: [Metallica, дискографія](https://www.metallica.com/releases/albums/?srule=old-to-new), [Pink Floyd, дискографія](https://www.pinkfloyd.com/music/), [Shady Records, Eminem](https://www.shadyrecords.com/artist/eminem-2/). Роки — оригінального виходу, не перевидань.
+
+Зріст Star Wars: офіційні сторінки Databank — [Luke](https://www.starwars.com/databank/luke-skywalker), [Yoda](https://www.starwars.com/databank/yoda), [Chewbacca](https://www.starwars.com/databank/chewbacca), [Vader](https://www.starwars.com/databank/darth-vader), [C-3PO](https://www.starwars.com/databank/c-3po), [R2-D2](https://www.starwars.com/databank/r2-d2), [Leia](https://www.starwars.com/databank/leia-organa), [Han](https://www.starwars.com/databank/han-solo). Це зріст персонажів у довіднику, не акторів.
+
+Сюжетні добірки написані за каноном екранізацій. Допоміжні джерела: [Star Wars Databank](https://www.starwars.com/databank/), [Harry Potter Fact Files](https://www.harrypotter.com/fact-file), [Disney — Wakanda](https://news.disney.com/black-panther-wakanda-forever), [Sony — Breaking Bad](https://www.sonypictures.com/tv/breakingbad), [AMC — Gus](https://www.amc.com/blogs/relive-the-height-of-guss-empire-on-breaking-bad--1008864), [Sony — Better Call Saul](https://www.sonypictures.com/tv/bettercallsaul), [Netflix — персонажі Stranger Things](https://www.netflix.com/tudum/articles/stranger-things-season-5-cast-character-guide), [HBO — Game of Thrones](https://www.hbomaxlapress.com/programming/series/94). Посилання на оглядові сторінки не означають окремої зовнішньої перевірки кожної сюжетної деталі; назви й переклади редакційні, відповіді показуються ведучому у вікторині.

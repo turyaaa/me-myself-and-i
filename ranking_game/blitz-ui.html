@@ -1,7 +1,8 @@
 <section id="blitz" hidden>
   <h2 class="title" id="btitle">Блітз</h2>
   <div id="bsetup">
-    <p class="sub">10 питань · 10 секунд на кожне · 4 варіанти відповіді.<br>Грай сам або виклич друга на дуель.</p>
+    <p class="sub">15 питань · 10 секунд на кожне · 4 варіанти відповіді.<br>Грай сам або виклич друга на дуель.</p>
+    <div class="topic-options" id="blitz-topic-buttons"></div><p id="blitz-topic-label" class="sub"></p>
     <button class="wbtn" id="bsolo">Грати самому</button>
     <div class="bdivider">Дуель онлайн</div>
     <label for="bname">Твій нік</label>
@@ -26,4 +27,13 @@
     <button class="wbtn alt" id="breplay" hidden>Зіграти ще раз</button>
   </div>
   <p id="berror" class="gerr" role="alert"></p>
+  <dialog id="boutcome" class="boutcome" aria-labelledby="boutcome-title" aria-describedby="boutcome-note">
+    <span id="boutcome-icon" class="boutcome-icon" aria-hidden="true"></span>
+    <h2 id="boutcome-title"></h2>
+    <p id="boutcome-note"></p>
+    <strong id="boutcome-score" class="boutcome-score"></strong>
+    <p class="boutcome-label">Твої бали · Бали суперника</p>
+    <button class="wbtn" id="boutcome-replay" autofocus>Зіграти ще раз</button>
+    <button class="wbtn alt" id="boutcome-close">Переглянути результат</button>
+  </dialog>
 </section>

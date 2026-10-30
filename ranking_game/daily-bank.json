@@ -1,0 +1,222 @@
+[
+  {
+    "id": "air",
+    "family": "science",
+    "title": "Чим ми дихаємо?",
+    "note": "Склад сухого повітря за об’ємом, без водяної пари. Приблизні частки.",
+    "labels": [
+      "Азот",
+      "Кисень",
+      "Аргон",
+      "Решта"
+    ],
+    "values": [
+      78.084,
+      20.946,
+      0.934,
+      0.036
+    ],
+    "source": "https://www.noaa.gov/jetstream/atmosphere",
+    "sourceName": "NOAA"
+  },
+  {
+    "id": "mars",
+    "family": "science",
+    "title": "Атмосфера Марса",
+    "note": "Об’ємні частки газів за довідником ESA.",
+    "labels": [
+      "Вуглекислий газ",
+      "Азот",
+      "Аргон",
+      "Решта"
+    ],
+    "values": [
+      95.32,
+      2.7,
+      1.6,
+      0.38
+    ],
+    "source": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Facts_about_Mars",
+    "sourceName": "ESA"
+  },
+  {
+    "id": "water",
+    "family": "nature",
+    "title": "Де зберігається вода Землі?",
+    "note": "Частки загального об’єму води. Оцінка USGS.",
+    "labels": [
+      "Океани й моря",
+      "Льодовики та сніг",
+      "Підземні води",
+      "Решта"
+    ],
+    "values": [
+      96.5,
+      1.74,
+      1.69,
+      0.07
+    ],
+    "source": "https://www.usgs.gov/water-science-school/science/where-earths-water",
+    "sourceName": "USGS"
+  },
+  {
+    "id": "fresh",
+    "family": "nature",
+    "title": "А де прісна вода?",
+    "note": "Частки об’єму лише прісної води, за оцінкою USGS.",
+    "labels": [
+      "Льодовики та сніг",
+      "Підземні води",
+      "Озера",
+      "Решта"
+    ],
+    "values": [
+      68.7,
+      30.1,
+      0.26,
+      0.94
+    ],
+    "source": "https://www.usgs.gov/water-science-school/science/where-earths-water",
+    "sourceName": "USGS"
+  },
+  {
+    "id": "nutella",
+    "family": "food",
+    "title": "Що в 100 г Nutella?",
+    "note": "Частки маси за етикеткою Nutella UK. Сірим — вода, клітковина та інші складники. Не частки калорій.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      6.3,
+      30.9,
+      57.5,
+      5.3
+    ],
+    "source": "https://www.nutella.com/uk/en/products/nutella",
+    "sourceName": "Nutella · етикетка UK"
+  },
+  {
+    "id": "fage",
+    "family": "food",
+    "title": "Що в 100 г грецького йогурту?",
+    "note": "FAGE Total 5%, за етикеткою виробника. Частки маси; сірим — вода та інші складники.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      9,
+      5,
+      3,
+      83
+    ],
+    "source": "https://home.fage/yogurts/fage-total-5",
+    "sourceName": "FAGE Total 5%"
+  },
+  {
+    "id": "ballon00",
+    "family": "sport",
+    "title": "Хто забирав «Золоті м’ячі»?",
+    "note": "20 чоловічих нагород за 2000–2019 включно. Країна лауреата; рахуємо нагороди, не різних гравців.",
+    "labels": [
+      "Аргентина",
+      "Португалія",
+      "Бразилія",
+      "Решта"
+    ],
+    "values": [
+      30,
+      30,
+      15,
+      25
+    ],
+    "source": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/",
+    "sourceName": "UEFA · список лауреатів"
+  },
+  {
+    "id": "ballon10",
+    "family": "sport",
+    "title": "Десять років «Золотого м’яча»",
+    "note": "10 чоловічих нагород за 2010–2019. Країна лауреата, кількість нагород.",
+    "labels": [
+      "Аргентина",
+      "Португалія",
+      "Хорватія",
+      "Решта"
+    ],
+    "values": [
+      50,
+      40,
+      10,
+      0
+    ],
+    "source": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/",
+    "sourceName": "UEFA · список лауреатів"
+  },
+  {
+    "id": "gdp-a",
+    "family": "economy",
+    "title": "Частки світового ВВП · 2023",
+    "note": "Номінальний ВВП у поточних доларах США; частки світового підсумку Світового банку.",
+    "labels": [
+      "США",
+      "Китай",
+      "Німеччина",
+      "Решта"
+    ],
+    "values": [
+      25.9077,
+      17.0196,
+      4.2499,
+      52.8228
+    ],
+    "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+    "sourceName": "Світовий банк · 2023"
+  },
+  {
+    "id": "gdp-b",
+    "family": "economy",
+    "title": "Частки світового ВВП · 2023",
+    "note": "Номінальний ВВП у поточних доларах США; частки світового підсумку Світового банку.",
+    "labels": [
+      "Японія",
+      "Індія",
+      "Велика Британія",
+      "Решта"
+    ],
+    "values": [
+      4.0847,
+      3.2612,
+      3.1866,
+      89.4675
+    ],
+    "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+    "sourceName": "Світовий банк · 2023"
+  },
+  {
+    "id": "gdp-c",
+    "family": "economy",
+    "title": "Частки світового ВВП · 2023",
+    "note": "Номінальний ВВП у поточних доларах США; частки світового підсумку Світового банку.",
+    "labels": [
+      "Франція",
+      "Італія",
+      "Бразилія",
+      "Решта"
+    ],
+    "values": [
+      2.847,
+      2.1583,
+      2.0411,
+      92.9536
+    ],
+    "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+    "sourceName": "Світовий банк · 2023"
+  }
+]

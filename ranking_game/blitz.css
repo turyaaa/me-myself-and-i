@@ -20,3 +20,13 @@
   .bfeedback { min-height:28px; text-align:center; font:15px/1.5 system-ui; margin:16px 0; }
   .broom { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; font:14px system-ui; }
   .broom button { padding:8px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); cursor:pointer; }
+  #bquestion.long-question { font:600 clamp(21px,5vw,28px)/1.35 Georgia,serif; margin:16px 0 22px; }
+
+  .boutcome { box-sizing:border-box; width:min(400px,calc(100% - 32px)); max-height:calc(100dvh - 32px); overflow:auto; padding:28px 24px 20px; background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:22px; text-align:center; box-shadow:0 20px 80px #0006; }
+  .boutcome::backdrop { background:#10060bb3; }
+  .boutcome-icon { display:block; color:var(--icon); font:48px/1.2 system-ui; }
+  .boutcome[data-result="win"] .boutcome-icon { color:var(--ok); }
+  .boutcome h2 { font:700 30px Georgia,serif; margin:12px 0; }
+  .boutcome p { font:15px/1.5 system-ui; color:var(--muted); }
+  .boutcome-score { display:block; font:700 40px/1.3 system-ui; font-variant-numeric:tabular-nums; margin-top:20px; }
+  .boutcome .boutcome-label { font-size:12px; margin:4px 0 24px; }
