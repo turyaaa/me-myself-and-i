@@ -1,0 +1,13 @@
+{
+  "realHtmlFlow": true,
+  "authenticatedSearch": true,
+  "cancellation": true,
+  "controlsLockedDuringSearch": true,
+  "serverMatchAdopted": true,
+  "automaticReady": true,
+  "countdownThreeSeconds": true,
+  "answerPrivate": true,
+  "cancelledMatchReplay": true,
+  "logoutCancelsSearch": true,
+  "guestSignInPrompt": true
+}

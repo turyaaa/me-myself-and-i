@@ -5,8 +5,10 @@ function renderAccountLinks(){
  for(const id of ['home-auth-actions','lib-auth-actions'])$(id).hidden=!!L.user;
  const label=L.user?(A.profile?.nickname?'Профіль · '+A.profile.nickname:'Мій профіль'):'Увійти або створити профіль';
  const button=$('profile-toggle');button.setAttribute('aria-label',label);button.setAttribute('title',label);button.classList.toggle('signed-in',!!L.user);
+ renderMatchmakingAuth();
 }
 function accountIdentityChanged(event,user){
+ syncMatchmakingIdentity(user);
  if(A.userId!==(user?.id||null)){A.userId=user?.id||null;A.profile=null;A.admin=false;A.loading=null;A.revision++;A.recovery=false;
   for(const id of ['profile-name','profile-email','profile-id','profile-nickname','profile-password','profile-password-repeat']){$(id).textContent='';$(id).value='';}
   $('profile-content').hidden=true;$('profile-guest').hidden=!!user;$('profile-admin').hidden=true;$('admin-quizzes').replaceChildren();

@@ -2,8 +2,8 @@
   "categories": 133,
   "cards": 1648,
   "rankingRounds": 1330,
-  "quizTopics": 61,
-  "quizQuestions": 1115,
+  "quizTopics": 52,
+  "quizQuestions": 1095,
   "linearScales": "passed",
   "fullRangeSlider": "passed",
   "answerValidation": "passed",
@@ -45,12 +45,13 @@
   },
   "dailyGentlerScoring": "passed",
   "footballCuratedQuiz": {
-    "collections": 10,
-    "questions": 50
+    "collections": 1,
+    "questions": 30
   },
   "blitzBigCountdown": "passed",
   "logoSecret15Clicks": "passed",
   "dailyAll90RoundsRender": "passed",
+  "footballSingleCategoryPlayable": "passed",
   "quizManualFiveAndRandom": "passed",
   "libraryAuthorValidation": "passed",
   "libraryLocalMultiplayer": "passed",

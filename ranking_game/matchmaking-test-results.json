@@ -1,0 +1,19 @@
+{
+  "atomicPairing": true,
+  "noSelfMatch": true,
+  "singleQueueEntryAcrossTabs": true,
+  "oneRoomPerPair": true,
+  "privateQuestions": true,
+  "guestCannotAccessAutomaticRoom": true,
+  "foreignAccountRejected": true,
+  "fifteenRounds": true,
+  "initialCountdownSeconds": 3,
+  "waitingLeaseExpiry": true,
+  "disconnectCancellation": true,
+  "staleCancellationSafe": true,
+  "cancelBeforeJoinSafe": true,
+  "finishedPlayersCanSearchAgain": true,
+  "authenticationVerifiedServerSide": true,
+  "requestUserIdIgnored": true,
+  "httpGuards": true
+}

@@ -229,10 +229,10 @@ assert.equal(dailyAccuracy([25,25,25,25],[10,20,45,25]),73);
 assert.equal(dailyAccuracy([0,40,60,0],[1,40,59,0]),99);
 results.dailySeason={newTasks:90,days:30,noRepeats:true,balancedThemes:true,noLoopAfterEnd:true};results.dailyGentlerScoring='passed';
 // All football selections use curated text questions, with the same rule online.
-const football=QUIZ.filter(c=>c.topicFamily==='Футбол');assert.equal(football.length,10);assert.equal(football.reduce((n,c)=>n+c.qs.length,0),50);
+const football=QUIZ.filter(c=>c.topicFamily==='Футбол');assert.equal(football.length,1);assert.equal(football[0].name,'Футбол');assert.equal(football[0].qs.length,30);assert.equal(TOPIC_OPTIONS['Футбол'],undefined);
 blitzSelection={family:'Футбол',ids:[]};assert.equal(makeBlitzPlan().length,15);assert(makeBlitzPlan().every(q=>q.options.every(v=>typeof v==='string')));
-blitzSelection={family:'Футбол',ids:['fb-offside','fb-referee','fb-data']};assert.equal(makeBlitzPlan().length,15);blitzSelection=null;
-results.footballCuratedQuiz={collections:10,questions:50};
+blitzSelection={family:'Футбол',ids:[]};assert.equal(makeBlitzPlan().length,15);blitzSelection=null;
+results.footballCuratedQuiz={collections:1,questions:30};
 // Timed overlays hide exactly when answers become available, and on leaving.
 let countNow=0,timerTick,startedCount=0,expiredCount=0,popCount=0;performance.now=()=>countNow;
 setInterval=fn=>{timerTick=fn;return 1;};
@@ -281,6 +281,7 @@ playLibraryQuiz(libraryRow);const libraryGrid=$('qsetup').children[3];for(let i=
 assert.equal(Q.cats.map(c=>c.name).join('|'),'Авторська 6|Авторська 5|Авторська 4|Авторська 3|Авторська 2');
 libraryQuizSource.categories[6].qs[0][0]='changed';assert.equal(libraryCats[6].qs[0][0],'Питання 0');
 L.user={id:'author-a'};L.draft={...libraryRow,owner_id:'author-a'};persistLibraryDraft();assert(store.get('ranking_library_draft_author-a'));L.user={id:'author-b'};composeLibraryQuiz();assert.notEqual(L.draft.owner_id,'author-a');
+quizSelection={family:'Футбол',ids:[]};openQuiz();chooseQuizCategories('std');assert.equal(quizCategoryChoice.source.length,1);$('qsetup').children[3].children[0].onclick();assert.equal($('qsetup').children[4].children[0].disabled,false);$('qsetup').children[4].children[0].onclick();assert.equal(Q.cats.length,1);assert.equal(Q.total,5);quizSelection=null;results.footballSingleCategoryPlayable='passed';
 results.quizManualFiveAndRandom='passed';results.libraryAuthorValidation='passed';results.libraryLocalMultiplayer='passed';results.libraryDraftAccountIsolation='passed';
 L.user=null;A.profile=null;renderAccountLinks();assert.equal($('home-auth-actions').hidden,false);assert.equal($('lib-auth-actions').hidden,false);assert($('profile-toggle').attributes['aria-label'].includes('Увійти'));
 show('quiz');Q.used=1;$('profile-toggle').onclick();assert.equal($('quiz').hidden,false);Q.used=0;$('profile-toggle').onclick();assert.equal($('account').hidden,false);

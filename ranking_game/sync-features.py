@@ -15,7 +15,7 @@ s=s[:a]+'const DAILY_BANK = '+Path('daily-bank.json').read_text(encoding='utf-8'
 a=s.index('// Daily puzzles are pinned');b=s.index('// Blitz: the standalone HTML',a)
 s=s[:a]+Path('daily.js').read_text(encoding='utf-8')+'\n'+s[b:]
 a=s.index('// Blitz: the standalone HTML');b=s.index('\nshowHome();',a)
-js=Path('blitz.js').read_text(encoding='utf-8').split("if(typeof location!=='undefined'){const invited=")[0]
+js=Path('blitz.js').read_text(encoding='utf-8').split("if(typeof location!=='undefined'){const invited=")[0]+'\n'+Path('matchmaking.js').read_text(encoding='utf-8')
 s=s[:a]+js+s[b:];p.write_text(s,encoding='utf-8')
 print('Feature copies synchronized into index.html.')
 if Path('library.js').exists():

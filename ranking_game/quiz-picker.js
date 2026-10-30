@@ -7,15 +7,15 @@ function quizSource(pool){
 }
 function chooseQuizCategories(pool){
  Q.open=null;$('qsetup').hidden=false;for(const id of ['board','qview','qend','qturn'])$(id).hidden=true;
- const source=quizSource(pool);quizCategoryChoice={pool,source,selected:[]};
+ const source=quizSource(pool),required=Math.min(5,source.length);quizCategoryChoice={pool,source,selected:[]};
  const box=$('qsetup');box.replaceChildren();
  const title=document.createElement('h2');title.className='title';title.textContent=pool==='library'?libraryQuizSource.title:'Обери категорії';
- const note=document.createElement('p');note.className='sub';note.textContent='Вибери свої п’ять категорій або довірся випадковому набору.';
+ const note=document.createElement('p');note.className='sub';note.textContent=required===5?'Вибери свої п’ять категорій або довірся випадковому набору.':'Грай з усіма категоріями цієї добірки. Питання обираються випадково.';
  const count=document.createElement('p');count.className='quiz-selection-count';count.id='quiz-choice-count';
  const grid=document.createElement('div');grid.className='quiz-category-grid';
  const manual=document.createElement('button');manual.className='wbtn';manual.textContent='Грати з обраними';
- const update=()=>{const selected=quizCategoryChoice.selected;count.textContent='Обрано '+selected.length+' із 5';manual.disabled=selected.length!==5;[...grid.children].forEach((b,i)=>{b.setAttribute('aria-pressed',String(selected.includes(i)));b.disabled=selected.length===5&&!selected.includes(i);});};
- source.forEach((cat,i)=>{const b=document.createElement('button');b.textContent=cat.name;b.onclick=()=>{const selected=quizCategoryChoice.selected;quizCategoryChoice.selected=selected.includes(i)?selected.filter(n=>n!==i):selected.length<5?[...selected,i]:selected;update();};grid.append(b);});
+ const update=()=>{const selected=quizCategoryChoice.selected;count.textContent='Обрано '+selected.length+' із '+required;manual.disabled=!required||selected.length!==required;[...grid.children].forEach((b,i)=>{b.setAttribute('aria-pressed',String(selected.includes(i)));b.disabled=selected.length===required&&!selected.includes(i);});};
+ source.forEach((cat,i)=>{const b=document.createElement('button');b.textContent=cat.name;b.onclick=()=>{const selected=quizCategoryChoice.selected;quizCategoryChoice.selected=selected.includes(i)?selected.filter(n=>n!==i):selected.length<required?[...selected,i]:selected;update();};grid.append(b);});
  const actions=document.createElement('div');actions.className='quiz-picker-actions';
  manual.onclick=()=>startQuiz(pool,quizCategoryChoice.selected.map(i=>source[i]));
  const random=document.createElement('button');random.className='wbtn alt';random.textContent=source.length>=5?'П’ять випадкових категорій':'Грати з усіма '+source.length+' категоріями';random.disabled=!source.length;random.onclick=()=>startQuiz(pool);

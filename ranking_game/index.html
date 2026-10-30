@@ -267,6 +267,7 @@
 
 /* END LIBRARY CSS */
   .bdivider { margin:28px 0 14px; text-align:center; color:var(--muted); font:600 14px system-ui; }
+  .bmatch-card{margin:22px 0;padding:24px;border:1px solid var(--icon);border-radius:20px;background:var(--card);text-align:center;box-shadow:0 8px 30px #0001}.bmatch-card h3{font:600 28px/1.2 Georgia,serif;margin:0 0 12px}.bmatch-card .sub{margin:12px 0 18px}#bsearch-status{color:var(--muted);line-height:1.5}#bsearch-time{display:block;margin:12px 0 18px;font:700 34px/1.2 system-ui;color:var(--icon);font-variant-numeric:tabular-nums}
   #bsetup label { display:block; font:14px system-ui; margin:0 0 6px; color:var(--muted); }
   .bjoin { display:flex; gap:8px; align-items:stretch; margin-top:14px; }
   .bjoin .fld { min-width:0; flex:1; margin:0; text-transform:uppercase; letter-spacing:.12em; }
@@ -444,10 +445,14 @@
   <div id="bcountdown" class="bcountdown" hidden><span class="bcountdown-label">Починаємо</span><strong id="bcountdown-digit" role="timer"></strong></div>
   <h2 class="title" id="btitle">Блітз</h2>
   <div id="bsetup">
-    <p class="sub">15 питань · 10 секунд на кожне · 4 варіанти відповіді.<br>Грай сам або виклич друга на дуель.</p>
+    <p class="sub">15 питань · 10 секунд на кожне · 4 варіанти відповіді.</p>
+    <div class="bmatch-card"><h3>Знайти суперника</h3><p class="sub">Автоматичний матч із гравцем онлайн. Питання з усіх тем, нікнейм із твого профілю.</p><button id="bfind" class="wbtn">Увійти для пошуку</button>
+      <div id="bsearch-panel" hidden><p id="bsearch-status" role="status" aria-live="polite">Шукаємо суперника…</p><strong id="bsearch-time" role="timer">0:00</strong><button id="bsearch-cancel" class="wbtn alt" type="button">Скасувати пошук</button></div>
+    </div>
+    <div class="bdivider">Обери тему для соло або кімнати</div>
     <div class="topic-options" id="blitz-topic-buttons"></div><p id="blitz-topic-label" class="sub"></p>
     <button class="wbtn" id="bsolo">Грати самому</button>
-    <div class="bdivider">Дуель онлайн</div>
+    <div class="bdivider">Дуель онлайн (Без авторизації)</div>
     <label for="bname">Твій нік</label>
     <input class="fld" id="bname" maxlength="24" autocomplete="nickname" placeholder="Гравець">
     <button class="wbtn" id="bcreate">Створити дуель</button>
@@ -804,7 +809,6 @@ let menuMode = "rank";
 const RANDOM = { name: "Випадкова", cats: [], random: true };
 const pickRandomGroup = () => GROUPS[Math.floor(Math.random() * GROUPS.length)];
 function startTopic(g) {
-  if(menuMode==='blitz'&&g.name==='Футбол')return openTopicPicker(g,menuMode);
   if(menuMode==='blitz'&&!['Фільми','Музика','Серіали'].includes(g.name)){blitzSelection=g.name==='Всі'?null:{family:g.name,ids:[]};showBlitzSetup();return;}
   if(['Фільми','Музика','Серіали'].includes(g.name))return openTopicPicker(g,menuMode);
   menuMode === "guess" ? startGuess(g) : startGame(g);
@@ -7876,251 +7880,9 @@ const QUIZ = [
     }
   },
   {
-    "name": "Футбол · прочитай роль",
+    "name": "Футбол",
     "topicFamily": "Футбол",
-    "topicId": "fb-roles",
-    "blitz": true,
-    "qs": [
-      [
-        "Центрфорвард відходить між лініями, витягує центрбека й відкриває коридор вінгеру. Яку роль він виконує?",
-        "Хибна дев’ятка"
-      ],
-      [
-        "Крайній захисник у володінні переходить у центр поруч з опорником, а не біжить уздовж бровки. Це…",
-        "Інвертований фулбек"
-      ],
-      [
-        "Гравець починає атаки довгими й короткими передачами з глибини перед центрбеками. Який термін найточніше описує такого плеймейкера?",
-        "Реджиста"
-      ],
-      [
-        "Нападник грає спиною до воріт, приймає довгі передачі під тиском і скидає партнерам. Його функція — це…",
-        "Таргетмен"
-      ],
-      [
-        "Вільний захисник страхує партнерів позаду лінії персональної опіки й може починати атаки. Історична назва ролі?",
-        "Ліберо"
-      ]
-    ],
-    "distractors": {
-      "Центрфорвард відходить між лініями, витягує центрбека й відкриває коридор вінгеру. Яку роль він виконує?": [
-        "Таргетмен",
-        "Ліберо",
-        "Класичний вінгбек"
-      ],
-      "Крайній захисник у володінні переходить у центр поруч з опорником, а не біжить уздовж бровки. Це…": [
-        "Широкий вінгбек",
-        "Відтягнутий форвард",
-        "Класичний стопер"
-      ],
-      "Гравець починає атаки довгими й короткими передачами з глибини перед центрбеками. Який термін найточніше описує такого плеймейкера?": [
-        "Почер",
-        "Треквартиста",
-        "Таргетмен"
-      ],
-      "Нападник грає спиною до воріт, приймає довгі передачі під тиском і скидає партнерам. Його функція — це…": [
-        "Інвертований вінгер",
-        "Ліберо",
-        "Реджиста"
-      ],
-      "Вільний захисник страхує партнерів позаду лінії персональної опіки й може починати атаки. Історична назва ролі?": [
-        "Меццала",
-        "Треквартиста",
-        "Вінгбек"
-      ]
-    },
-    "sources": [
-      "https://www.fifatrainingcentre.com/en/game/game-analysis/landing-page-core-principles.php",
-      "https://inside.fifa.com/tournaments/mens/mensolympic/tokyo2020/news/tactical-trends-at-the-mens-olympic-tournament",
-      "https://www.fifatrainingcentre.com/en/game/tournaments/fcwc/2025/team-analyses/emerging-positioning-of-the-inverted-full-back.php",
-      "https://www.fifatrainingcentre.com/en/fwc2022/technical-and-tactical-analysis/the-role-of-the-number-9--more-goals-yet-fewer-attempts.php",
-      "https://learning.coachesvoice.com/cv/what-is-a-regista-explained-jorginho-andrea-pirlo/"
-    ]
-  },
-  {
-    "name": "Футбол · тактична лабораторія",
-    "topicFamily": "Футбол",
-    "topicId": "fb-moves",
-    "blitz": true,
-    "qs": [
-      [
-        "М’яч щойно втрачено. Найближчі гравці одразу стискають простір довкола суперника замість відходу назад. Це…",
-        "Контрпресинг"
-      ],
-      [
-        "А не може передати В напряму. А грає на Б, Б одним дотиком знаходить В, який уже відкрився. Це комбінація…",
-        "Через третього"
-      ],
-      [
-        "Захисник пробігає повз вінгера із зовнішнього боку, ближче до бровки. Як називають цей забіг?",
-        "Оверлап"
-      ],
-      [
-        "Вінгер тримає ширину, а захисник забігає повз нього внутрішнім коридором. Який це рух?",
-        "Андерлап"
-      ],
-      [
-        "Під час власної атаки команда залишає позаду структуру, яка перекриває першу передачу суперника в контратаку. Що це?",
-        "Страхування атаки — rest defence"
-      ]
-    ],
-    "distractors": {
-      "М’яч щойно втрачено. Найближчі гравці одразу стискають простір довкола суперника замість відходу назад. Це…": [
-        "Низький блок",
-        "Позиційна атака",
-        "Офсайдна пастка"
-      ],
-      "А не може передати В напряму. А грає на Б, Б одним дотиком знаходить В, який уже відкрився. Це комбінація…": [
-        "Зворотного пресингу",
-        "Персональної опіки",
-        "Штучного офсайду"
-      ],
-      "Захисник пробігає повз вінгера із зовнішнього боку, ближче до бровки. Як називають цей забіг?": [
-        "Андерлап",
-        "Контрпресинг",
-        "Ривок у півфланг"
-      ],
-      "Вінгер тримає ширину, а захисник забігає повз нього внутрішнім коридором. Який це рух?": [
-        "Оверлап",
-        "Відскок під підбір",
-        "Офсайдна пастка"
-      ],
-      "Під час власної атаки команда залишає позаду структуру, яка перекриває першу передачу суперника в контратаку. Що це?": [
-        "Висока лінія без страхування",
-        "Перекриття флангу в низькому блоці",
-        "Позиційне перевантаження штрафного"
-      ]
-    },
-    "sources": [
-      "https://www.fifatrainingcentre.com/en/game/game-analysis/in-possession/third-player-combinations.php",
-      "https://www.fifatrainingcentre.com/en/practice/elite-sessions/transition-to-defending/preparing-and-executing-counter-pressing.php",
-      "https://www.fifatrainingcentre.com/en/game/tournaments/olympic-football-tournament/moft/rest-defence.php",
-      "https://www.fifatrainingcentre.com/media/native/test/FIFA_Session_Plan_Clement.pdf"
-    ]
-  },
-  {
-    "name": "Футбол · офсайд без міфів",
-    "topicFamily": "Футбол",
-    "topicId": "fb-offside",
-    "blitz": true,
-    "qs": [
-      [
-        "Форвард за всіма польовими захисниками отримує м’яч безпосередньо з ауту. Офсайд?",
-        "Ні, безпосередньо з ауту його немає"
-      ],
-      [
-        "Форвард стояв в офсайді під час удару партнера. М’яч відскочив від стійки, і форвард добив. Рішення?",
-        "Офсайд: відскок не скасовує порушення"
-      ],
-      [
-        "Партнер прострілює назад. Одержувач ближче до воріт за передостаннього суперника, але перебуває позаду м’яча. Офсайд?",
-        "Ні: він не попереду м’яча"
-      ],
-      [
-        "Захисник мав час і контроль, навмисно зіграв у м’яч, але невдало відпасував форварду, що був в офсайді. Це не сейв. Рішення?",
-        "Грати далі: свідома гра суперника скинула офсайд"
-      ],
-      [
-        "Форвард був в офсайді під час удару партнера. Воротар відбив удар саме йому. Чи скидає свідомий сейв офсайд?",
-        "Ні, сейв не скидає офсайд"
-      ]
-    ],
-    "distractors": {
-      "Форвард за всіма польовими захисниками отримує м’яч безпосередньо з ауту. Офсайд?": [
-        "Так, якщо ближче до воріт",
-        "Так, якщо прийняв ногою",
-        "Лише якщо прийняв у штрафному"
-      ],
-      "Форвард стояв в офсайді під час удару партнера. М’яч відскочив від стійки, і форвард добив. Рішення?": [
-        "Гол: стійка починає нову фазу",
-        "Гол: добивання завжди дозволене",
-        "Спірний м’яч замість гола"
-      ],
-      "Партнер прострілює назад. Одержувач ближче до воріт за передостаннього суперника, але перебуває позаду м’яча. Офсайд?": [
-        "Так: важливі лише суперники",
-        "Так: у штрафному діє інше правило",
-        "Ні, але лише при пасі головою"
-      ],
-      "Захисник мав час і контроль, навмисно зіграв у м’яч, але невдало відпасував форварду, що був в офсайді. Це не сейв. Рішення?": [
-        "Офсайд після будь-якого дотику захисника",
-        "Вільний удар команді захисника",
-        "Перегравання передачі"
-      ],
-      "Форвард був в офсайді під час удару партнера. Воротар відбив удар саме йому. Чи скидає свідомий сейв офсайд?": [
-        "Так, бо воротар діяв свідомо",
-        "Так, якщо відбив двома руками",
-        "Так, якщо м’яч змінив напрямок"
-      ]
-    },
-    "sources": [
-      "https://www.theifab.com/laws/latest/offside/"
-    ]
-  },
-  {
-    "name": "Футбол · ти — арбітр",
-    "topicFamily": "Футбол",
-    "topicId": "fb-referee",
-    "blitz": true,
-    "qs": [
-      [
-        "З ауту м’яч без жодного дотику залетів у власні ворота. Як поновити гру?",
-        "Кутовим для суперника"
-      ],
-      [
-        "З ауту м’яч без жодного дотику влетів у ворота суперника. Як поновити гру?",
-        "Ударом від воріт суперника"
-      ],
-      [
-        "М’яч влучив в арбітра, залишився на полі, і володіння перейшло іншій команді. Рішення?",
-        "Зупинка і спірний м’яч"
-      ],
-      [
-        "За редакцією правил IFAB 2025/26 воротар тримає м’яч руками понад 8 секунд. Що отримує суперник?",
-        "Кутовий удар"
-      ],
-      [
-        "За уточненням IFAB 2025 року гравець послизнувся й випадково торкнувся м’яча обома ногами при пенальті. М’яч забито. Рішення?",
-        "Повторити пенальті"
-      ]
-    ],
-    "distractors": {
-      "З ауту м’яч без жодного дотику залетів у власні ворота. Як поновити гру?": [
-        "Голом і початковим ударом",
-        "Ударом від власних воріт",
-        "Повторним аутом тієї ж команди"
-      ],
-      "З ауту м’яч без жодного дотику влетів у ворота суперника. Як поновити гру?": [
-        "Голом і початковим ударом",
-        "Кутовим команді, що вкидала",
-        "Повторним аутом тієї ж команди"
-      ],
-      "М’яч влучив в арбітра, залишився на полі, і володіння перейшло іншій команді. Рішення?": [
-        "Завжди продовжувати гру",
-        "Вільний удар команді, що втратила м’яч",
-        "Повернути попередній аут"
-      ],
-      "За редакцією правил IFAB 2025/26 воротар тримає м’яч руками понад 8 секунд. Що отримує суперник?": [
-        "Вільний удар у штрафному",
-        "Пенальті",
-        "Удар від воріт"
-      ],
-      "За уточненням IFAB 2025 року гравець послизнувся й випадково торкнувся м’яча обома ногами при пенальті. М’яч забито. Рішення?": [
-        "Зарахувати гол",
-        "Призначити вільний удар захисту",
-        "Зарахувати промах у всіх випадках"
-      ]
-    },
-    "sources": [
-      "https://www.theifab.com/laws/latest/the-throw-in/",
-      "https://www.theifab.com/law-changes/2025-26/",
-      "https://downloads.theifab.com/downloads/circular-31?l=en",
-      "https://www.theifab.com/laws/latest/the-ball-in-and-out-of-play/"
-    ]
-  },
-  {
-    "name": "Футбол · герої другого плану",
-    "topicFamily": "Футбол",
-    "topicId": "fb-finals",
+    "topicId": "football",
     "blitz": true,
     "qs": [
       [
@@ -8142,6 +7904,106 @@ const QUIZ = [
       [
         "Фінал ЛЧ-1997. Хто першим дотиком після виходу на заміну перекинув воротаря «Ювентуса» й зробив рахунок 3:1?",
         "Ларс Ріккен"
+      ],
+      [
+        "«Ліверпуль» — «Барселона», 2019: хто помітив, що захист не готовий, і швидко подав кутовий на Орігі?",
+        "Трент Александер-Арнольд"
+      ],
+      [
+        "«Аякс» — «Тоттенгем», 2019: хто забив усі три м’ячі гостей після перерви й перевернув півфінал?",
+        "Лукас Моура"
+      ],
+      [
+        "Після 1:4 у Мілані цей клуб виграв матч-відповідь 4:0 у чвертьфіналі ЛЧ-2004. Хто здійснив камбек?",
+        "Депортіво"
+      ],
+      [
+        "«Рома» — «Барселона», 2018: хто головою після кутового забив третій гол, який завершив камбек?",
+        "Костас Манолас"
+      ],
+      [
+        "Стамбул-2005: третій гол «Ліверпуля» забив Хабі Алонсо. Якою була безпосередня передісторія?",
+        "Добив власний пенальті, відбитий Дідою"
+      ],
+      [
+        "Данія виграла Євро-1992, хоча спочатку не потрапила у фінальну частину. Яку збірну вона замінила?",
+        "Югославію"
+      ],
+      [
+        "Майбутній чемпіон Євро-2016 вийшов із групи з третього місця. Яким був баланс Португалії?",
+        "Три нічиї"
+      ],
+      [
+        "Фінал Євро-2000: хто врятував Францію голом у компенсований час, перш ніж Трезеге забив переможний?",
+        "Сільвен Вільтор"
+      ],
+      [
+        "На Євро-2004 Греція зупинила яскраву команду з Недведом, Росицьким і Барошем. Яку збірну вона вибила в півфіналі?",
+        "Чехію"
+      ],
+      [
+        "Італія та СРСР зіграли 0:0 у півфіналі Євро-1968. Як визначили фіналіста?",
+        "Киданням монети"
+      ],
+      [
+        "«Дніпро» — «Наполі», півфінал ЛЄ-2015: хто забив єдиний м’яч у київському матчі-відповіді?",
+        "Євген Селезньов"
+      ],
+      [
+        "У фіналі Кубка УЄФА-2009 «Вердер» зрівняв рахунок зі штрафного. Хто приніс «Шахтарю» перемогу вже в додатковий час?",
+        "Жадсон"
+      ],
+      [
+        "До болісного фіналу-2005 Шевченко вже вирішував фінальну серію пенальті ЛЧ на користь «Мілана». Проти якого клубу?",
+        "Ювентуса"
+      ],
+      [
+        "«Динамо» виграло на «Камп Ноу» 4:0 у 1997-му. Шевченко зробив хет-трик. Хто забив четвертий м’яч?",
+        "Сергій Ребров"
+      ],
+      [
+        "Ігор Бєланов зробив хет-трик у плейоф ЧС-1986, але його команда програла 3:4. Хто був суперником?",
+        "Бельгія"
+      ],
+      [
+        "Чому у фіналі ЧС-1930 на кожен тайм брали іншу модель м’яча?",
+        "Збірні не погодилися, чиїм м’ячем грати"
+      ],
+      [
+        "Проти якої збірної Кройф на ЧС-1974 продемонстрував знаменитий розворот, обігравши Яна Ульссона?",
+        "Швеції"
+      ],
+      [
+        "Чвертьфінал ЧС-1966: КНДР повела 3:0, але Португалія виграла 5:3. Хто забив чотири голи?",
+        "Еусебіу"
+      ],
+      [
+        "Фінал ЧС-1994 пам’ятають за промахом Баджо. Яка пара італійців також не реалізувала удари в тій серії?",
+        "Барезі та Массаро"
+      ],
+      [
+        "Чому Бразилії вистачало нічиєї з Уругваєм у вирішальному матчі ЧС-1950?",
+        "Це був матч фінальної групи, у якій вона лідирувала"
+      ],
+      [
+        "ЧС-2014: якого воротаря ван Гал випустив замість Сіллессена спеціально перед серією пенальті з Коста-Рикою?",
+        "Тім Крул"
+      ],
+      [
+        "Гол Агуеро проти КПР приніс «Сіті» чемпіонство у 2012-му. Хто віддав йому останню передачу, падаючи під тиском захисника?",
+        "Маріо Балотеллі"
+      ],
+      [
+        "Франція поступалася Хорватії у півфіналі ЧС-1998, але один захисник забив обидва її голи. Хто це був?",
+        "Ліліан Тюрам"
+      ],
+      [
+        "Фінал жіночого ЧС-1999: хто реалізував вирішальний пенальті США й відсвяткував його, знявши футболку?",
+        "Бренді Честейн"
+      ],
+      [
+        "Японія виграла жіночий ЧС-2011, а її капітанка забрала і «Золотий м’яч», і «Золотий бутс». Хто вона?",
+        "Хомаре Сава"
       ]
     ],
     "distractors": {
@@ -8169,43 +8031,7 @@ const QUIZ = [
         "Гайко Геррліх",
         "Андреас Меллер",
         "Карл-Гайнц Рідле"
-      ]
-    },
-    "sources": [
-      "https://www.uefa.com/uefachampionsleague/news/021f-0e8f969a399c-e6573eecc236-1000--legendary-moments-ricken-on-1997-final-goal/",
-      "https://www.uefa.com/uefachampionsleague/news/0254-0d7b9bda7048-f02946ac9dba-1000--barca-comeback-denies-arsenal/",
-      "https://www.uefa.com/uefachampionsleague/news/0250-0c50f2820ac1-0d73022c807f-1000--liverpool-triumph-in-turkey/",
-      "https://www.uefa.com/uefachampionsleague/match/56379/"
-    ]
-  },
-  {
-    "name": "Футбол · анатомія камбеку",
-    "topicFamily": "Футбол",
-    "topicId": "fb-comebacks",
-    "blitz": true,
-    "qs": [
-      [
-        "«Ліверпуль» — «Барселона», 2019: хто помітив, що захист не готовий, і швидко подав кутовий на Орігі?",
-        "Трент Александер-Арнольд"
       ],
-      [
-        "«Аякс» — «Тоттенгем», 2019: хто забив усі три м’ячі гостей після перерви й перевернув півфінал?",
-        "Лукас Моура"
-      ],
-      [
-        "Після 1:4 у Мілані цей клуб виграв матч-відповідь 4:0 у чвертьфіналі ЛЧ-2004. Хто здійснив камбек?",
-        "Депортіво"
-      ],
-      [
-        "«Рома» — «Барселона», 2018: хто головою після кутового забив третій гол, який завершив камбек?",
-        "Костас Манолас"
-      ],
-      [
-        "Стамбул-2005: третій гол «Ліверпуля» забив Хабі Алонсо. Якою була безпосередня передісторія?",
-        "Добив власний пенальті, відбитий Дідою"
-      ]
-    ],
-    "distractors": {
       "«Ліверпуль» — «Барселона», 2019: хто помітив, що захист не готовий, і швидко подав кутовий на Орігі?": [
         "Ендрю Робертсон",
         "Джеймс Мілнер",
@@ -8230,43 +8056,7 @@ const QUIZ = [
         "Замкнув кутовий Джеррарда",
         "Реалізував прямий штрафний",
         "Перехопив пас Нести воротарю"
-      ]
-    },
-    "sources": [
-      "https://es.uefa.com/uefachampionsleague/news/0253-0d812400f58e-4b495e78d264-1000--remontadas-historicas/",
-      "https://www.premierleague.com/en/news/1212312",
-      "https://www.tottenhamhotspur.com/news/996953",
-      "https://www.uefa.com/uefachampionsleague/news/0250-0c50f2820ac1-0d73022c807f-1000--liverpool-triumph-in-turkey/"
-    ]
-  },
-  {
-    "name": "Футбол · Євро всупереч сценарію",
-    "topicFamily": "Футбол",
-    "topicId": "fb-euro",
-    "blitz": true,
-    "qs": [
-      [
-        "Данія виграла Євро-1992, хоча спочатку не потрапила у фінальну частину. Яку збірну вона замінила?",
-        "Югославію"
       ],
-      [
-        "Майбутній чемпіон Євро-2016 вийшов із групи з третього місця. Яким був баланс Португалії?",
-        "Три нічиї"
-      ],
-      [
-        "Чому фінал Євро-2000 закінчився одразу після гола Трезеге в додатковий час?",
-        "Діяло правило золотого гола"
-      ],
-      [
-        "Гол Делласа завершив півфінал Греція — Чехія на Євро-2004 наприкінці першого додаткового тайму. Яке правило тоді діяло?",
-        "Срібний гол"
-      ],
-      [
-        "Італія та СРСР зіграли 0:0 у півфіналі Євро-1968. Як визначили фіналіста?",
-        "Киданням монети"
-      ]
-    ],
-    "distractors": {
       "Данія виграла Євро-1992, хоча спочатку не потрапила у фінальну частину. Яку збірну вона замінила?": [
         "Чехословаччину",
         "СРСР",
@@ -8277,58 +8067,11 @@ const QUIZ = [
         "Дві перемоги й поразка",
         "Перемога й дві поразки"
       ],
-      "Чому фінал Євро-2000 закінчився одразу після гола Трезеге в додатковий час?": [
-        "Спливли всі 120 хвилин",
-        "Італія мала менше семи гравців",
-        "Діяло правило срібного гола"
-      ],
-      "Гол Делласа завершив півфінал Греція — Чехія на Євро-2004 наприкінці першого додаткового тайму. Яке правило тоді діяло?": [
-        "Золотий гол",
-        "Звичайні два тайми по 15 хвилин",
-        "Перегравання після нічиєї"
-      ],
       "Італія та СРСР зіграли 0:0 у півфіналі Євро-1968. Як визначили фіналіста?": [
         "Серією пенальті",
         "Переграванням наступного дня",
         "За кількістю кутових"
-      ]
-    },
-    "sources": [
-      "https://www.uefa.com/uefaeuro/history/news/0253-0d7b2f5adb06-fa5820ecb86b-1000--coin-toss-takes-italy-to-euro-1968-final-after-ussr-stal/",
-      "https://www.uefa.com/uefaeuro/history/news/025a-0eb91faf9bf0-942d69c5a0a8-1000--euro-1992-all-you-need-to-know/",
-      "https://www.uefa.com/uefaeuro/history/news/0253-0d7b3013529f-3e15ce8dc46b-1000--trezeguet-s-golden-goal-sinks-italy-as-france-make-history-a/",
-      "https://www.uefa.com/uefaeuro/history/news/025e-0f9fdb15ba65-d27a2a1bb326-1000--classics-2016-final/",
-      "https://www.uefa.com/MultimediaFiles/Download/Inside/Competitions/MediaServices/68/63/53/686353_DOWNLOAD.pdf"
-    ]
-  },
-  {
-    "name": "Футбол · український слід",
-    "topicFamily": "Футбол",
-    "topicId": "fb-ukraine",
-    "blitz": true,
-    "qs": [
-      [
-        "«Дніпро» — «Наполі», півфінал ЛЄ-2015: хто забив єдиний м’яч у київському матчі-відповіді?",
-        "Євген Селезньов"
       ],
-      [
-        "У фіналі Кубка УЄФА-2009 «Вердер» зрівняв рахунок зі штрафного. Хто приніс «Шахтарю» перемогу вже в додатковий час?",
-        "Жадсон"
-      ],
-      [
-        "До болісного фіналу-2005 Шевченко вже вирішував фінальну серію пенальті ЛЧ на користь «Мілана». Проти якого клубу?",
-        "Ювентуса"
-      ],
-      [
-        "«Динамо» виграло на «Камп Ноу» 4:0 у 1997-му. Шевченко зробив хет-трик. Хто забив четвертий м’яч?",
-        "Сергій Ребров"
-      ],
-      [
-        "Ігор Бєланов зробив хет-трик у плейоф ЧС-1986, але його команда програла 3:4. Хто був суперником?",
-        "Бельгія"
-      ]
-    ],
-    "distractors": {
       "«Дніпро» — «Наполі», півфінал ЛЄ-2015: хто забив єдиний м’яч у київському матчі-відповіді?": [
         "Нікола Калініч",
         "Євген Коноплянка",
@@ -8353,45 +8096,7 @@ const QUIZ = [
         "Данія",
         "Іспанія",
         "Угорщина"
-      ]
-    },
-    "sources": [
-      "https://www.uefa.com/uefaeuropaleague/news/0252-0cdbb2f0094e-7907943299e5-1000--rock-solid-dnipro-shock-napoli-to-make-final/",
-      "https://www.uefa.com/uefaeuropaleague/news/01d9-0e7233534cb2-ca7dcb346335-1000--jadson-the-difference-as-shakhtar-triumph/",
-      "https://www.uefa.com/uefachampionsleague/news/025a-0eaa42e02a8e-9949eef54c93-1000--shevchenko-bemoans-blue-ruin/",
-      "https://www.uefa.com/uefachampionsleague/news/01df-0e7364b03db2-67007c618fc3-1000--dynamo-face-tall-order-against-holders/",
-      "https://www.fifa.com/en/tournaments/mens/worldcup/articles/soviet-union-belgium-mexico-1986",
-      "https://www.uefa.com/uefachampionsleague/news/0208-0e9f5fd014ae-4b6daa79e5aa-1000--bayern-s-4-0-triumph-joins-elite-company/"
-    ]
-  },
-  {
-    "name": "Футбол · ЧС: деталі, які пам’ятають",
-    "topicFamily": "Футбол",
-    "topicId": "fb-worldcup",
-    "blitz": true,
-    "qs": [
-      [
-        "Чому у фіналі ЧС-1930 на кожен тайм брали іншу модель м’яча?",
-        "Збірні не погодилися, чиїм м’ячем грати"
       ],
-      [
-        "Проти якої збірної Кройф на ЧС-1974 продемонстрував знаменитий розворот, обігравши Яна Ульссона?",
-        "Швеції"
-      ],
-      [
-        "Чвертьфінал ЧС-1966: КНДР повела 3:0, але Португалія виграла 5:3. Хто забив чотири голи?",
-        "Еусебіу"
-      ],
-      [
-        "Фінал ЧС-1994 пам’ятають за промахом Баджо. Яка пара італійців також не реалізувала удари в тій серії?",
-        "Барезі та Массаро"
-      ],
-      [
-        "Чому Бразилії вистачало нічиєї з Уругваєм у вирішальному матчі ЧС-1950?",
-        "Це був матч фінальної групи, у якій вона лідирувала"
-      ]
-    ],
-    "distractors": {
       "Чому у фіналі ЧС-1930 на кожен тайм брали іншу модель м’яча?": [
         "Перший м’яч луснув після гола",
         "Для сухого й мокрого поля вимагали різні м’ячі",
@@ -8416,73 +8121,73 @@ const QUIZ = [
         "Вона виграла перший матч двоматчевого фіналу",
         "Фінал враховував голи попередньої очної гри",
         "Чемпіона визначали за голами в усьому турнірі"
+      ],
+      "Фінал Євро-2000: хто врятував Францію голом у компенсований час, перш ніж Трезеге забив переможний?": [
+        "Тьєррі Анрі",
+        "Зінедін Зідан",
+        "Юрій Джоркаєфф"
+      ],
+      "На Євро-2004 Греція зупинила яскраву команду з Недведом, Росицьким і Барошем. Яку збірну вона вибила в півфіналі?": [
+        "Нідерланди",
+        "Португалію",
+        "Данію"
+      ],
+      "ЧС-2014: якого воротаря ван Гал випустив замість Сіллессена спеціально перед серією пенальті з Коста-Рикою?": [
+        "Мартен Стекеленбург",
+        "Міхел Ворм",
+        "Кеннет Вермер"
+      ],
+      "Гол Агуеро проти КПР приніс «Сіті» чемпіонство у 2012-му. Хто віддав йому останню передачу, падаючи під тиском захисника?": [
+        "Давід Сілва",
+        "Едін Джеко",
+        "Яя Туре"
+      ],
+      "Франція поступалася Хорватії у півфіналі ЧС-1998, але один захисник забив обидва її голи. Хто це був?": [
+        "Лоран Блан",
+        "Марсель Десаї",
+        "Біксант Лізаразю"
+      ],
+      "Фінал жіночого ЧС-1999: хто реалізував вирішальний пенальті США й відсвяткував його, знявши футболку?": [
+        "Міа Гемм",
+        "Джулі Фауді",
+        "Крістін Ліллі"
+      ],
+      "Японія виграла жіночий ЧС-2011, а її капітанка забрала і «Золотий м’яч», і «Золотий бутс». Хто вона?": [
+        "Ая Міяма",
+        "Юкі Нагасато",
+        "Нахомі Кавасумі"
       ]
     },
     "sources": [
+      "https://www.uefa.com/uefachampionsleague/news/021f-0e8f969a399c-e6573eecc236-1000--legendary-moments-ricken-on-1997-final-goal/",
+      "https://www.uefa.com/uefachampionsleague/news/0254-0d7b9bda7048-f02946ac9dba-1000--barca-comeback-denies-arsenal/",
+      "https://www.uefa.com/uefachampionsleague/news/0250-0c50f2820ac1-0d73022c807f-1000--liverpool-triumph-in-turkey/",
+      "https://www.uefa.com/uefachampionsleague/match/56379/",
+      "https://es.uefa.com/uefachampionsleague/news/0253-0d812400f58e-4b495e78d264-1000--remontadas-historicas/",
+      "https://www.premierleague.com/en/news/1212312",
+      "https://www.tottenhamhotspur.com/news/996953",
+      "https://www.uefa.com/uefaeuro/history/news/0253-0d7b2f5adb06-fa5820ecb86b-1000--coin-toss-takes-italy-to-euro-1968-final-after-ussr-stal/",
+      "https://www.uefa.com/uefaeuro/history/news/025a-0eb91faf9bf0-942d69c5a0a8-1000--euro-1992-all-you-need-to-know/",
+      "https://www.uefa.com/uefaeuro/history/news/0253-0d7b3013529f-3e15ce8dc46b-1000--trezeguet-s-golden-goal-sinks-italy-as-france-make-history-a/",
+      "https://www.uefa.com/uefaeuro/history/news/025e-0f9fdb15ba65-d27a2a1bb326-1000--classics-2016-final/",
+      "https://www.uefa.com/MultimediaFiles/Download/Inside/Competitions/MediaServices/68/63/53/686353_DOWNLOAD.pdf",
+      "https://www.uefa.com/uefaeuropaleague/news/0252-0cdbb2f0094e-7907943299e5-1000--rock-solid-dnipro-shock-napoli-to-make-final/",
+      "https://www.uefa.com/uefaeuropaleague/news/01d9-0e7233534cb2-ca7dcb346335-1000--jadson-the-difference-as-shakhtar-triumph/",
+      "https://www.uefa.com/uefachampionsleague/news/025a-0eaa42e02a8e-9949eef54c93-1000--shevchenko-bemoans-blue-ruin/",
+      "https://www.uefa.com/uefachampionsleague/news/01df-0e7364b03db2-67007c618fc3-1000--dynamo-face-tall-order-against-holders/",
+      "https://www.fifa.com/en/tournaments/mens/worldcup/articles/soviet-union-belgium-mexico-1986",
+      "https://www.uefa.com/uefachampionsleague/news/0208-0e9f5fd014ae-4b6daa79e5aa-1000--bayern-s-4-0-triumph-joins-elite-company/",
       "https://inside.fifa.com/tournaments/mens/worldcup/1970mexico/news/telstar-story-fifa-world-cup-ball-3073424",
       "https://www.fifa.com/en/tournaments/mens/worldcup/articles/johan-cruyff-turn-netherlands-1974",
       "https://www.fifa.com/en/tournaments/mens/worldcup/articles/portugal-korea-dpr-eusebio-england-1966",
       "https://figc.it/it/nazionali/palmares-storia/mondiali/1994/",
-      "https://www.uefa.com/european-qualifiers/news/019c-0e6adb9fe2b7-4e8b8d3e65b7-1000--1950-sting-in-the-tail-for-brazil/"
-    ]
-  },
-  {
-    "name": "Футбол · футбол проти інтуїції",
-    "topicFamily": "Футбол",
-    "topicId": "fb-data",
-    "blitz": true,
-    "qs": [
-      [
-        "Модель дала удару 0,30 xG. Яке тлумачення коректне?",
-        "Приблизно 30% подібних моментів стають голами"
-      ],
-      [
-        "Команда зробила десять ударів по 0,05 xG, суперник — один на 0,70 xG. У кого вища сумарна xG?",
-        "У суперника: 0,70 проти 0,50"
-      ],
-      [
-        "Два моменти по 0,40 xG, але матч закінчився 0:0. Який висновок коректний?",
-        "Такий результат можливий і не спростовує оцінку xG"
-      ],
-      [
-        "Визначимо PPDA як передачі суперника на одну нашу захисну дію в тій самій зоні. За рівних умов значення 7 проти 18 зазвичай вказує на…",
-        "Інтенсивніший пресинг у команди з PPDA 7"
-      ],
-      [
-        "У спрощеній моделі два незалежні моменти мають шанс гола по 30%. Яка ймовірність хоча б одного гола?",
-        "51%"
-      ]
-    ],
-    "distractors": {
-      "Модель дала удару 0,30 xG. Яке тлумачення коректне?": [
-        "Це 30% імовірності перемоги команди",
-        "Це 30% реалізації всіх ударів цього форварда",
-        "Воротар має 30% шансів урятувати"
-      ],
-      "Команда зробила десять ударів по 0,05 xG, суперник — один на 0,70 xG. У кого вища сумарна xG?": [
-        "У першої команди: вона била частіше",
-        "Порівну: кількість ударів неважлива",
-        "Неможливо порівняти без рахунку"
-      ],
-      "Два моменти по 0,40 xG, але матч закінчився 0:0. Який висновок коректний?": [
-        "Модель обов’язково помилилася щонайменше на 0,80",
-        "Команда мусить забити наступним ударом",
-        "Воротар гарантовано запобіг рівно 0,80 гола"
-      ],
-      "Визначимо PPDA як передачі суперника на одну нашу захисну дію в тій самій зоні. За рівних умов значення 7 проти 18 зазвичай вказує на…": [
-        "Інтенсивніший пресинг у команди з PPDA 18",
-        "Однакову інтенсивність пресингу",
-        "Обов’язково глибший блок у команди з PPDA 7"
-      ],
-      "У спрощеній моделі два незалежні моменти мають шанс гола по 30%. Яка ймовірність хоча б одного гола?": [
-        "60%",
-        "30%",
-        "49%"
-      ]
-    },
-    "sources": [
-      "https://theanalyst.com/articles/what-is-expected-goals-xg",
-      "https://www.fifatrainingcentre.com/en/game/game-analysis/landing-page-core-principles.php"
+      "https://www.uefa.com/european-qualifiers/news/019c-0e6adb9fe2b7-4e8b8d3e65b7-1000--1950-sting-in-the-tail-for-brazil/",
+      "https://www.fifa.com/en/tournaments/mens/worldcup/articles/tim-krul-interview-costa-rica-shootout",
+      "https://www.premierleague.com/en/match/360841/manchester-city-vs-queens-park-rangers/highlights",
+      "https://inside.fifa.com/en/tournaments/mens/worldcup/1998france/news/worldcupathome-titanic-thuram-sinks-croatia-3072150",
+      "https://inside.fifa.com/tournaments/womens/womensworldcup/usa1999/news/mo-3003-usa-v-chn-1999-wwc-3069388",
+      "https://inside.fifa.com/tournaments/womens/womensworldcup/france2019/news/classic-players--homare-sawa-2944420",
+      "https://www.uefa.com/uefaeuro/history/news/0253-0d8169e80114-dc6c2ff63958-1000--ten-great-euro-moments-trezeguet-s-golden-goal/"
     ]
   }
 ];
@@ -8539,7 +8244,7 @@ function showSetup() {
     b.onclick = () => chooseQuizCategories(pool); box.appendChild(b);
   };
   const filterRow=document.createElement('div');filterRow.className='topic-options';
-  [['Футбол','Футбольна вікторина'],['Фільми','Добірки кіно'],['Музика','Жанри музики'],['Серіали','Добірки серіалів']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.onclick=()=>openTopicPicker(GROUPS.find(g=>g.name===name),'quiz');filterRow.append(b);});
+  [['Футбол','Футбольна вікторина'],['Фільми','Добірки кіно'],['Музика','Жанри музики'],['Серіали','Добірки серіалів']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.onclick=()=>{if(name==='Футбол'){quizSelection={family:name,ids:[]};openQuiz();}else openTopicPicker(GROUPS.find(g=>g.name===name),'quiz');};filterRow.append(b);});
   if(quizSelection){const reset=document.createElement('button');reset.textContent='Скинути: '+quizSelection.family;reset.onclick=()=>{quizSelection=null;openQuiz();};filterRow.append(reset);}
   box.append(filterRow);
   opt(quizSelection?'Обрані добірки':'Стандартні', topicQuiz(quizSelection).length + " категорій: обери п’ять або випадковий набір", "std", true);
@@ -8960,8 +8665,10 @@ function renderAccountLinks(){
  for(const id of ['home-auth-actions','lib-auth-actions'])$(id).hidden=!!L.user;
  const label=L.user?(A.profile?.nickname?'Профіль · '+A.profile.nickname:'Мій профіль'):'Увійти або створити профіль';
  const button=$('profile-toggle');button.setAttribute('aria-label',label);button.setAttribute('title',label);button.classList.toggle('signed-in',!!L.user);
+ renderMatchmakingAuth();
 }
 function accountIdentityChanged(event,user){
+ syncMatchmakingIdentity(user);
  if(A.userId!==(user?.id||null)){A.userId=user?.id||null;A.profile=null;A.admin=false;A.loading=null;A.revision++;A.recovery=false;
   for(const id of ['profile-name','profile-email','profile-id','profile-nickname','profile-password','profile-password-repeat']){$(id).textContent='';$(id).value='';}
   $('profile-content').hidden=true;$('profile-guest').hidden=!!user;$('profile-admin').hidden=true;$('admin-quizzes').replaceChildren();
@@ -9086,15 +8793,15 @@ function quizSource(pool){
 }
 function chooseQuizCategories(pool){
  Q.open=null;$('qsetup').hidden=false;for(const id of ['board','qview','qend','qturn'])$(id).hidden=true;
- const source=quizSource(pool);quizCategoryChoice={pool,source,selected:[]};
+ const source=quizSource(pool),required=Math.min(5,source.length);quizCategoryChoice={pool,source,selected:[]};
  const box=$('qsetup');box.replaceChildren();
  const title=document.createElement('h2');title.className='title';title.textContent=pool==='library'?libraryQuizSource.title:'Обери категорії';
- const note=document.createElement('p');note.className='sub';note.textContent='Вибери свої п’ять категорій або довірся випадковому набору.';
+ const note=document.createElement('p');note.className='sub';note.textContent=required===5?'Вибери свої п’ять категорій або довірся випадковому набору.':'Грай з усіма категоріями цієї добірки. Питання обираються випадково.';
  const count=document.createElement('p');count.className='quiz-selection-count';count.id='quiz-choice-count';
  const grid=document.createElement('div');grid.className='quiz-category-grid';
  const manual=document.createElement('button');manual.className='wbtn';manual.textContent='Грати з обраними';
- const update=()=>{const selected=quizCategoryChoice.selected;count.textContent='Обрано '+selected.length+' із 5';manual.disabled=selected.length!==5;[...grid.children].forEach((b,i)=>{b.setAttribute('aria-pressed',String(selected.includes(i)));b.disabled=selected.length===5&&!selected.includes(i);});};
- source.forEach((cat,i)=>{const b=document.createElement('button');b.textContent=cat.name;b.onclick=()=>{const selected=quizCategoryChoice.selected;quizCategoryChoice.selected=selected.includes(i)?selected.filter(n=>n!==i):selected.length<5?[...selected,i]:selected;update();};grid.append(b);});
+ const update=()=>{const selected=quizCategoryChoice.selected;count.textContent='Обрано '+selected.length+' із '+required;manual.disabled=!required||selected.length!==required;[...grid.children].forEach((b,i)=>{b.setAttribute('aria-pressed',String(selected.includes(i)));b.disabled=selected.length===required&&!selected.includes(i);});};
+ source.forEach((cat,i)=>{const b=document.createElement('button');b.textContent=cat.name;b.onclick=()=>{const selected=quizCategoryChoice.selected;quizCategoryChoice.selected=selected.includes(i)?selected.filter(n=>n!==i):selected.length<required?[...selected,i]:selected;update();};grid.append(b);});
  const actions=document.createElement('div');actions.className='quiz-picker-actions';
  manual.onclick=()=>startQuiz(pool,quizCategoryChoice.selected.map(i=>source[i]));
  const random=document.createElement('button');random.className='wbtn alt';random.textContent=source.length>=5?'П’ять випадкових категорій':'Грати з усіма '+source.length+' категоріями';random.disabled=!source.length;random.onclick=()=>startQuiz(pool);
@@ -9299,7 +9006,7 @@ const LEGAL = {
 <p>Одиночні режими й локальна гра компанією працюють у браузері. Дуелі Блітзу передають на Netlify нік, гостьовий ключ, відповіді та готовність. Для акаунтів є вхід через Google або email і пароль із Supabase Auth. Сервіс обробляє ідентифікатор акаунта, email, дані входу та підтвердження пошти. Профіль гри містить нікнейм і дати створення та оновлення. Пароль не записується в локальні чернетки гри. Реклами й аналітичних трекерів у грі немає.</p>
 <h3>2. Які дані зберігаються на твоєму пристрої</h3>
 <p>Щоб Гра працювала й пам'ятала твій вибір, браузер зберігає невеликі дані в локальному сховищі (localStorage):</p>${KEYS_TABLE}
-<p>Рекорди одиночних режимів і налаштування залишаються на пристрої. Локальні питання не надсилаються в бібліотеку, доки ти сам не збережеш їх у свій акаунт. Для онлайн-дуелі сервер зберігає кімнату з ніками, питаннями, відповідями, балами й хешами гостьових ключів. Кімната діє 30 хвилин і видаляється під час щоденного прибирання; суперник бачить твій нік і бали, а після раунду — спільний результат.</p>
+<p>Рекорди одиночних режимів і налаштування залишаються на пристрої. Локальні питання не надсилаються в бібліотеку, доки ти сам не збережеш їх у свій акаунт. Для дуелі за кодом сервер зберігає кімнату з ніками, питаннями, відповідями, балами й хешами гостьових ключів. Автоматичний пошук передає сеанс Supabase для перевірки входу; у приватній черзі Netlify зберігаються ідентифікатор акаунта, нікнейм і час активності. Супернику ідентифікатор акаунта та сеанс не передаються. Запис очікування стає недійсним після 20 секунд без зв’язку, матч — не пізніше ніж за 30 хвилин; завершені записи черги стають недійсними за 5 хвилин і видаляються під час оновлення черги або щоденного прибирання. Кімната діє 30 хвилин і видаляється під час щоденного прибирання; суперник бачить твій нік і бали, а після раунду — спільний результат.</p>
 <h3>3. Імена гравців і власні питання</h3>
 <p>Імена учасників локальної вікторини залишаються у браузері. Коли автор зберігає вікторину в акаунт, її назва, опис, нік автора, категорії, питання та відповіді надсилаються в базу Supabase. Приватну вікторину бачить її автор; опубліковану — усі відвідувачі бібліотеки, включно з відповідями для ведучого. Зняти її з публікації чи видалити можна зі свого акаунта. Не публікуй чужих персональних даних без дозволу.</p>
 <p>Нікнейм змінюється у профілі та оновлює підпис під вікторинами. Email та дані приватного профілю не відкриваються іншим гравцям. Адміністратор гри може приховувати публічні вікторини; журнал модерації зберігає ID вікторини, ID адміністратора, дію та час. Ця роль не відкриває довільні приватні чернетки авторів.</p>
@@ -9531,7 +9238,6 @@ $("sbback").onclick = closeSidebar;
 document.addEventListener("click", e => { const b = e.target.closest("[data-legal]"); if (b) navigate(() => showLegal(b.dataset.legal)); });
 const TOPIC_MATCHERS={"potter":new RegExp("Гаррі Поттер|Філософський камінь|Таємна кімната|В’язень Азкабану|Келих вогню|Орден Фенікса|Напівкровний Принц|Смертельні реліквії",'i'),"starwars":new RegExp("Зоряні війни|Star Wars",'i'),"lotr":new RegExp("Володар перснів|Гобіт",'i'),"marvel":new RegExp("Месники|Залізна людина|Чорна пантера|Людина-павук|Доктор Стрендж|Вартові галактики",'i'),"rock":new RegExp("The Beatles|John Lennon|Queen|Pink Floyd|Led Zeppelin|AC/DC|Nirvana|Metallica|Guns N|Eagles|Fleetwood Mac|Леннон|Фредді|Мік Джаггер|Lordi|U2|Oasis|Radiohead|Coldplay|Linkin Park",'i'),"rap":new RegExp("Eminem|Tupac|2Pac|Kendrick|Drake|Kanye|Jay.Z|Snoop|50 Cent|Емінем|Тупак",'i'),"pop":new RegExp("Michael Jackson|Madonna|Taylor Swift|Adele|ABBA|BTS|Billie Eilish|Dua Lipa|Beyonc|Lady Gaga|Джексон|Мадонна|Селін Діон|Мадонн|Біллі Айліш|Елвіс",'i'),"breakingbad":new RegExp("Breaking Bad|Пуститися берега|Волтер Вайт|Джессі Пінкман",'i'),"got":new RegExp("Гра престолів|Старк|Ланністер|Таргарієн",'i'),"friends":new RegExp("Друзі|Чендлер|Моніка|Рейчел",'i'),"stranger":new RegExp("Дивні дива|Гокінс|Одинадцять",'i'),"saul":new RegExp("Краще подзвоніть Солу|Джиммі Макґілл",'i'),"office":new RegExp("Офіс|Двайт|Dunder Mifflin",'i'),"jazz":new RegExp("Miles Davis|Louis Armstrong|Луї Армстронг|Ella Fitzgerald|Дюк Еллінгтон|John Coltrane|Nina Simone",'i')};
 const TOPIC_OPTIONS={
- 'Футбол':[["fb-roles", "прочитай роль"], ["fb-moves", "тактична лабораторія"], ["fb-offside", "офсайд без міфів"], ["fb-referee", "ти — арбітр"], ["fb-finals", "герої другого плану"], ["fb-comebacks", "анатомія камбеку"], ["fb-euro", "Євро всупереч сценарію"], ["fb-ukraine", "український слід"], ["fb-worldcup", "ЧС: деталі, які пам’ятають"], ["fb-data", "футбол проти інтуїції"]],
  'Фільми':[['potter','Гаррі Поттер'],['starwars','Star Wars'],['marvel','Marvel'],['lotr','Володар кілець / Гобіт'],['nolan','Нолан'],['tarantino','Тарантіно'],['spielberg','Спілберґ']],
  'Музика':[['rock','Рок'],['rap','Реп / хіп-хоп'],['pop','Поп']],
  'Серіали':[['breakingbad','Breaking Bad'],['got','Гра престолів'],['friends','Друзі'],['stranger','Дивні дива'],['saul','Краще подзвоніть Солу'],['office','Офіс']]
@@ -12130,7 +11836,7 @@ function showBlitzCountdown(seconds){
  if(digit.textContent!==String(seconds)){digit.textContent=String(seconds);digit.setAttribute('aria-label','Початок через '+seconds);digit.classList.remove('countdown-pop');void digit.offsetWidth;digit.classList.add('countdown-pop');}
 }
 function stopBlitzClock(hide=true) { if(blitzTimer!==null) clearInterval(blitzTimer); blitzTimer=null;if(hide)showBlitzCountdown(0); }
-function cleanupBlitz() { closeBlitzOutcome(); stopBlitzClock(); if(blitzPoll!==null) clearTimeout(blitzPoll); blitzPoll=null; blitzEpoch++; }
+function cleanupBlitz() { cleanupMatchmaking();closeBlitzOutcome(); stopBlitzClock(); if(blitzPoll!==null) clearTimeout(blitzPoll); blitzPoll=null; blitzEpoch++; }
 function rememberDuel(value) { try { if(value) sessionStorage.setItem('ranking_duel',JSON.stringify(value)); else sessionStorage.removeItem('ranking_duel'); } catch(_){} }
 function savedDuel() { try { const d=JSON.parse(sessionStorage.getItem('ranking_duel')); return d&&/^[A-Z2-9]{6}$/.test(d.room)&&typeof d.token==='string'?d:null; } catch(_){return null;} }
 function showBlitzSetup() {
@@ -12138,6 +11844,7 @@ function showBlitzSetup() {
   $('btitle').textContent='Блітз'; $('bsetup').hidden=false; $('barena').hidden=true; $('berror').textContent='';
   renderBlitzTopics();$('bresume').hidden=!savedDuel();$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';
   for(const id of ['bcreate','bjoin','bresume']) $(id).disabled=false;
+  renderMatchmakingAuth();
 }
 function blitzValues(items,answer,year=false){
  const pool=[...new Set(items.map(i=>i[1]))].filter(v=>v!==answer);
@@ -12244,6 +11951,7 @@ function submitBlitz(index) {
 }
 function lockBlitzOptions() { [...$('boptions').children].forEach((button,i)=>{button.disabled=true;button.classList.toggle('chosen',i===B.selected);}); }
 async function duelRequest(action,payload={}) {
+  if(B?.automatic)return automaticRequest(action,{matchId:B.matchId,round:payload.round,index:payload.index},{accountId:B.accountId});
   if(typeof location==='undefined'||!/^https?:$/.test(location.protocol))throw Error('Онлайн-дуелі доступні у вебверсії гри на Netlify. У цьому HTML можна грати самому.');
   let response;const sent=performance.now();
   try {response=await fetch('/api/duel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,...payload}),cache:'no-store'});}catch(_){throw Error('Немає зв’язку. Перевір інтернет; дуель можна відновити.');}
@@ -12252,6 +11960,7 @@ async function duelRequest(action,payload={}) {
 }
 async function connectDuel(action) {
   if(B&&B.pending)return;
+  cleanupMatchmaking();
   const epoch=++blitzEpoch;B={phase:'setup',online:true,pending:true};
   $('berror').textContent='';for(const id of ['bcreate','bjoin','bresume'])$(id).disabled=true;
   try {
@@ -12267,12 +11976,12 @@ async function connectDuel(action) {
 }
 function scheduleDuelPoll() {
   if(blitzPoll!==null)clearTimeout(blitzPoll);
-  if(!B?.online||['cancelled'].includes(B.phase))return;
+  if(!B?.online||B.phase==='cancelled'||B.automatic&&B.phase==='end')return;
   const epoch=blitzEpoch;
   blitzPoll=setTimeout(async()=>{
     if(epoch!==blitzEpoch||!B?.online)return;
     try {const data=await duelRequest('state',{room:B.room,token:B.token});if(epoch!==blitzEpoch)return;renderDuel(data);$('berror').textContent='';}
-    catch(error){if(epoch===blitzEpoch){$('berror').textContent=error.message;if([401,404,410].includes(error.status)){B.phase='cancelled';closeBlitzOutcome();stopBlitzClock();$('bnext').hidden=true;$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);}}}
+    catch(error){if(epoch===blitzEpoch){$('berror').textContent=error.message;if([401,404,410].includes(error.status)){B.phase='cancelled';closeBlitzOutcome();stopBlitzClock();$('bround').hidden=true;$('bnext').hidden=true;$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent=B.automatic?'Знайти нового суперника':'Зіграти ще раз';rememberDuel(null);}}}
     if(epoch===blitzEpoch&&B?.online)scheduleDuelPoll();
   },['waiting','end'].includes(B?.phase)?1800:1000);
 }
@@ -12286,13 +11995,14 @@ async function duelAction(action,extra={}) {
 function renderDuel(data) {
   const previous=B.snapshot, changed=!previous||previous.round!==data.round||previous.phase!==data.phase||previous.match!==data.match;
   if(previous&&previous.match!==data.match)closeBlitzOutcome();
-  B.snapshot=data;B.phase=data.phase;$('btitle').textContent='Блітз · Дуель';$('broomcode').textContent='Кімната '+data.room;
+  B.snapshot=data;B.phase=data.phase;$('btitle').textContent=B.automatic?'Блітз · Онлайн':'Блітз · Дуель';$('broomcode').textContent='Кімната '+data.room;$('broom').hidden=!!B.automatic;
   renderBlitzPlayers(data.players);$('bnext').hidden=true;$('breplay').hidden=true;
   if(data.phase==='waiting'){
+    if(B.automatic){stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent='Суперника знайдено! Готуємо матч…';$('bnext').hidden=true;readyAutomaticMatch(data);return;}
     stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent=data.players.length<2?'Надішли другу запрошення. Очікуємо другого гравця.':data.ready?'Ти готовий. Чекаємо суперника.':'Обидва гравці мають підтвердити готовність.';
     $('bnext').hidden=data.players.length<2||data.ready;$('bnext').textContent='Готовий';return;
   }
-  if(data.phase==='cancelled'){closeBlitzOutcome();stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent='Суперник вийшов із дуелі.';$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);return;}
+  if(data.phase==='cancelled'){closeBlitzOutcome();stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent=data.message||'Суперник вийшов із дуелі.';$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent=B.automatic?'Знайти нового суперника':'Зіграти ще раз';rememberDuel(null);if(B.automatic)searchMemory(null);return;}
   if(changed&&data.question){B.selected=null;renderBlitzQuestion(data.question,data.round,data.total);}
   if(data.phase==='question'){
     // Anchor to server time; repeated snapshots cannot extend the same deadline.
@@ -12315,6 +12025,7 @@ function renderDuel(data) {
     $('breplay').hidden=false;$('bhome').hidden=false;$('breplay').textContent=data.rematch?'Очікуємо реваншу…':'Реванш';$('breplay').disabled=!!data.rematch;
     $('boutcome-replay').textContent=data.rematch?'Очікуємо суперника…':'Реванш';$('boutcome-replay').disabled=!!data.rematch;
     if(changed)showBlitzOutcome(data.players);
+    if(B.automatic){searchMemory(null);$('breplay').disabled=false;$('breplay').textContent='Знайти нового суперника';$('boutcome-replay').disabled=false;$('boutcome-replay').textContent='Знайти нового суперника';}
   }else {$('bstatus').textContent=data.ready?'Ти готовий до наступного раунду. Чекаємо суперника.':'Результати раунду';$('bnext').hidden=data.ready;$('bnext').textContent='Готовий далі';}
 }
 function blitzOutcome(players) {
@@ -12327,18 +12038,18 @@ function showBlitzOutcome(players){
   const result=blitzOutcome(players);if(!result)return;
   const copy={win:['Перемога!','Чудова гра. Ця дуель за тобою.','★'],draw:['Нічия!','Рівні бали. Час для реваншу?','='],loss:['Цього разу поразка','Наступна дуель — новий шанс.','↗']}[result.kind];
   $('boutcome').dataset.result=result.kind;
-  $('boutcome-title').textContent=copy[0];$('boutcome-note').textContent=copy[1];$('boutcome-icon').textContent=copy[2];
+  $('boutcome-title').textContent=copy[0];$('boutcome-note').textContent=B?.automatic&&result.kind==='draw'?'Рівні бали. Спробуємо ще один матч?':copy[1];$('boutcome-icon').textContent=copy[2];
   $('boutcome-score').textContent=result.you+' : '+result.other;
   if(!$('boutcome').open)$('boutcome').showModal();
 }
 $('boutcome-close').onclick=closeBlitzOutcome;
-$('boutcome-replay').onclick=()=>duelAction('rematch');
+$('boutcome-replay').onclick=replayBlitz;
 $('boutcome-home').onclick=()=>navigate(showHome);
 $('boutcome').addEventListener('click',event=>{if(event.target===$('boutcome')){const r=$('boutcome').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeBlitzOutcome();}});
 $('boutcome').addEventListener('close',()=>{if(B?.phase==='end')$('breplay').focus();});
 function renderBlitzTopics(){
  const box=$('blitz-topic-buttons');box.replaceChildren();
- [['','Усі теми'],['Футбол','Футбол'],['Фільми','Фільми'],['Музика','Музика'],['Серіали','Серіали'],['Аніме','Аніме']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.setAttribute('aria-pressed',name?blitzSelection?.family===name:!blitzSelection);b.onclick=()=>{if(!name){blitzSelection=null;renderBlitzTopics();}else if(name==='Аніме'){blitzSelection={family:name,ids:[]};renderBlitzTopics();}else openTopicPicker(GROUPS.find(g=>g.name===name),'blitz');};box.append(b);});
+ [['','Усі теми'],['Футбол','Футбол'],['Фільми','Фільми'],['Музика','Музика'],['Серіали','Серіали'],['Аніме','Аніме']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.setAttribute('aria-pressed',name?blitzSelection?.family===name:!blitzSelection);b.onclick=()=>{if(!name){blitzSelection=null;renderBlitzTopics();}else if(['Аніме','Футбол'].includes(name)){blitzSelection={family:name,ids:[]};renderBlitzTopics();}else openTopicPicker(GROUPS.find(g=>g.name===name),'blitz');};box.append(b);});
  const more=document.createElement('button');more.textContent='Усі категорії';more.onclick=()=>showMenu('blitz');box.append(more);
  $('blitz-topic-label').textContent=blitzSelection?blitzSelection.family+(blitzSelection.ids.length?' · '+blitzSelection.ids.map(id=>TOPIC_OPTIONS[blitzSelection.family]?.find(x=>x[0]===id)?.[1]||id).join(' + '):' · усе разом'):'Питання з усіх тем. У дуелі добірку обирає автор кімнати.';
 }
@@ -12346,9 +12057,81 @@ $('bsolo').onclick=startSoloBlitz;
 $('bcreate').onclick=()=>connectDuel('create');$('bjoin').onclick=()=>connectDuel('join');$('bresume').onclick=()=>connectDuel('resume');
 $('bnext').onclick=()=>B?.online?duelAction('ready',{round:B.snapshot.round}):nextSoloBlitz();
 $('bhome').onclick=()=>navigate(showHome);
-$('breplay').onclick=()=>B?.online&&B.phase==='end'?duelAction('rematch'):showBlitzSetup();
+$('breplay').onclick=replayBlitz;
 $('bcopy').onclick=async()=>{const link=new URL(location.href);link.search='';link.hash='';link.searchParams.set('duel',B.room);try{await navigator.clipboard.writeText(link.href);toast('Запрошення скопійовано');}catch(_){$('berror').textContent='Код для друга: '+B.room;}};
 $('mode-blitz').onclick=showBlitzSetup;
+
+// One public queue. Membership and game actions are authenticated on Netlify.
+const MM={phase:'idle',epoch:0,poll:null,clock:null,abort:null,ticket:null,accountId:null,started:0,authError:false};
+function searchMemory(value){try{if(value)sessionStorage.setItem('ranking_matchmaking',JSON.stringify(value));else sessionStorage.removeItem('ranking_matchmaking');}catch(_){} }
+function savedSearch(){try{const value=JSON.parse(sessionStorage.getItem('ranking_matchmaking')||'null');return value?.accountId===L.user?.id&&typeof value.ticket==='string'?value:null;}catch(_){return null;} }
+function renderMatchmakingAuth(){
+ const searching=MM.phase==='searching',starting=MM.phase==='starting';
+ $('bfind').hidden=searching;$('bfind').disabled=starting;$('bfind').textContent=starting?'Підключаємо…':!L.user||MM.authError?'Увійти для пошуку':'Знайти суперника';
+ $('bsearch-panel').hidden=!(searching||starting);
+ for(const id of ['bsolo','bcreate','bjoin','bresume'])$(id).disabled=searching||starting;
+}
+async function automaticRequest(action,payload={},options={}){
+ if(typeof location==='undefined'||!/^https?:$/.test(new URL(location.href).protocol))throw Error('Онлайн-пошук доступний на сайті гри.');
+ const client=await bootLibrary(),{data,error}=await client.auth.getSession();
+ if(error||!data.session?.access_token||options.accountId&&data.session.user.id!==options.accountId){const failure=Error('Для пошуку й матчу увійди у свій акаунт.');failure.status=401;throw failure;}
+ const sent=performance.now();let response;
+ try{response=await fetch('/api/matchmaking',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+data.session.access_token},body:JSON.stringify({action,...payload}),cache:'no-store',signal:options.signal||AbortSignal.timeout(12000)});}catch(error){if(error.name==='AbortError')throw error;throw Error('Немає зв’язку. Перевір інтернет.');}
+ let result;try{result=await response.json();}catch(_){throw Error('Пошук зараз недоступний. Спробуй трохи пізніше.');}
+ if(!response.ok){const failure=Error(result.error||'Не вдалося виконати дію.');failure.status=response.status;throw failure;}
+ result.latency=Math.max(0,performance.now()-sent-(Number(result.processingMs)||0))/2;return result;
+}
+function cleanupMatchmaking(cancel=true){
+ const previous={ticket:MM.ticket,accountId:MM.accountId,active:['starting','searching'].includes(MM.phase)};
+ MM.epoch++;if(MM.poll!==null)clearTimeout(MM.poll);if(MM.clock!==null)clearInterval(MM.clock);MM.poll=null;MM.clock=null;MM.abort?.abort();MM.abort=null;MM.phase='idle';MM.ticket=null;MM.accountId=null;
+ if(previous.active){searchMemory(null);if(cancel&&previous.ticket&&previous.accountId)automaticRequest('cancel',{ticket:previous.ticket},{accountId:previous.accountId}).catch(()=>{});}
+ renderMatchmakingAuth();
+}
+function cancelAutomaticSearch(){cleanupMatchmaking();$('berror').textContent='Пошук скасовано.';}
+function renderSearchTime(){
+ const elapsed=Math.max(0,Math.floor((performance.now()-MM.started)/1000));$('bsearch-time').textContent=Math.floor(elapsed/60)+':'+String(elapsed%60).padStart(2,'0');
+ const message=elapsed>=60?'Поки немає суперника. Пошук триває…':'Шукаємо суперника…';if($('bsearch-status').textContent!==message)$('bsearch-status').textContent=message;
+}
+function adoptAutomaticMatch(data){
+ MM.phase='idle';cleanupMatchmaking(false);cleanupBlitz();
+ B={online:true,automatic:true,accountId:L.user.id,matchId:data.matchId,phase:data.phase,room:data.room,selected:null,pending:false};
+ searchMemory({ticket:crypto.randomUUID(),accountId:B.accountId,matchId:B.matchId});
+ $('bsetup').hidden=true;$('barena').hidden=false;$('broom').hidden=true;$('berror').textContent='';renderDuel(data);scheduleDuelPoll();
+}
+async function pollAutomaticSearch(epoch,action='poll'){
+ if(epoch!==MM.epoch)return;
+ try{const result=await automaticRequest(action,{ticket:MM.ticket},{accountId:MM.accountId,signal:MM.abort.signal});if(epoch!==MM.epoch)return;
+  if(result.status==='matched'){adoptAutomaticMatch(result);return;}
+  if(result.status==='idle'){cleanupMatchmaking(false);searchMemory(null);$('berror').textContent='Пошук завершено. Можна почати знову.';return;}
+  if(result.ticket)MM.ticket=result.ticket;searchMemory({ticket:MM.ticket,accountId:MM.accountId});MM.phase='searching';
+  if(Number.isFinite(result.joinedAt)&&Number.isFinite(result.serverNow))MM.started=performance.now()-Math.max(0,result.serverNow-result.joinedAt);
+  if(MM.clock===null)MM.clock=setInterval(renderSearchTime,1000);renderSearchTime();renderMatchmakingAuth();$('berror').textContent='';
+ }catch(error){if(epoch!==MM.epoch)return;if(error.name==='AbortError')return;$('berror').textContent=error.message;
+  if([400,401,403,404,410].includes(error.status)){MM.authError=error.status===401;cleanupMatchmaking();return;}
+ }
+ if(epoch===MM.epoch&&['starting','searching'].includes(MM.phase))MM.poll=setTimeout(()=>pollAutomaticSearch(epoch),1500);
+}
+async function startAutomaticSearch(){
+ if(['starting','searching'].includes(MM.phase))return;
+ if(!L.user||MM.authError){showAuth('login');return;}
+ cleanupBlitz();B={phase:'setup',online:false};const saved=savedSearch();MM.ticket=saved?.ticket||crypto.randomUUID();MM.accountId=L.user.id;MM.started=performance.now();MM.phase='starting';MM.abort=new AbortController();$('berror').textContent='';renderMatchmakingAuth();
+ const epoch=++MM.epoch;searchMemory({ticket:MM.ticket,accountId:MM.accountId});await pollAutomaticSearch(epoch,'search');
+}
+function readyAutomaticMatch(data){
+ if(!B?.automatic||data.ready||B.pending||B.autoReadyScheduled)return;B.autoReadyScheduled=true;const epoch=blitzEpoch;
+ setTimeout(()=>{if(epoch!==blitzEpoch||!B?.automatic)return;B.autoReadyScheduled=false;duelAction('ready',{round:data.round});},0);
+}
+function replayBlitz(){
+ if(B?.automatic){showBlitzSetup();startAutomaticSearch();}
+ else if(B?.online&&B.phase==='end')duelAction('rematch');else showBlitzSetup();
+}
+function syncMatchmakingIdentity(user){
+ MM.authError=false;
+ if(MM.accountId&&MM.accountId!==user?.id){cleanupMatchmaking(false);searchMemory(null);}
+ if(B?.automatic&&B.accountId!==user?.id){cleanupBlitz();searchMemory(null);if(!$('blitz').hidden)showBlitzSetup();}
+ renderMatchmakingAuth();
+}
+$('bfind').onclick=startAutomaticSearch;$('bsearch-cancel').onclick=cancelAutomaticSearch;
 
 showHome();
 initLibrary();

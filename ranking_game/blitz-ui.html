@@ -2,10 +2,14 @@
   <div id="bcountdown" class="bcountdown" hidden><span class="bcountdown-label">Починаємо</span><strong id="bcountdown-digit" role="timer"></strong></div>
   <h2 class="title" id="btitle">Блітз</h2>
   <div id="bsetup">
-    <p class="sub">15 питань · 10 секунд на кожне · 4 варіанти відповіді.<br>Грай сам або виклич друга на дуель.</p>
+    <p class="sub">15 питань · 10 секунд на кожне · 4 варіанти відповіді.</p>
+    <div class="bmatch-card"><h3>Знайти суперника</h3><p class="sub">Автоматичний матч із гравцем онлайн. Питання з усіх тем, нікнейм із твого профілю.</p><button id="bfind" class="wbtn">Увійти для пошуку</button>
+      <div id="bsearch-panel" hidden><p id="bsearch-status" role="status" aria-live="polite">Шукаємо суперника…</p><strong id="bsearch-time" role="timer">0:00</strong><button id="bsearch-cancel" class="wbtn alt" type="button">Скасувати пошук</button></div>
+    </div>
+    <div class="bdivider">Обери тему для соло або кімнати</div>
     <div class="topic-options" id="blitz-topic-buttons"></div><p id="blitz-topic-label" class="sub"></p>
     <button class="wbtn" id="bsolo">Грати самому</button>
-    <div class="bdivider">Дуель онлайн</div>
+    <div class="bdivider">Дуель онлайн (Без авторизації)</div>
     <label for="bname">Твій нік</label>
     <input class="fld" id="bname" maxlength="24" autocomplete="nickname" placeholder="Гравець">
     <button class="wbtn" id="bcreate">Створити дуель</button>

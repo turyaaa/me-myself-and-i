@@ -46,6 +46,7 @@ function blitzPlan(cats,previous=[]){
 export function makePlan(bank,previous=[]){return blitzPlan(bank,previous).map(q=>({...q,id:crypto.randomUUID()}));}
 function selectBank(bank,selection){
  if(selection===null||selection===undefined)return bank;
+ if(selection?.family==='Футбол'&&Array.isArray(selection.ids)&&selection.ids.every(id=>id==='football'||/^fb-/.test(id)))selection={family:'Футбол',ids:[]};
  const allowed={};for(const c of bank){if(!c.topicFamily)continue;allowed[c.topicFamily]=allowed[c.topicFamily]||[];for(const i of c.items)for(const id of i[2]||[])if(id&&!allowed[c.topicFamily].includes(id))allowed[c.topicFamily].push(id);}
  if(!selection||typeof selection!=='object'||!Object.hasOwn(allowed,selection.family)||!Array.isArray(selection.ids)||selection.ids.length>allowed[selection.family].length||selection.ids.some(id=>!allowed[selection.family].includes(id)))throw new DuelError('Некоректна добірка.');
  return bank.filter(c=>c.topicFamily===selection.family&&(selection.family!=='Футбол'||c.kind==='trivia')).map(c=>({...c,items:c.items.filter(i=>!selection.ids.length||selection.ids.some(id=>i[2]?.includes(id)))}));
@@ -102,7 +103,7 @@ function actionOnRoom(room,who,input,now,bank){
   }
   throw new DuelError('Невідома дія.');
 }
-export async function processDuel(input,store,bank,clock=Date.now){
+export async function processDuel(input,store,bank,clock=Date.now,accountId=null){
   if(!input||typeof input!=='object'||Array.isArray(input))throw new DuelError('Некоректний запит.');
   if(input.action==='create'){
     const name=nameOf(input.name),secret=token(),id=crypto.randomUUID(),secretHash=await hash(secret);
@@ -117,12 +118,14 @@ export async function processDuel(input,store,bank,clock=Date.now){
     }
     throw new DuelError('Спробуй створити кімнату ще раз.',503);
   }
-  if(typeof input.room!=='string'||! /^[A-Z2-9]{6}$/.test(input.room))throw new DuelError('Код кімнати має містити 6 символів.');
+  const automatic=typeof input.room==='string'&&/^M[a-f0-9]{32}$/.test(input.room);
+  if(typeof input.room!=='string'||(!automatic&&! /^[A-Z2-9]{6}$/.test(input.room)))throw new DuelError('Код кімнати має містити 6 символів.');
   const joining=input.action==='join';
+  if(automatic&&(!accountId||joining))throw new DuelError('Для цього матчу потрібен вхід у свій акаунт.',401);
   const joinPlayer=joining?{id:crypto.randomUUID(),name:nameOf(input.name),score:0,secretHash:null}:null;
   const secret=joining?token():input.token;
-  if(typeof secret!=='string'||! /^[a-f0-9]{48}$/.test(secret))throw new DuelError('Немає доступу до цієї дуелі.',401);
-  const secretHash=await hash(secret);if(joining)joinPlayer.secretHash=secretHash;
+  if(!automatic&&(typeof secret!=='string'||! /^[a-f0-9]{48}$/.test(secret)))throw new DuelError('Немає доступу до цієї дуелі.',401);
+  const secretHash=automatic?null:await hash(secret);if(joining)joinPlayer.secretHash=secretHash;
   // Retry the entire transition against the latest room, never blindly overwrite.
   for(let attempt=0;attempt<10;attempt++){
     const entry=await store.getWithMetadata('room/'+input.room,{type:'json',consistency:'strong'});
@@ -134,7 +137,7 @@ export async function processDuel(input,store,bank,clock=Date.now){
       if(room.phase!=='waiting'||room.players.length>=2)throw new DuelError('Кімната вже зайнята або гра почалася.',409);
       room.players.push(joinPlayer);who=joinPlayer;changed=true;
     }else{
-      who=room.players.find(p=>p.secretHash===secretHash);
+      who=automatic?room.players.find(p=>p.accountId===accountId):room.players.find(p=>p.secretHash===secretHash);
       if(!who)throw new DuelError('Немає доступу до цієї дуелі.',401);
       changed=actionOnRoom(room,who,input,now,bank);
     }
@@ -144,4 +147,16 @@ export async function processDuel(input,store,bank,clock=Date.now){
     if(result.modified){if(!result.etag)throw new DuelError('Сховище тимчасово недоступне.',503);return {...projectRoom(room,who,clock()),...(joining?{token:secret}:{})};}
   }
   throw new DuelError('Кімната оновлюється. Повтори дію.',409);
+}
+
+// Deterministic storage key + conditional creation: simultaneous pollers cannot
+// create separate games. Account identity is supplied only by the auth adapter.
+export async function provisionMatchedDuel(match,store,bank,clock=Date.now){
+ const code='M'+match.id.replaceAll('-',''),now=clock();
+ const existing=await store.getWithMetadata('room/'+code,{type:'json',consistency:'strong'});if(existing?.data)return code;
+ const room={code,automatic:true,created:now,expires:match.expires,phase:'waiting',round:0,deadline:null,players:match.users.map(p=>({id:crypto.randomUUID(),accountId:p.id,name:p.name,score:0})),ready:[],answers:[],selection:null,plan:makePlan(bank)};
+ if(room.plan.length!==COUNT)throw new DuelError('Недостатньо питань для матчу.',503);
+ const result=await store.setJSON('room/'+code,room,{onlyIfNew:true});
+ if(result.modified&&!result.etag)throw new DuelError('Сховище тимчасово недоступне.',503);
+ return code;
 }

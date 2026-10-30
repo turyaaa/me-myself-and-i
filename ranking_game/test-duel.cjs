@@ -73,8 +73,8 @@ async function run(){
  const story=await call({action:'create',name:'BB',selection:{family:'Серіали',ids:['breakingbad']}});assert.equal(story.total,15);assert(records.get('room/'+story.room).data.plan.every(q=>q.category.includes('Breaking Bad')));
  const allSeries=await call({action:'create',name:'All series',selection:{family:'Серіали',ids:['breakingbad','got','friends','stranger','saul','office']}});assert.equal(allSeries.total,15);
  const geo=await call({action:'create',name:'Geo',selection:{family:'Географія',ids:[]}});assert.equal(geo.total,15);
- const football=await call({action:'create',name:'Football',selection:{family:'Футбол',ids:['fb-offside','fb-referee','fb-data']}});assert.equal(football.total,15);assert(records.get('room/'+football.room).data.plan.every(q=>q.category.startsWith('Футбол · ')));
- const allFootball=await call({action:'create',name:'Football all',selection:{family:'Футбол',ids:[]}});assert.equal(allFootball.total,15);assert(records.get('room/'+allFootball.room).data.plan.every(q=>q.category.startsWith('Футбол · ')));
+ const football=await call({action:'create',name:'Football',selection:{family:'Футбол',ids:['fb-offside','fb-referee','fb-data']}});assert.equal(football.total,15);assert(records.get('room/'+football.room).data.plan.every(q=>q.category==='Футбол'));
+ const allFootball=await call({action:'create',name:'Football all',selection:{family:'Футбол',ids:[]}});assert.equal(allFootball.total,15);assert(records.get('room/'+allFootball.room).data.plan.every(q=>q.category==='Футбол'));
  for(const record of records.values())for(const question of record.data.plan||[]){
   const c=bank.find(c=>c.title===question.category),item=c?.items.find(i=>i[0]===question.prompt);
   if(c?.kind==='trivia')assert.deepEqual([...question.options].sort(),[item[1],...item[3]].sort());
