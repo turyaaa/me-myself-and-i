@@ -1,0 +1,18 @@
+{
+  "repeatableMigration": true,
+  "existingUsersBackfilled": true,
+  "newUserProfile": true,
+  "metadataCannotGrantAdmin": true,
+  "adminGrantTargetsOwner": true,
+  "selfPromotionBlocked": true,
+  "profilePrivate": true,
+  "foreignProfileEditBlocked": true,
+  "nicknameValidation": true,
+  "authorNicknameSynced": true,
+  "publicationAuthorCannotBeSpoofed": true,
+  "adminModeration": true,
+  "adminCannotReadUnrelatedDrafts": true,
+  "ownerCannotBypassModeration": true,
+  "restoreDoesNotAutoPublish": true,
+  "auditTrail": true
+}

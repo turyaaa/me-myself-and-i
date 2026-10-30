@@ -5,9 +5,10 @@ const get=id=>{if(!nodes.has(id))nodes.set(id,element());return nodes.get(id)},s
 const a='00000000-0000-4000-8000-000000000001',b='00000000-0000-4000-8000-000000000002';
 const categories=Array.from({length:5},(_,i)=>({name:'Категорія '+i,qs:Array.from({length:5},(_,j)=>['Q'+j,'A'+j])}));
 let session={user:{id:a}},authListener,clientOptions,oauthOptions,stale=false,version=0,reads=[];
+const profiles=[a,b].map(id=>({id,nickname:'Гравець '+id.slice(-1),created_at:'2026-10-30T00:00:00Z',updated_at:'p0'}));let signupOptions,recoveryOptions,passwordChanged,admin=false;
 const rows=[{id:'11111111-1111-4111-8111-111111111111',owner_id:b,title:'<img src=x onerror=alert(1)>',description:'Текст від автора',author_name:'Інший автор',categories,status:'published',category_count:5,created_at:'2026-10-30T00:00:00Z',updated_at:'2026-10-30T00:00:00Z'}];
 class Query{
- constructor(){this.filters=[];this.op='read';}
+ constructor(table){this.table=table;this.filters=[];this.op='read';}
  select(columns){this.columns=columns;if(this.op==='read')reads.push(columns);return this;}
  eq(k,v){this.filters.push([k,v]);return this;}
  order(){return this;}ilike(){return this;}
@@ -16,14 +17,14 @@ class Query{
  delete(){this.op='delete';return this;}
  async range(lo,hi){let data=rows.filter(r=>this.filters.every(([k,v])=>r[k]===v));return {data:structuredClone(data.slice(lo,hi+1)),count:data.length,error:null};}
  async maybeSingle(){
-  let row=rows.find(r=>this.filters.every(([k,v])=>r[k]===v));
+  const source=this.table==='profiles'?profiles:rows;let row=source.find(r=>this.filters.every(([k,v])=>r[k]===v));
   if(this.op==='insert'){row={...structuredClone(this.data),id:'22222222-2222-4222-8222-222222222222',category_count:this.data.categories.length,created_at:'2026-10-30T00:00:00Z',updated_at:'v'+(++version)};rows.push(row);}
   if(this.op==='update'){if(stale)return {data:null,error:null};if(row)Object.assign(row,structuredClone(this.data),{updated_at:'v'+(++version)});}
   if(this.op==='delete'&&row)rows.splice(rows.indexOf(row),1);
   return {data:row?structuredClone(row):null,error:null};
  }
 }
-const client={from:()=>new Query(),auth:{getSession:async()=>({data:{session},error:null}),getUser:async()=>({data:{user:session?.user},error:null}),onAuthStateChange:fn=>{authListener=fn},signInWithOAuth:async options=>{oauthOptions=options;return {error:null}},signOut:async()=>{session=null;authListener('SIGNED_OUT',null);return {error:null}}}};
+const client={from:table=>new Query(table),rpc:async name=>({data:name==='is_game_admin'?admin:[],error:null}),auth:{getSession:async()=>({data:{session},error:null}),getUser:async()=>({data:{user:session?.user},error:null}),onAuthStateChange:fn=>{authListener=fn},signInWithOAuth:async options=>{oauthOptions=options;return {error:null}},signUp:async options=>{signupOptions=options;return {data:{session:null},error:null}},signInWithPassword:async()=>{session={user:{id:a,email:'player@example.com'}};authListener('SIGNED_IN',session);return {data:session,error:null}},resetPasswordForEmail:async(email,options)=>{recoveryOptions={email,options};return {error:null}},updateUser:async options=>{passwordChanged=options.password;return {data:{user:session.user},error:null}},signOut:async()=>{session=null;authListener('SIGNED_OUT',null);return {error:null}}}};
 const ctx=vm.createContext({console,Math,Date,Number,JSON,Error,Set,Map,Array,Object,String,parseFloat,isFinite,Intl,URL,structuredClone,AbortSignal,
  localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,String(v))},
  document:{getElementById:get,documentElement:{dataset:{}},body:element(),createElement:element,addEventListener(){},querySelectorAll:()=>[]},
@@ -41,6 +42,14 @@ async function run(){
  session={user:{id:b}};authListener('SIGNED_IN',session);assert.equal(get('lib-compose').hidden,true);assert.equal(get('lib-detail').children.length,0);assert.equal(vm.runInContext('L.draft',ctx),null);
  vm.runInContext('composeLibraryQuiz(ownRow)',ctx);await vm.runInContext('saveLibraryQuiz(true)',ctx);assert(get('lib-status').textContent.includes('іншому акаунту'));assert.equal(rows.length,2);
  await get('lib-signout').onclick();assert.equal(vm.runInContext('L.user',ctx),null);assert.equal(get('lib-signout').hidden,true);
- const result={pkce:true,googleRedirect:true,publicBrowse:true,untrustedTitlesAsText:true,publishOwnerAttached:true,staleEditPreservesDraft:true,accountSwitchClearsPrivateUI:true,foreignDraftSaveBlocked:true,signOut:true};fs.writeFileSync(path.join(__dirname,'library-client-test-results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+ vm.runInContext("showAuth('register')",ctx);assert.equal(get('auth-switch').textContent,'Already have an account?');get('auth-email').value='player@example.com';get('auth-nickname').value='Новий нік';get('auth-password').value='Test-password-123';get('auth-repeat').value='different';await get('auth-form').onsubmit({preventDefault(){}});assert(get('auth-message').textContent.includes('не збігаються'));assert.equal(signupOptions,undefined);
+ get('auth-repeat').value='Test-password-123';await get('auth-form').onsubmit({preventDefault(){}});assert.equal(signupOptions.options.data.nickname,'Новий нік');assert.equal(signupOptions.options.emailRedirectTo,'https://therankinggame.netlify.app/');assert(get('auth-message').textContent.includes('Перевір пошту'));assert.equal(get('auth-password').value,'');
+ vm.runInContext("showAuth('login')",ctx);get('auth-password').value='Test-password-123';await get('auth-form').onsubmit({preventDefault(){}});assert.equal(get('profile').hidden,false);assert.equal(get('profile-content').hidden,false);
+ get('profile-nickname').value='Мій новий нік';await get('profile-form').onsubmit({preventDefault(){}});assert.equal(profiles[0].nickname,'Мій новий нік');assert(get('home-profile').textContent.includes('Мій новий нік'));
+ vm.runInContext("showAuth('forgot')",ctx);await get('auth-form').onsubmit({preventDefault(){}});assert.equal(recoveryOptions.email,'player@example.com');assert.equal(recoveryOptions.options.redirectTo,'https://therankinggame.netlify.app/');
+ authListener('PASSWORD_RECOVERY',session);await vm.runInContext('showProfile()',ctx);assert.equal(get('profile-password-form').hidden,false);get('profile-password').value='New-test-password-123';get('profile-password-repeat').value='New-test-password-123';await get('profile-password-form').onsubmit({preventDefault(){}});assert.equal(passwordChanged,'New-test-password-123');assert.equal(get('profile-password').value,'');
+ admin=true;await vm.runInContext('loadAccountProfile(true);',ctx);await vm.runInContext('showProfile()',ctx);assert.equal(get('profile-role').textContent,'Адміністратор');assert.equal(get('profile-admin').hidden,false);
+ assert(!JSON.stringify([...storage]).includes('Test-password-123'));assert(!JSON.stringify([...storage]).includes('New-test-password-123'));
+ const result={pkce:true,googleRedirect:true,publicBrowse:true,untrustedTitlesAsText:true,publishOwnerAttached:true,staleEditPreservesDraft:true,accountSwitchClearsPrivateUI:true,foreignDraftSaveBlocked:true,signOut:true,registerAndLoginScreens:true,signupNicknameAndConfirmation:true,passwordMismatchBlocked:true,emailSignIn:true,nicknameSave:true,recoveryFlow:true,passwordsNotPersisted:true,adminProfileBadgeFromServer:true};fs.writeFileSync(path.join(__dirname,'library-client-test-results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
 }
 run().catch(error=>{console.error(error);process.exitCode=1;});

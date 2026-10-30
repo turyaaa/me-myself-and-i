@@ -1,0 +1,33 @@
+import {PGlite} from '@electric-sql/pglite';import {readFile,writeFile} from 'node:fs/promises';import assert from 'node:assert/strict';
+const db=new PGlite();
+try{
+ await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,email text,raw_user_meta_data jsonb default '{}');create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema public,auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;`);
+ await db.exec(await readFile(new URL('./supabase-library.sql',import.meta.url),'utf8'));
+ const owner='2dca481e-df1d-45e5-b4a6-88c3c1f0c7e1',a='00000000-0000-4000-8000-000000000001',b='00000000-0000-4000-8000-000000000002',c='00000000-0000-4000-8000-000000000003';
+ await db.query('insert into auth.users(id) values($1),($2),($3)',[owner,a,b]);
+ const migration=await readFile(new URL('./supabase-accounts.sql',import.meta.url),'utf8');await db.exec(migration);await db.exec(migration);
+ const grant=await readFile(new URL('./grant-owner-admin.sql',import.meta.url),'utf8');await db.exec(grant);await db.exec(grant);
+ await db.query('insert into auth.users(id,raw_user_meta_data) values($1,$2::jsonb)',[c,JSON.stringify({nickname:'Новий гравець',role:'admin',is_admin:true})]);
+ const role=async(name,id='')=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id]);await db.exec('set role '+name);};
+ await role('anon');await assert.rejects(()=>db.query('select * from public.profiles'));await assert.rejects(()=>db.query('select public.is_game_admin()'));
+ await role('authenticated',c);assert.equal((await db.query('select nickname from public.profiles')).rows[0].nickname,'Новий гравець');assert.equal((await db.query('select public.is_game_admin() as admin')).rows[0].admin,false);
+ await assert.rejects(()=>db.query('insert into public.app_admins(user_id) values($1)',[c]));await assert.rejects(()=>db.query('delete from public.app_admins'));
+ assert.equal((await db.query('select * from public.profiles where id=$1',[a])).rows.length,0);
+ assert.equal((await db.query("update public.profiles set nickname='Hacked' where id=$1 returning *",[a])).rows.length,0);
+ await role('authenticated',a);await db.query("update public.profiles set nickname='  Мій нік  ' where id=$1",[a]);assert.equal((await db.query('select nickname from public.profiles')).rows[0].nickname,'Мій нік');
+ await assert.rejects(()=>db.query("update public.profiles set nickname='' where id=$1",[a]));await assert.rejects(()=>db.query('update public.profiles set id=$1 where id=$2',[b,a]));await assert.rejects(()=>db.query('update public.profiles set created_at=now() where id=$1',[a]));
+ const cats=Array.from({length:5},(_,i)=>({name:'Тема '+i,qs:Array.from({length:5},(_,j)=>['Q'+j,'A'+j])}));
+ const quiz=(await db.query("insert into public.quizzes(owner_id,title,author_name,categories,status) values($1,'Гра','Фальшивий автор',$2::jsonb,'published') returning *",[a,JSON.stringify(cats)])).rows[0];assert.equal(quiz.author_name,'Мій нік');
+ await db.query("update public.profiles set nickname='Новий нік' where id=$1",[a]);assert.equal((await db.query('select author_name from public.quizzes where id=$1',[quiz.id])).rows[0].author_name,'Новий нік');
+ await assert.rejects(()=>db.query('select public.moderate_game_quiz($1,true)',[quiz.id]));await assert.rejects(()=>db.query('select * from public.game_moderation_queue()'));
+ await role('authenticated',owner);assert.equal((await db.query('select public.is_game_admin() as admin')).rows[0].admin,true);await db.query('select public.moderate_game_quiz($1,true)',[quiz.id]);
+ assert.equal((await db.query('select * from public.game_moderation_queue()')).rows.length,1);assert.equal((await db.query('select * from public.quizzes where id=$1',[quiz.id])).rows.length,0);await assert.rejects(()=>db.query('select * from public.quiz_moderation_log'));
+ await role('anon');assert.equal((await db.query('select * from public.quizzes where id=$1',[quiz.id])).rows.length,0);
+ await role('authenticated',a);assert.equal((await db.query('select moderation_hidden from public.quizzes where id=$1',[quiz.id])).rows[0].moderation_hidden,true);
+ await assert.rejects(()=>db.query("update public.quizzes set status='published' where id=$1",[quiz.id]));await assert.rejects(()=>db.query('update public.quizzes set moderation_hidden=false where id=$1',[quiz.id]));
+ await role('authenticated',owner);await db.query('select public.moderate_game_quiz($1,false)',[quiz.id]);
+ await role('authenticated',a);assert.equal((await db.query('select status from public.quizzes where id=$1',[quiz.id])).rows[0].status,'draft');await db.query("update public.quizzes set status='published' where id=$1",[quiz.id]);
+ await role('anon');assert.equal((await db.query('select id from public.quizzes')).rows.length,1);
+ await db.exec('reset role');assert.equal((await db.query('select count(*)::int as n from public.quiz_moderation_log')).rows[0].n,2);
+ const result={repeatableMigration:true,existingUsersBackfilled:true,newUserProfile:true,metadataCannotGrantAdmin:true,adminGrantTargetsOwner:true,selfPromotionBlocked:true,profilePrivate:true,foreignProfileEditBlocked:true,nicknameValidation:true,authorNicknameSynced:true,publicationAuthorCannotBeSpoofed:true,adminModeration:true,adminCannotReadUnrelatedDrafts:true,ownerCannotBypassModeration:true,restoreDoesNotAutoPublish:true,auditTrail:true};await writeFile(new URL('./accounts-db-test-results.json',import.meta.url),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+}finally{await db.close();}

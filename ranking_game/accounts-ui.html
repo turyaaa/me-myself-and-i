@@ -1,0 +1,25 @@
+<section id="account" hidden>
+ <div class="account-shell"><p class="daily-eyebrow">THE RANKING GAME</p><h2 id="auth-heading" class="title">Sign in</h2><p id="auth-description" class="sub">Твої вікторини й нікнейм — на всіх пристроях.</p>
+ <div class="topic-options"><button id="auth-tab-login">Sign in</button><button id="auth-tab-register">Register</button></div>
+ <button id="auth-google" class="wbtn alt">Продовжити з Google</button><div class="bdivider">або через email</div>
+ <form id="auth-form">
+  <div id="auth-nickname-row" hidden><label for="auth-nickname">Нікнейм</label><input id="auth-nickname" class="fld" minlength="2" maxlength="32" autocomplete="nickname" placeholder="Як тебе називати?"></div>
+  <label for="auth-email">Email</label><input id="auth-email" class="fld" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com">
+  <div id="auth-password-row"><label for="auth-password">Пароль</label><input id="auth-password" class="fld" type="password" maxlength="128" autocomplete="current-password" required></div>
+  <div id="auth-repeat-row" hidden><label for="auth-repeat">Повтори пароль</label><input id="auth-repeat" class="fld" type="password" maxlength="128" autocomplete="new-password"></div>
+  <button id="auth-submit" class="wbtn" type="submit">Sign in</button>
+ </form>
+ <button id="auth-switch" class="wbtn alt">Register</button><button id="auth-forgot" class="wbtn alt">Забув пароль?</button>
+ <p id="auth-message" class="sub" role="status" aria-live="polite"></p></div>
+</section>
+<section id="profile" hidden>
+ <div id="profile-guest" class="lib-panel" hidden><h2 class="title">Твій профіль</h2><p class="sub">Увійди, щоб змінювати нікнейм і керувати вікторинами.</p><button id="profile-login" class="wbtn">Sign in</button><button id="profile-register" class="wbtn alt">Register</button></div>
+ <div id="profile-content" hidden>
+  <div class="profile-identity"><div id="profile-initial" class="profile-initial" aria-hidden="true"></div><div><p class="daily-eyebrow">ТВІЙ ПРОФІЛЬ</p><h2 id="profile-name" class="title"></h2><span id="profile-role" class="profile-role"></span></div></div>
+  <div class="profile-stats"><div><strong id="profile-quiz-count">—</strong><span>Мої вікторини</span></div><div><strong id="profile-public-count">—</strong><span>Опубліковано</span></div></div>
+  <form id="profile-form" class="lib-panel"><h3>Особисті дані</h3><label for="profile-nickname">Нікнейм</label><input id="profile-nickname" class="fld" minlength="2" maxlength="32" autocomplete="nickname" required><p class="sub">Цей нік буде підписом під твоїми вікторинами.</p><button id="profile-save" class="wbtn" type="submit">Зберегти нікнейм</button><p id="profile-email" class="sub"></p><p id="profile-created" class="sub"></p><p class="sub">ID акаунта: <span id="profile-id" class="profile-id"></span></p><button id="profile-copy-id" class="alt" type="button">Скопіювати ID</button></form>
+  <form id="profile-password-form" class="lib-panel" hidden><h3>Новий пароль</h3><label for="profile-password">Пароль — щонайменше 8 символів</label><input id="profile-password" class="fld" type="password" minlength="8" maxlength="128" autocomplete="new-password" required><label for="profile-password-repeat">Повтори пароль</label><input id="profile-password-repeat" class="fld" type="password" minlength="8" maxlength="128" autocomplete="new-password" required><button id="profile-password-save" class="wbtn" type="submit">Оновити пароль</button></form>
+  <div class="topic-options"><button id="profile-my-quizzes">Мої вікторини</button><button id="profile-change-password">Змінити пароль</button><button id="profile-signout">Вийти з акаунта</button></div>
+  <div id="profile-admin" class="lib-panel" hidden><h3>Адміністрування</h3><p class="sub">Публічні вікторини можна приховувати зі сторінки вікторини. Тут — приховані публікації; відновлення знімає обмеження, автор публікує їх знову сам.</p><button id="admin-refresh">Оновити список</button><div id="admin-quizzes"></div></div>
+ </div><p id="profile-message" class="sub" role="status" aria-live="polite"></p>
+</section>
