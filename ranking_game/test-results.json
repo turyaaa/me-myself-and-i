@@ -2,8 +2,8 @@
   "categories": 133,
   "cards": 1648,
   "rankingRounds": 1330,
-  "quizTopics": 52,
-  "quizQuestions": 1080,
+  "quizTopics": 61,
+  "quizQuestions": 1115,
   "linearScales": "passed",
   "zoomAndReset": "passed",
   "answerValidation": "passed",
@@ -35,5 +35,24 @@
   "allSeriesNumericPlayable": "passed",
   "newFilmCollections": "passed",
   "blitzAllTopics": "passed",
-  "blitzMenuAndNavigation": "passed"
+  "blitzMenuAndNavigation": "passed",
+  "dailySeason": {
+    "newTasks": 90,
+    "days": 30,
+    "noRepeats": true,
+    "balancedThemes": true,
+    "noLoopAfterEnd": true
+  },
+  "dailyGentlerScoring": "passed",
+  "footballCuratedQuiz": {
+    "collections": 10,
+    "questions": 50
+  },
+  "blitzBigCountdown": "passed",
+  "logoSecret15Clicks": "passed",
+  "dailyAll90RoundsRender": "passed",
+  "quizManualFiveAndRandom": "passed",
+  "libraryAuthorValidation": "passed",
+  "libraryLocalMultiplayer": "passed",
+  "libraryDraftAccountIsolation": "passed"
 }

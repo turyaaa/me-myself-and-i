@@ -1,0 +1,13 @@
+{
+  "migrationTwice": true,
+  "privateHiddenFromGuests": true,
+  "privateHiddenFromOtherAuthors": true,
+  "publicReadable": true,
+  "foreignEditsBlocked": true,
+  "foreignDeletesBlocked": true,
+  "ownerImmutable": true,
+  "concurrentEditConflict": true,
+  "invalidPublicationRejected": true,
+  "unpublishHides": true,
+  "authorQuota100": true
+}

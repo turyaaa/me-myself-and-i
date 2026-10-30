@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "start": "2026-10-31",
+  "end": "2026-11-29",
+  "days": {
+    "2026-10-31": [
+      "sectors-POL",
+      "land-AUS",
+      "food-13-661"
+    ],
+    "2026-11-01": [
+      "paris-11",
+      "planet-masses",
+      "ages-AUS"
+    ],
+    "2026-11-02": [
+      "paris-7",
+      "land-IND",
+      "food-11-980"
+    ],
+    "2026-11-03": [
+      "isotopes-S",
+      "ages-FRA",
+      "sectors-AUS"
+    ],
+    "2026-11-04": [
+      "land-FRA",
+      "ages-UKR",
+      "paris-12"
+    ],
+    "2026-11-05": [
+      "sectors-ESP",
+      "food-13-662",
+      "isotopes-Ar"
+    ],
+    "2026-11-06": [
+      "paris-1",
+      "sectors-BRA",
+      "land-ITA"
+    ],
+    "2026-11-07": [
+      "sea-salt",
+      "food-12-346",
+      "ages-GBR"
+    ],
+    "2026-11-08": [
+      "sectors-KOR",
+      "food-14-318",
+      "paris-4"
+    ],
+    "2026-11-09": [
+      "crust-elements",
+      "ages-DEU",
+      "land-BRA"
+    ],
+    "2026-11-10": [
+      "food-16-359",
+      "paris-2",
+      "isotopes-Mg"
+    ],
+    "2026-11-11": [
+      "ages-BRA",
+      "land-UKR",
+      "sectors-DEU"
+    ],
+    "2026-11-12": [
+      "paris-0",
+      "isotopes-K",
+      "land-GBR"
+    ],
+    "2026-11-13": [
+      "ages-ESP",
+      "food-14-896",
+      "sectors-CHN"
+    ],
+    "2026-11-14": [
+      "food-17-648",
+      "paris-14",
+      "isotopes-Kr"
+    ],
+    "2026-11-15": [
+      "ages-KOR",
+      "sectors-JPN",
+      "land-ESP"
+    ],
+    "2026-11-16": [
+      "food-12-940",
+      "land-JPN",
+      "isotopes-Ne"
+    ],
+    "2026-11-17": [
+      "ages-IND",
+      "sectors-FRA",
+      "paris-9"
+    ],
+    "2026-11-18": [
+      "food-14-879",
+      "ages-ITA",
+      "land-DEU"
+    ],
+    "2026-11-19": [
+      "sectors-CAN",
+      "sun-elements",
+      "paris-8"
+    ],
+    "2026-11-20": [
+      "paris-6",
+      "ages-USA",
+      "food-14-892"
+    ],
+    "2026-11-21": [
+      "isotopes-Si",
+      "sectors-IND",
+      "land-USA"
+    ],
+    "2026-11-22": [
+      "ages-CHN",
+      "land-KOR",
+      "food-18-323"
+    ],
+    "2026-11-23": [
+      "universe-planck",
+      "sectors-ZAF",
+      "paris-5"
+    ],
+    "2026-11-24": [
+      "paris-10",
+      "ages-JPN",
+      "land-CAN"
+    ],
+    "2026-11-25": [
+      "sectors-GBR",
+      "saturn-air",
+      "food-11-006"
+    ],
+    "2026-11-26": [
+      "body-elements",
+      "ages-CAN",
+      "land-POL"
+    ],
+    "2026-11-27": [
+      "sectors-UKR",
+      "food-14-386",
+      "paris-13"
+    ],
+    "2026-11-28": [
+      "isotopes-Xe",
+      "ages-POL",
+      "paris-3"
+    ],
+    "2026-11-29": [
+      "land-CHN",
+      "food-11-858",
+      "sectors-ITA"
+    ]
+  }
+}

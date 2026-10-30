@@ -1,4 +1,5 @@
 const TOPIC_OPTIONS={
+ 'Футбол':[["fb-roles", "прочитай роль"], ["fb-moves", "тактична лабораторія"], ["fb-offside", "офсайд без міфів"], ["fb-referee", "ти — арбітр"], ["fb-finals", "герої другого плану"], ["fb-comebacks", "анатомія камбеку"], ["fb-euro", "Євро всупереч сценарію"], ["fb-ukraine", "український слід"], ["fb-worldcup", "ЧС: деталі, які пам’ятають"], ["fb-data", "футбол проти інтуїції"]],
  'Фільми':[['potter','Гаррі Поттер'],['starwars','Star Wars'],['marvel','Marvel'],['lotr','Володар кілець / Гобіт'],['nolan','Нолан'],['tarantino','Тарантіно'],['spielberg','Спілберґ']],
  'Музика':[['rock','Рок'],['rap','Реп / хіп-хоп'],['pop','Поп']],
  'Серіали':[['breakingbad','Breaking Bad'],['got','Гра престолів'],['friends','Друзі'],['stranger','Дивні дива'],['saul','Краще подзвоніть Солу'],['office','Офіс']]
@@ -14,7 +15,7 @@ function topicQuiz(selection){
  const matching=TOPIC_MATCHERS;
  return QUIZ.filter(c=>c.name===selection.family||c.topicFamily===selection.family).map(c=>({...c,qs:c.qs.filter(q=>!selection.ids.length||selection.ids.includes(c.topicId)||selection.ids.some(id=>matching[id]?.test(q.join(' '))))})).filter(c=>c.qs.length);
 }
-function blitzPool(selection){return [...selectionCats(selection),...topicQuiz(selection).filter(c=>c.blitz).map(c=>({title:c.name,kind:'trivia',items:c.qs.map(q=>[q[0],q[1],[c.topicId],c.distractors?.[q[0]]])}))];}
+function blitzPool(selection){return [...(selection?.family==='Футбол'?[]:selectionCats(selection)),...topicQuiz(selection).filter(c=>c.blitz).map(c=>({title:c.name,kind:'trivia',items:c.qs.map(q=>[q[0],q[1],[c.topicId],c.distractors?.[q[0]]])}))];}
 function openTopicPicker(group,kind){
  let ids=[];try{ids=JSON.parse(store.get('topic_'+group.name)||'[]').filter(id=>TOPIC_OPTIONS[group.name].some(x=>x[0]===id));}catch(_){}
  topicPicker={group,kind,ids};show('topic-picker');$('topic-title').textContent=group.name;renderTopicPicker();

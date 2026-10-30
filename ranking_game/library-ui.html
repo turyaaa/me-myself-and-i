@@ -1,0 +1,22 @@
+<section id="library" hidden>
+  <div class="library-heading"><div><p class="daily-eyebrow">СТВОРЕНО ГРАВЦЯМИ</p><h2 class="title">Бібліотека вікторин</h2></div><button id="lib-account" class="alt">Увійти</button></div>
+  <p class="sub">Обери вікторину для своєї компанії. Один екран, ведучий і до восьми гравців.</p>
+  <div id="lib-auth" class="lib-panel" hidden><h3 id="lib-auth-title">Твій акаунт</h3><p id="lib-user" class="sub"></p><button id="lib-google" class="wbtn">Продовжити з Google</button><button id="lib-signout" class="wbtn alt" hidden>Вийти з акаунта</button></div>
+  <p id="lib-status" class="sub" role="status" aria-live="polite"></p>
+  <div id="lib-browse">
+    <div class="topic-options"><button id="lib-public" aria-pressed="true">Усі вікторини</button><button id="lib-mine" aria-pressed="false">Мої вікторини</button><button id="lib-new">+ Створити вікторину</button><button id="lib-local">Мої локальні категорії</button></div>
+    <form id="lib-search-form" class="lib-search"><input id="lib-search" class="fld" type="search" maxlength="80" aria-label="Пошук вікторин" placeholder="Назва вікторини…"><button type="submit">Знайти</button></form>
+    <div id="lib-cards" class="lib-grid"></div><div class="topic-options"><button id="lib-prev" hidden>Попередні</button><span id="lib-page"></span><button id="lib-next" hidden>Наступні</button></div>
+  </div>
+  <div id="lib-detail" class="lib-panel" hidden></div>
+  <div id="lib-compose" class="lib-panel" hidden>
+    <h3>Твоя вікторина</h3><p id="lib-draft-state" class="sub" role="status"></p>
+    <label for="lib-title">Назва</label><input id="lib-title" class="fld" maxlength="80" placeholder="Назва для твоєї компанії">
+    <label for="lib-author">Ім’я автора для бібліотеки</label><input id="lib-author" class="fld" maxlength="40" placeholder="Твій нік">
+    <label for="lib-description">Про що ця вікторина?</label><textarea id="lib-description" class="fld" rows="3" maxlength="600" placeholder="Теми, складність, для кого вона…"></textarea>
+    <div class="topic-options"><button id="lib-import-local">Додати мої локальні категорії</button><button id="lib-add-category">+ Категорія</button></div>
+    <p class="sub">Для публікації: від 5 до 30 категорій, у кожній — п’ять питань на 100–500 балів. Відповіді відкриває ведучий.</p>
+    <div id="lib-category-tabs" class="topic-options"></div><div id="lib-category-editor"></div>
+    <div class="lib-actions"><button id="lib-save" class="wbtn alt">Зберегти приватно</button><button id="lib-publish" class="wbtn">Зберегти й опублікувати</button><button id="lib-test" class="wbtn alt">Зіграти локально</button><button id="lib-close-compose" class="wbtn alt">До бібліотеки</button></div>
+  </div>
+</section>

@@ -1,7 +1,13 @@
 // Blitz: the standalone HTML runs solo; Netlify's /api/duel runs shared rooms.
 let B=null, blitzTimer=null, blitzPoll=null, blitzEpoch=0;
 const BLITZ_COUNT=15, BLITZ_MS=10000;
-function stopBlitzClock() { if(blitzTimer!==null) clearInterval(blitzTimer); blitzTimer=null; }
+function showBlitzCountdown(seconds){
+ const overlay=$('bcountdown'),digit=$('bcountdown-digit');
+ if(seconds<=0){overlay.hidden=true;digit.textContent='';return;}
+ overlay.hidden=false;
+ if(digit.textContent!==String(seconds)){digit.textContent=String(seconds);digit.setAttribute('aria-label','Початок через '+seconds);digit.classList.remove('countdown-pop');void digit.offsetWidth;digit.classList.add('countdown-pop');}
+}
+function stopBlitzClock(hide=true) { if(blitzTimer!==null) clearInterval(blitzTimer); blitzTimer=null;if(hide)showBlitzCountdown(0); }
 function cleanupBlitz() { closeBlitzOutcome(); stopBlitzClock(); if(blitzPoll!==null) clearTimeout(blitzPoll); blitzPoll=null; blitzEpoch++; }
 function rememberDuel(value) { try { if(value) sessionStorage.setItem('ranking_duel',JSON.stringify(value)); else sessionStorage.removeItem('ranking_duel'); } catch(_){} }
 function savedDuel() { try { const d=JSON.parse(sessionStorage.getItem('ranking_duel')); return d&&/^[A-Z2-9]{6}$/.test(d.room)&&typeof d.token==='string'?d:null; } catch(_){return null;} }
@@ -61,10 +67,11 @@ function renderBlitzQuestion(q,round,total) {
   q.options.forEach((label,i)=>{const button=document.createElement('button');button.className='boption';button.textContent=label;button.onclick=()=>submitBlitz(i);box.append(button);});
 }
 function startBlitzClock(deadline,onExpire,startsAt=0,onStart=()=>{}) {
-  stopBlitzClock();
+  stopBlitzClock(false);
   let started=false;
   const tick=()=>{
-    if(performance.now()<startsAt){$('bseconds').classList.remove('urgent');$('bseconds').textContent='Старт '+Math.ceil((startsAt-performance.now())/1000);$('btimebar').style.width='100%';return;}
+    if(performance.now()<startsAt){const seconds=Math.ceil((startsAt-performance.now())/1000);showBlitzCountdown(seconds);$('bseconds').classList.remove('urgent');$('bseconds').textContent='Старт '+seconds;$('btimebar').style.width='100%';return;}
+    showBlitzCountdown(0);
     if(!started){started=true;onStart();}
     const remaining=Math.min(BLITZ_MS,Math.max(0,deadline-performance.now()));
     $('bseconds').textContent=Math.ceil(remaining/1000)+' с'; $('bseconds').classList.toggle('urgent',remaining<=3000);
@@ -209,7 +216,7 @@ $('boutcome').addEventListener('click',event=>{if(event.target===$('boutcome')){
 $('boutcome').addEventListener('close',()=>{if(B?.phase==='end')$('breplay').focus();});
 function renderBlitzTopics(){
  const box=$('blitz-topic-buttons');box.replaceChildren();
- [['','Усі теми'],['Фільми','Фільми'],['Музика','Музика'],['Серіали','Серіали'],['Аніме','Аніме']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.setAttribute('aria-pressed',name?blitzSelection?.family===name:!blitzSelection);b.onclick=()=>{if(!name){blitzSelection=null;renderBlitzTopics();}else if(name==='Аніме'){blitzSelection={family:name,ids:[]};renderBlitzTopics();}else openTopicPicker(GROUPS.find(g=>g.name===name),'blitz');};box.append(b);});
+ [['','Усі теми'],['Футбол','Футбол'],['Фільми','Фільми'],['Музика','Музика'],['Серіали','Серіали'],['Аніме','Аніме']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.setAttribute('aria-pressed',name?blitzSelection?.family===name:!blitzSelection);b.onclick=()=>{if(!name){blitzSelection=null;renderBlitzTopics();}else if(name==='Аніме'){blitzSelection={family:name,ids:[]};renderBlitzTopics();}else openTopicPicker(GROUPS.find(g=>g.name===name),'blitz');};box.append(b);});
  const more=document.createElement('button');more.textContent='Усі категорії';more.onclick=()=>showMenu('blitz');box.append(more);
  $('blitz-topic-label').textContent=blitzSelection?blitzSelection.family+(blitzSelection.ids.length?' · '+blitzSelection.ids.map(id=>TOPIC_OPTIONS[blitzSelection.family]?.find(x=>x[0]===id)?.[1]||id).join(' + '):' · усе разом'):'Питання з усіх тем. У дуелі добірку обирає автор кімнати.';
 }

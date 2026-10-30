@@ -48,7 +48,7 @@ function selectBank(bank,selection){
  if(selection===null||selection===undefined)return bank;
  const allowed={};for(const c of bank){if(!c.topicFamily)continue;allowed[c.topicFamily]=allowed[c.topicFamily]||[];for(const i of c.items)for(const id of i[2]||[])if(id&&!allowed[c.topicFamily].includes(id))allowed[c.topicFamily].push(id);}
  if(!selection||typeof selection!=='object'||!Object.hasOwn(allowed,selection.family)||!Array.isArray(selection.ids)||selection.ids.length>allowed[selection.family].length||selection.ids.some(id=>!allowed[selection.family].includes(id)))throw new DuelError('Некоректна добірка.');
- return bank.filter(c=>c.topicFamily===selection.family).map(c=>({...c,items:c.items.filter(i=>!selection.ids.length||selection.ids.some(id=>i[2]?.includes(id)))}));
+ return bank.filter(c=>c.topicFamily===selection.family&&(selection.family!=='Футбол'||c.kind==='trivia')).map(c=>({...c,items:c.items.filter(i=>!selection.ids.length||selection.ids.some(id=>i[2]?.includes(id)))}));
 }
 function settle(room,now){
   if(room.phase!=='question')return false;

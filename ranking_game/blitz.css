@@ -21,6 +21,12 @@
   .broom { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; font:14px system-ui; }
   .broom button { padding:8px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); cursor:pointer; }
   #bquestion.long-question { font:600 clamp(21px,5vw,28px)/1.35 Georgia,serif; margin:16px 0 22px; }
+  .bcountdown { position:fixed; inset:0; z-index:70; display:flex; flex-direction:column; align-items:center; justify-content:center; background:color-mix(in srgb,var(--bg) 94%,transparent); backdrop-filter:blur(8px); }
+  .bcountdown-label { font:600 13px system-ui; text-transform:uppercase; letter-spacing:.2em; color:var(--muted); }
+  #bcountdown-digit { font:800 clamp(140px,34vw,260px)/1.2 system-ui; color:var(--icon); font-variant-numeric:tabular-nums; }
+  #bcountdown-digit.countdown-pop { animation:countdownShrink .95s cubic-bezier(.2,.6,.3,1) both; }
+  @keyframes countdownShrink { 0%{transform:scale(1.16);opacity:0}12%{opacity:1}72%{opacity:1}100%{transform:scale(.68);opacity:0} }
+  @media(prefers-reduced-motion:reduce){#bcountdown-digit.countdown-pop{animation:none;}}
 
   .boutcome { box-sizing:border-box; width:min(400px,calc(100% - 32px)); max-height:calc(100dvh - 32px); overflow:auto; padding:28px 24px 20px; background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:22px; text-align:center; box-shadow:0 20px 80px #0006; }
   .boutcome::backdrop { background:#10060bb3; }

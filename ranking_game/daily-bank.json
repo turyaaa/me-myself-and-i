@@ -218,5 +218,2060 @@
     ],
     "source": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
     "sourceName": "Світовий банк · 2023"
+  },
+  {
+    "id": "land-USA",
+    "family": "nature",
+    "title": "Ліси й поля · США",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      33.792151,
+      16.567975,
+      0.347628,
+      49.292246
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "USA"
+  },
+  {
+    "id": "ages-USA",
+    "family": "society",
+    "title": "Вік населення · США",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      17.881825,
+      65.198554,
+      16.919621,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "USA"
+  },
+  {
+    "id": "land-CHN",
+    "family": "nature",
+    "title": "Ліси й поля · Китай",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      23.680766,
+      11.503654,
+      2.085731,
+      62.729849
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CHN"
+  },
+  {
+    "id": "ages-CHN",
+    "family": "society",
+    "title": "Вік населення · Китай",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      17.1218,
+      69.09627,
+      13.78193,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CHN"
+  },
+  {
+    "id": "land-IND",
+    "family": "nature",
+    "title": "Ліси й поля · Індія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      24.378193,
+      51.875999,
+      4.706773,
+      19.039035
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "IND"
+  },
+  {
+    "id": "ages-IND",
+    "family": "society",
+    "title": "Вік населення · Індія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      25.487704,
+      67.813296,
+      6.699,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "IND"
+  },
+  {
+    "id": "land-JPN",
+    "family": "nature",
+    "title": "Ліси й поля · Японія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      68.352812,
+      11.155007,
+      0.710562,
+      19.781619
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "JPN"
+  },
+  {
+    "id": "ages-JPN",
+    "family": "society",
+    "title": "Вік населення · Японія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      11.858936,
+      58.738417,
+      29.402647,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "JPN"
+  },
+  {
+    "id": "land-DEU",
+    "family": "nature",
+    "title": "Ліси й поля · Німеччина",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      32.822876,
+      33.366728,
+      0.581063,
+      33.229333
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "DEU"
+  },
+  {
+    "id": "ages-DEU",
+    "family": "society",
+    "title": "Вік населення · Німеччина",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      13.912531,
+      63.628562,
+      22.458907,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "DEU"
+  },
+  {
+    "id": "land-FRA",
+    "family": "nature",
+    "title": "Ліси й поля · Франція",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      32.520271,
+      31.509812,
+      1.914676,
+      34.055241
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "FRA"
+  },
+  {
+    "id": "ages-FRA",
+    "family": "society",
+    "title": "Вік населення · Франція",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      17.031416,
+      61.591235,
+      21.377349,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "FRA"
+  },
+  {
+    "id": "land-ITA",
+    "family": "nature",
+    "title": "Ліси й поля · Італія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      31.734377,
+      23.956706,
+      8.070621,
+      36.238296
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ITA"
+  },
+  {
+    "id": "ages-ITA",
+    "family": "society",
+    "title": "Вік населення · Італія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      12.389781,
+      63.68103,
+      23.929189,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ITA"
+  },
+  {
+    "id": "land-GBR",
+    "family": "nature",
+    "title": "Ліси й поля · Велика Британія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      13.39313,
+      24.970487,
+      0.178402,
+      61.457981
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "GBR"
+  },
+  {
+    "id": "ages-GBR",
+    "family": "society",
+    "title": "Вік населення · Велика Британія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      17.629257,
+      63.440428,
+      18.930315,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "GBR"
+  },
+  {
+    "id": "land-BRA",
+    "family": "nature",
+    "title": "Ліси й поля · Бразилія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      59.325972,
+      6.657223,
+      0.927958,
+      33.088847
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "BRA"
+  },
+  {
+    "id": "ages-BRA",
+    "family": "society",
+    "title": "Вік населення · Бразилія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      20.202477,
+      69.545738,
+      10.251785,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "BRA"
+  },
+  {
+    "id": "land-CAN",
+    "family": "nature",
+    "title": "Ліси й поля · Канада",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      41.968471,
+      4.363103,
+      0.019571,
+      53.648855
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CAN"
+  },
+  {
+    "id": "ages-CAN",
+    "family": "society",
+    "title": "Вік населення · Канада",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      15.547908,
+      65.511345,
+      18.940747,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CAN"
+  },
+  {
+    "id": "land-AUS",
+    "family": "nature",
+    "title": "Ліси й поля · Австралія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      17.342559,
+      4.064602,
+      0.050052,
+      78.542787
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "AUS"
+  },
+  {
+    "id": "ages-AUS",
+    "family": "society",
+    "title": "Вік населення · Австралія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      18.235542,
+      64.689426,
+      17.075032,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "AUS"
+  },
+  {
+    "id": "land-UKR",
+    "family": "nature",
+    "title": "Ліси й поля · Україна",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      17.217812,
+      56.824301,
+      1.472213,
+      24.485674
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "UKR"
+  },
+  {
+    "id": "ages-UKR",
+    "family": "society",
+    "title": "Вік населення · Україна",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      14.821728,
+      67.321333,
+      17.856939,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "UKR"
+  },
+  {
+    "id": "land-POL",
+    "family": "nature",
+    "title": "Ліси й поля · Польща",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      30.959914,
+      36.4762,
+      1.163057,
+      31.400829
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "POL"
+  },
+  {
+    "id": "ages-POL",
+    "family": "society",
+    "title": "Вік населення · Польща",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      15.323755,
+      65.65703,
+      19.019215,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "POL"
+  },
+  {
+    "id": "land-KOR",
+    "family": "nature",
+    "title": "Ліси й поля · Південна Корея",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      64.451332,
+      13.52459,
+      2.131148,
+      19.89293
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "KOR"
+  },
+  {
+    "id": "ages-KOR",
+    "family": "society",
+    "title": "Вік населення · Південна Корея",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      11.414259,
+      71.101095,
+      17.484646,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "KOR"
+  },
+  {
+    "id": "land-ESP",
+    "family": "nature",
+    "title": "Ліси й поля · Іспанія",
+    "note": "Частки площі суходолу за World Bank WDI, 2022. Рілля, ліси та багаторічні насадження — окремі категорії. Решта включає пасовища, забудову й інші землі.",
+    "labels": [
+      "Ліси",
+      "Рілля",
+      "Багаторічні насадження",
+      "Решта"
+    ],
+    "values": [
+      38.106521,
+      23.394513,
+      10.179755,
+      28.319211
+    ],
+    "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ESP"
+  },
+  {
+    "id": "ages-ESP",
+    "family": "society",
+    "title": "Вік населення · Іспанія",
+    "note": "Частки населення за віковими групами, World Bank WDI, 2022. Усі три групи разом охоплюють населення; дрібні розбіжності округлення нормовано до 100%.",
+    "labels": [
+      "0–14 років",
+      "15–64 роки",
+      "65 років і старше",
+      "Решта"
+    ],
+    "values": [
+      13.59591,
+      66.21609,
+      20.188,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/SP.POP.0014.TO.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ESP"
+  },
+  {
+    "id": "sectors-CHN",
+    "family": "economy",
+    "title": "З чого складається ВВП · Китай",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      7.147887,
+      37.894527,
+      54.957586,
+      0
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CHN"
+  },
+  {
+    "id": "sectors-IND",
+    "family": "economy",
+    "title": "З чого складається ВВП · Індія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      18.210666,
+      25.604026,
+      47.172752,
+      9.012556
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "IND"
+  },
+  {
+    "id": "sectors-JPN",
+    "family": "economy",
+    "title": "З чого складається ВВП · Японія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      0.848657,
+      27.057606,
+      71.11911,
+      0.974627
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "JPN"
+  },
+  {
+    "id": "sectors-DEU",
+    "family": "economy",
+    "title": "З чого складається ВВП · Німеччина",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      0.994638,
+      25.560349,
+      63.480683,
+      9.96433
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "DEU"
+  },
+  {
+    "id": "sectors-FRA",
+    "family": "economy",
+    "title": "З чого складається ВВП · Франція",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      1.720171,
+      15.769154,
+      71.757544,
+      10.753131
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "FRA"
+  },
+  {
+    "id": "sectors-ITA",
+    "family": "economy",
+    "title": "З чого складається ВВП · Італія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      1.890372,
+      23.279144,
+      64.597322,
+      10.233162
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ITA"
+  },
+  {
+    "id": "sectors-GBR",
+    "family": "economy",
+    "title": "З чого складається ВВП · Велика Британія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      0.681106,
+      16.81986,
+      72.483648,
+      10.015386
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "GBR"
+  },
+  {
+    "id": "sectors-BRA",
+    "family": "economy",
+    "title": "З чого складається ВВП · Бразилія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      5.767475,
+      22.819457,
+      58.087231,
+      13.325837
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "BRA"
+  },
+  {
+    "id": "sectors-CAN",
+    "family": "economy",
+    "title": "З чого складається ВВП · Канада",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      1.932753,
+      27.350634,
+      64.110821,
+      6.605792
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "CAN"
+  },
+  {
+    "id": "sectors-AUS",
+    "family": "economy",
+    "title": "З чого складається ВВП · Австралія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      2.672427,
+      27.401962,
+      63.362777,
+      6.562834
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "AUS"
+  },
+  {
+    "id": "sectors-UKR",
+    "family": "economy",
+    "title": "З чого складається ВВП · Україна",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      8.572976,
+      18.010832,
+      61.717229,
+      11.698963
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "UKR"
+  },
+  {
+    "id": "sectors-POL",
+    "family": "economy",
+    "title": "З чого складається ВВП · Польща",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      2.806069,
+      29.181482,
+      57.22173,
+      10.790719
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "POL"
+  },
+  {
+    "id": "sectors-KOR",
+    "family": "economy",
+    "title": "З чого складається ВВП · Південна Корея",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      1.448346,
+      32.511258,
+      58.071484,
+      7.968912
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "KOR"
+  },
+  {
+    "id": "sectors-ESP",
+    "family": "economy",
+    "title": "З чого складається ВВП · Іспанія",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      2.36964,
+      21.223479,
+      67.601643,
+      8.805238
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ESP"
+  },
+  {
+    "id": "sectors-ZAF",
+    "family": "economy",
+    "title": "З чого складається ВВП · Південна Африка",
+    "note": "Частки доданої вартості у ВВП, World Bank WDI, 2022. Промисловість включає будівництво; агросектор — лісове господарство й рибальство. Решта — різниця до ВВП, зокрема чисті податки на продукти.",
+    "labels": [
+      "Агросектор",
+      "Промисловість і будівництво",
+      "Послуги",
+      "Решта"
+    ],
+    "values": [
+      2.605775,
+      24.982029,
+      62.271961,
+      10.140235
+    ],
+    "source": "https://data.worldbank.org/indicator/NV.IND.TOTL.ZS",
+    "sourceName": "World Bank WDI · 2022",
+    "edition": "daily-2026-10",
+    "entity": "ZAF"
+  },
+  {
+    "id": "food-14-896",
+    "family": "food",
+    "title": "Що в 100 г: Мигдаль, ядра",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      21.2,
+      49.9,
+      5.3,
+      23.6
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "14-896"
+  },
+  {
+    "id": "food-14-879",
+    "family": "food",
+    "title": "Що в 100 г: Волоські горіхи, ядра",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      14.7,
+      68.5,
+      3.3,
+      13.5
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "14-879"
+  },
+  {
+    "id": "food-14-892",
+    "family": "food",
+    "title": "Що в 100 г: Арахісова паста, однорідна",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      22.8,
+      51.8,
+      13.1,
+      12.3
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "14-892"
+  },
+  {
+    "id": "food-14-386",
+    "family": "food",
+    "title": "Що в 100 г: Авокадо Hass, м’якоть",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      1.8,
+      17.4,
+      1.8,
+      79.0
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "14-386"
+  },
+  {
+    "id": "food-14-318",
+    "family": "food",
+    "title": "Що в 100 г: Банан, м’якоть",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      1.2,
+      0.1,
+      20.3,
+      78.4
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "14-318"
+  },
+  {
+    "id": "food-12-346",
+    "family": "food",
+    "title": "Що в 100 г: Англійський чедер",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      25.4,
+      34.9,
+      0.1,
+      39.6
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "12-346"
+  },
+  {
+    "id": "food-13-662",
+    "family": "food",
+    "title": "Що в 100 г: Нут, відварений без солі",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      8.4,
+      3.0,
+      18.3,
+      70.3
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "13-662"
+  },
+  {
+    "id": "food-13-661",
+    "family": "food",
+    "title": "Що в 100 г: Зелена й коричнева сочевиця, відварена",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      7.8,
+      0.7,
+      14.5,
+      77.0
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "13-661"
+  },
+  {
+    "id": "food-12-940",
+    "family": "food",
+    "title": "Що в 100 г: Куряче яйце, варене",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      14.1,
+      9.6,
+      0.0,
+      76.3
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "12-940"
+  },
+  {
+    "id": "food-11-858",
+    "family": "food",
+    "title": "Що в 100 г: Рис басматі, відварений без солі",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      2.8,
+      0.7,
+      26.5,
+      70.0
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "11-858"
+  },
+  {
+    "id": "food-11-006",
+    "family": "food",
+    "title": "Що в 100 г: Гречана крупа, суха",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      8.1,
+      1.5,
+      84.9,
+      5.5
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "11-006"
+  },
+  {
+    "id": "food-17-648",
+    "family": "food",
+    "title": "Що в 100 г: Молочний шоколад",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      7.3,
+      31.1,
+      56.0,
+      5.6
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "17-648"
+  },
+  {
+    "id": "food-11-980",
+    "family": "food",
+    "title": "Що в 100 г: Білий нарізний хліб",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      7.9,
+      1.6,
+      46.1,
+      44.4
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "11-980"
+  },
+  {
+    "id": "food-18-323",
+    "family": "food",
+    "title": "Що в 100 г: Куряча грудка на грилі, без шкіри",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      32.0,
+      2.2,
+      0.0,
+      65.8
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "18-323"
+  },
+  {
+    "id": "food-16-359",
+    "family": "food",
+    "title": "Що в 100 г: Фермерський лосось, запечений",
+    "note": "Довідникові грами на 100 г їстівної частини, CoFID 2021. Вуглеводи — у моносахаридних еквівалентах; слідові кількості округлені до нуля. Сірим — арифметична решта до 100, а не окремо виміряна вода.",
+    "labels": [
+      "Білки",
+      "Жири",
+      "Вуглеводи",
+      "Решта"
+    ],
+    "values": [
+      25.2,
+      14.6,
+      0.0,
+      60.2
+    ],
+    "source": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "sourceName": "Public Health England · CoFID 2021",
+    "edition": "daily-2026-10",
+    "entity": "16-359"
+  },
+  {
+    "id": "paris-0",
+    "family": "sport",
+    "title": "Колір медалей · США",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      31.746032,
+      34.920635,
+      33.333333,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "США",
+    "rawCounts": [
+      40,
+      44,
+      42
+    ]
+  },
+  {
+    "id": "paris-1",
+    "family": "sport",
+    "title": "Колір медалей · Китай",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      43.956044,
+      29.67033,
+      26.373626,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Китай",
+    "rawCounts": [
+      40,
+      27,
+      24
+    ]
+  },
+  {
+    "id": "paris-2",
+    "family": "sport",
+    "title": "Колір медалей · Японія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      44.444444,
+      26.666667,
+      28.888889,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Японія",
+    "rawCounts": [
+      20,
+      12,
+      13
+    ]
+  },
+  {
+    "id": "paris-3",
+    "family": "sport",
+    "title": "Колір медалей · Австралія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      33.962264,
+      35.849057,
+      30.188679,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Австралія",
+    "rawCounts": [
+      18,
+      19,
+      16
+    ]
+  },
+  {
+    "id": "paris-4",
+    "family": "sport",
+    "title": "Колір медалей · Франція",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      25.0,
+      40.625,
+      34.375,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Франція",
+    "rawCounts": [
+      16,
+      26,
+      22
+    ]
+  },
+  {
+    "id": "paris-5",
+    "family": "sport",
+    "title": "Колір медалей · Нідерланди",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      44.117647,
+      20.588235,
+      35.294118,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Нідерланди",
+    "rawCounts": [
+      15,
+      7,
+      12
+    ]
+  },
+  {
+    "id": "paris-6",
+    "family": "sport",
+    "title": "Колір медалей · Велика Британія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      21.538462,
+      33.846154,
+      44.615384,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Велика Британія",
+    "rawCounts": [
+      14,
+      22,
+      29
+    ]
+  },
+  {
+    "id": "paris-7",
+    "family": "sport",
+    "title": "Колір медалей · Південна Корея",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      40.625,
+      28.125,
+      31.25,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Південна Корея",
+    "rawCounts": [
+      13,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "paris-8",
+    "family": "sport",
+    "title": "Колір медалей · Італія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      30.0,
+      32.5,
+      37.5,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Італія",
+    "rawCounts": [
+      12,
+      13,
+      15
+    ]
+  },
+  {
+    "id": "paris-9",
+    "family": "sport",
+    "title": "Колір медалей · Німеччина",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      36.363636,
+      39.393939,
+      24.242425,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Німеччина",
+    "rawCounts": [
+      12,
+      13,
+      8
+    ]
+  },
+  {
+    "id": "paris-10",
+    "family": "sport",
+    "title": "Колір медалей · Нова Зеландія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      50.0,
+      35.0,
+      15.0,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Нова Зеландія",
+    "rawCounts": [
+      10,
+      7,
+      3
+    ]
+  },
+  {
+    "id": "paris-11",
+    "family": "sport",
+    "title": "Колір медалей · Канада",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      33.333333,
+      25.925926,
+      40.740741,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Канада",
+    "rawCounts": [
+      9,
+      7,
+      11
+    ]
+  },
+  {
+    "id": "paris-12",
+    "family": "sport",
+    "title": "Колір медалей · Узбекистан",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      61.538462,
+      15.384615,
+      23.076923,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Узбекистан",
+    "rawCounts": [
+      8,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "paris-13",
+    "family": "sport",
+    "title": "Колір медалей · Іспанія",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      27.777778,
+      22.222222,
+      50.0,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Іспанія",
+    "rawCounts": [
+      5,
+      4,
+      9
+    ]
+  },
+  {
+    "id": "paris-14",
+    "family": "sport",
+    "title": "Колір медалей · Україна",
+    "note": "Частки золотих, срібних і бронзових нагород цієї збірної на Олімпіаді Париж-2024. Командна нагорода рахується один раз, як у медальному заліку.",
+    "labels": [
+      "Золоті",
+      "Срібні",
+      "Бронзові",
+      "Решта"
+    ],
+    "values": [
+      25.0,
+      41.666667,
+      33.333333,
+      0
+    ],
+    "source": "https://www.olympedia.org/editions/63",
+    "sourceName": "Olympedia · Париж-2024",
+    "edition": "daily-2026-10",
+    "entity": "Україна",
+    "rawCounts": [
+      3,
+      5,
+      4
+    ]
+  },
+  {
+    "id": "isotopes-Ne",
+    "family": "science",
+    "title": "Природні ізотопи · Неон",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Ne-20",
+      "Ne-21",
+      "Ne-22",
+      "Решта"
+    ],
+    "values": [
+      90.48,
+      0.27,
+      9.25,
+      0
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Ne",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Ne"
+  },
+  {
+    "id": "isotopes-Mg",
+    "family": "science",
+    "title": "Природні ізотопи · Магній",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Mg-24",
+      "Mg-25",
+      "Mg-26",
+      "Решта"
+    ],
+    "values": [
+      78.99,
+      10.0,
+      11.01,
+      0
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Mg",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Mg"
+  },
+  {
+    "id": "isotopes-Si",
+    "family": "science",
+    "title": "Природні ізотопи · Кремній",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Si-28",
+      "Si-29",
+      "Si-30",
+      "Решта"
+    ],
+    "values": [
+      92.223,
+      4.685,
+      3.092,
+      0
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Si",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Si"
+  },
+  {
+    "id": "isotopes-S",
+    "family": "science",
+    "title": "Природні ізотопи · Сірка",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "S-32",
+      "S-33",
+      "S-34",
+      "Решта"
+    ],
+    "values": [
+      94.99,
+      0.75,
+      4.25,
+      0.01
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=S",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-S"
+  },
+  {
+    "id": "isotopes-Ar",
+    "family": "science",
+    "title": "Природні ізотопи · Аргон",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Ar-36",
+      "Ar-38",
+      "Ar-40",
+      "Решта"
+    ],
+    "values": [
+      0.3336,
+      0.0629,
+      99.6035,
+      0
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Ar",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Ar"
+  },
+  {
+    "id": "isotopes-K",
+    "family": "science",
+    "title": "Природні ізотопи · Калій",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "K-39",
+      "K-40",
+      "K-41",
+      "Решта"
+    ],
+    "values": [
+      93.2581,
+      0.0117,
+      6.7302,
+      0
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=K",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-K"
+  },
+  {
+    "id": "isotopes-Kr",
+    "family": "science",
+    "title": "Природні ізотопи · Криптон",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Kr-84",
+      "Kr-86",
+      "Kr-82",
+      "Решта"
+    ],
+    "values": [
+      56.987,
+      17.279,
+      11.593,
+      14.141
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Kr",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Kr"
+  },
+  {
+    "id": "isotopes-Xe",
+    "family": "science",
+    "title": "Природні ізотопи · Ксенон",
+    "note": "Орієнтовні частки атомів за репрезентативним ізотопним складом NIST. Природні зразки можуть відрізнятися; показано саме довідникове співвідношення, не масові частки.",
+    "labels": [
+      "Xe-132",
+      "Xe-129",
+      "Xe-131",
+      "Решта"
+    ],
+    "values": [
+      26.9086,
+      26.4006,
+      21.2324,
+      25.4584
+    ],
+    "source": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=Xe",
+    "sourceName": "NIST · ізотопний склад",
+    "edition": "daily-2026-10",
+    "entity": "isotopes-Xe"
+  },
+  {
+    "id": "universe-planck",
+    "family": "science",
+    "title": "З чого складається Всесвіт?",
+    "note": "Модельні частки густини енергії за результатами Planck 2013. Це історичний набір оцінок, а не облік лише видимої матерії.",
+    "labels": [
+      "Темна енергія",
+      "Темна матерія",
+      "Звичайна матерія",
+      "Решта"
+    ],
+    "values": [
+      68.3,
+      26.8,
+      4.9,
+      0
+    ],
+    "source": "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_science_highlights",
+    "sourceName": "ESA · Planck 2013",
+    "edition": "daily-2026-10",
+    "entity": "universe-planck"
+  },
+  {
+    "id": "crust-elements",
+    "family": "science",
+    "title": "Елементи земної кори",
+    "note": "Типові довідникові масові частки основних елементів кори; не склад усієї Землі. Оцінки округлені.",
+    "labels": [
+      "Оксиген",
+      "Силіцій",
+      "Алюміній",
+      "Решта"
+    ],
+    "values": [
+      46.6,
+      27.7,
+      8.1,
+      17.6
+    ],
+    "source": "https://catalogimages.wiley.com/images/db/pdf/0470000201.ch2.pdf",
+    "sourceName": "Wiley · Earth Materials, table 2-1",
+    "edition": "daily-2026-10",
+    "entity": "crust-elements"
+  },
+  {
+    "id": "body-elements",
+    "family": "science",
+    "title": "Елементи людського тіла",
+    "note": "Типові приблизні масові частки елементів тіла за навчальним довідником. Не співвідношення газів, якими ми дихаємо.",
+    "labels": [
+      "Оксиген",
+      "Карбон",
+      "Гідроген",
+      "Решта"
+    ],
+    "values": [
+      65.0,
+      18.5,
+      9.5,
+      7.0
+    ],
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/2-1-elements-and-atoms-the-building-blocks-of-matter",
+    "sourceName": "OpenStax · Anatomy & Physiology",
+    "edition": "daily-2026-10",
+    "entity": "body-elements"
+  },
+  {
+    "id": "sun-elements",
+    "family": "science",
+    "title": "Склад сонячної фотосфери",
+    "note": "Масові частки за довідниковою таблицею NASA, наведеною Stanford Solar Center. Не об’ємні частки газу.",
+    "labels": [
+      "Гідроген",
+      "Гелій",
+      "Оксиген",
+      "Решта"
+    ],
+    "values": [
+      73.46,
+      24.85,
+      0.77,
+      0.92
+    ],
+    "source": "https://solar-center.stanford.edu/vitalstats",
+    "sourceName": "Stanford Solar Center · дані NASA",
+    "edition": "daily-2026-10",
+    "entity": "sun-elements"
+  },
+  {
+    "id": "sea-salt",
+    "family": "science",
+    "title": "Що входить до морської солі?",
+    "note": "Масові частки іонів серед розчинених солей морської води. Саму воду до цього кола не включено.",
+    "labels": [
+      "Хлорид",
+      "Натрій",
+      "Сульфат",
+      "Решта"
+    ],
+    "values": [
+      55.04,
+      30.61,
+      7.68,
+      6.67
+    ],
+    "source": "https://salinity.oceansciences.org/science-salinity.htm",
+    "sourceName": "NASA Salinity",
+    "edition": "daily-2026-10",
+    "entity": "sea-salt"
+  },
+  {
+    "id": "saturn-air",
+    "family": "science",
+    "title": "Гази атмосфери Сатурна",
+    "note": "Орієнтовні об’ємні частки з довідника NASA. Слідові домішки знехтувані в округленому розподілі.",
+    "labels": [
+      "Водень",
+      "Гелій",
+      "Метан",
+      "Решта"
+    ],
+    "values": [
+      96.3,
+      3.25,
+      0.45,
+      0
+    ],
+    "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html",
+    "sourceName": "NASA · Saturn Fact Sheet",
+    "edition": "daily-2026-10",
+    "entity": "saturn-air"
+  },
+  {
+    "id": "planet-masses",
+    "family": "science",
+    "title": "Хто важить більше серед планет?",
+    "note": "Частки сумарної маси восьми планет Сонячної системи. Сонце й супутники не враховані; решта — п’ять неназваних планет. Округлені маси NASA.",
+    "labels": [
+      "Юпітер",
+      "Сатурн",
+      "Нептун",
+      "Решта"
+    ],
+    "values": [
+      71.176459,
+      21.300437,
+      3.825078,
+      3.698026
+    ],
+    "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+    "sourceName": "NASA · Planetary Fact Sheet",
+    "edition": "daily-2026-10",
+    "entity": "planet-masses"
   }
 ]

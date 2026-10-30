@@ -1,0 +1,2297 @@
+{
+  "NV.AGR.TOTL.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/NV.AGR.TOTL.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 2.67242699950618,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 5.76747490819457,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 1.93275289413659,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 7.14788692830171,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 0.994638278032481,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 2.36964000049424,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 1.72017137018833,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 0.681106058275464,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 18.2106659929942,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 1.89037175125669,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 0.848657019671377,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 1.4483461547482,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 2.80606930357805,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 8.57297627041519,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.AGR.TOTL.ZS",
+            "value": "Agriculture, forestry, and fishing, value added (% of GDP)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": null,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "NV.IND.TOTL.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/NV.IND.TOTL.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 27.4019620848457,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 22.819456851691,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 27.3506338523117,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 37.8945266620066,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 25.560348825259,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 21.2234793725829,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 15.769153788105,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 16.8198596717719,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 25.6040259797277,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 23.2791441111799,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 27.0576060274173,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 32.5112580507246,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 29.1814824967348,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 18.0108316024427,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.IND.TOTL.ZS",
+            "value": "Industry (including construction), value added (% of GDP)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": null,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "NV.SRV.TOTL.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/NV.SRV.TOTL.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 63.3627768729711,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 58.0872310744068,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 64.1108208953921,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 54.9575804271762,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 63.4806825103587,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 67.6016434775846,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 71.7575436778909,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 72.4836484564399,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 47.1727519374304,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 64.5973224396351,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 71.1191098111371,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 58.0714839153337,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 57.2217295257752,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 61.7172292872421,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "NV.SRV.TOTL.ZS",
+            "value": "Services, value added (% of GDP)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": null,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "AG.LND.ARBL.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/AG.LND.ARBL.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 4.0646020161154,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 6.65722277923079,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 4.3631026204103,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 11.5036541577148,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 33.3667277307076,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 23.3945131872425,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 31.5098116708415,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 24.9704873310462,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 51.8759985066545,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 23.9567056675233,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 11.1550068587106,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 13.5245901639344,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 36.4761998105133,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 56.8243010010356,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.ARBL.ZS",
+            "value": "Arable land (% of land area)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 16.5679749153313,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "AG.LND.FRST.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/AG.LND.FRST.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 17.3425589117033,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 59.3259720464122,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 41.9684708773766,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 23.6807655559473,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 32.822876116327,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 38.106521242111,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 32.5202708971148,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 13.3931302442855,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 24.378193119175,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 31.7343771134857,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 68.3528120713306,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 64.4513319672131,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 30.9599137508576,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 17.2178115291681,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.FRST.ZS",
+            "value": "Forest area (% of land area)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 33.792151229527,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "AG.LND.CROP.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/AG.LND.CROP.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 0.0500518719400106,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 0.927957655650659,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 0.0195705849556817,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 2.08573093273372,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 0.581062514311885,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 10.1797553147239,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 1.91467594396512,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 0.17840243045509,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 4.70677286012666,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 8.07062085756797,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 0.710562414266118,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 2.13114754098361,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 1.16305661733477,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 1.47221263375906,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        },
+        {
+          "indicator": {
+            "id": "AG.LND.CROP.ZS",
+            "value": "Permanent cropland (% of land area)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 0.347628074364138,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 1
+        }
+      ]
+    ]
+  },
+  "SP.POP.0014.TO.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/SP.POP.0014.TO.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 18.2355418743903,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 20.2024769910192,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 15.5479076554421,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 17.1217997582731,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 13.9125311211787,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 13.5959103362946,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 17.0314157651472,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 17.6292573661875,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 25.4877038842946,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 12.3897806298347,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 11.8589361787474,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 11.4142590399463,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 15.3237547413116,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 14.821728136724,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.0014.TO.ZS",
+            "value": "Population ages 0-14 (% of total population)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 17.8818251956671,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        }
+      ]
+    ]
+  },
+  "SP.POP.1564.TO.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/SP.POP.1564.TO.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 64.6894260786269,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 69.5457382256878,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 65.5113452142292,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 69.0962698960779,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 63.6285624993021,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 66.2160904145149,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 61.5912351189772,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 63.4404279110136,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 67.8132963616236,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 63.6810296805062,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 58.7384165155584,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 71.1010946234232,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 65.6570295546479,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 67.3213331187593,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.1564.TO.ZS",
+            "value": "Population ages 15-64 (% of total population)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 65.1985544146872,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        }
+      ]
+    ]
+  },
+  "SP.POP.65UP.TO.ZS": {
+    "source": "https://api.worldbank.org/v2/country/USA;CHN;IND;JPN;DEU;FRA;ITA;GBR;BRA;CAN;AUS;UKR;POL;KOR;ESP/indicator/SP.POP.65UP.TO.ZS?date=2022&format=json&per_page=100",
+    "data": [
+      {
+        "page": 1,
+        "pages": 1,
+        "per_page": 100,
+        "total": 15,
+        "sourceid": "2",
+        "lastupdated": "2026-10-08"
+      },
+      [
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "AU",
+            "value": "Australia"
+          },
+          "countryiso3code": "AUS",
+          "date": "2022",
+          "value": 17.0750320469828,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "BR",
+            "value": "Brazil"
+          },
+          "countryiso3code": "BRA",
+          "date": "2022",
+          "value": 10.251784783293,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "CA",
+            "value": "Canada"
+          },
+          "countryiso3code": "CAN",
+          "date": "2022",
+          "value": 18.9407471303288,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "CN",
+            "value": "China"
+          },
+          "countryiso3code": "CHN",
+          "date": "2022",
+          "value": 13.781930345649,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "DE",
+            "value": "Germany"
+          },
+          "countryiso3code": "DEU",
+          "date": "2022",
+          "value": 22.4589063795192,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "ES",
+            "value": "Spain"
+          },
+          "countryiso3code": "ESP",
+          "date": "2022",
+          "value": 20.1879992491906,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "FR",
+            "value": "France"
+          },
+          "countryiso3code": "FRA",
+          "date": "2022",
+          "value": 21.3773491158756,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "GB",
+            "value": "United Kingdom"
+          },
+          "countryiso3code": "GBR",
+          "date": "2022",
+          "value": 18.9303147227989,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "IN",
+            "value": "India"
+          },
+          "countryiso3code": "IND",
+          "date": "2022",
+          "value": 6.69899975408181,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "IT",
+            "value": "Italy"
+          },
+          "countryiso3code": "ITA",
+          "date": "2022",
+          "value": 23.929189689659,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "JP",
+            "value": "Japan"
+          },
+          "countryiso3code": "JPN",
+          "date": "2022",
+          "value": 29.4026473056942,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "KR",
+            "value": "Korea, Rep."
+          },
+          "countryiso3code": "KOR",
+          "date": "2022",
+          "value": 17.4846463366305,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "PL",
+            "value": "Poland"
+          },
+          "countryiso3code": "POL",
+          "date": "2022",
+          "value": 19.0192157040405,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "UA",
+            "value": "Ukraine"
+          },
+          "countryiso3code": "UKR",
+          "date": "2022",
+          "value": 17.8569387445167,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        },
+        {
+          "indicator": {
+            "id": "SP.POP.65UP.TO.ZS",
+            "value": "Population ages 65 and above (% of total population)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2022",
+          "value": 16.9196203896458,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 0
+        }
+      ]
+    ]
+  }
+}

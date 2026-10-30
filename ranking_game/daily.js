@@ -12,9 +12,11 @@ function nextKyivDay(now=new Date()){
   return hi;
 }
 function dailyPlan(day){
+  if(DAILY_SCHEDULE.days[day])return DAILY_SCHEDULE.days[day].map(id=>DAILY_BANK.find(q=>q.id===id));
+  if(day>=DAILY_SCHEDULE.start)return [];
   let seed=Number(day.replaceAll('-',''))>>>0;
   const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
-  const pool=DAILY_BANK.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const pool=DAILY_BANK.filter(q=>!q.edition);for(let i=pool.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const chosen=[];for(const q of pool)if(!chosen.some(x=>x.family===q.family)){chosen.push(q);if(chosen.length===3)break;}
   return chosen;
 }
@@ -26,15 +28,16 @@ function loadDaily(day=kyivDay()){
     }
   }catch(_){}const plan=dailyPlan(day);return {day,plan,results:[],shares:initialDailyShares(plan[0]),revealed:false};
 }
-function initialDailyShares(q){const rest=q.values[3],part=(100-rest)/3;return [part,part,part,rest];}
+function initialDailyShares(q){if(!q)return [];const rest=q.values[3],part=(100-rest)/3;return [part,part,part,rest];}
 function saveDaily(advance=false){
   const latest=loadDaily(D.day);
   if(latest.results.length>D.results.length||(!advance&&latest.results.length===D.results.length&&latest.revealed&&!D.revealed)){D=latest;renderDaily();return false;}
   const ok=store.set('ranking_daily_'+D.day,JSON.stringify(D));$('daily-error').textContent=ok?'':'Браузер не дозволив зберегти прогрес. Не закривай цю вкладку.';return ok;
 }
 // Only the three editable sectors count; the known grey remainder earns no points.
-// A one-percentage-point floor avoids punishing negligible trace amounts.
-function dailyAccuracy(guess,truth){return Math.max(0,Math.round(100*guess.slice(0,3).reduce((n,v,i)=>n+1-Math.abs(v-truth[i])/Math.max(1,v,truth[i]),0)/3));}
+// Distribution overlap: moving 5% of the editable budget costs 5 points.
+// Small true sectors no longer magnify tiny absolute errors.
+function dailyAccuracy(guess,truth){const budget=truth.slice(0,3).reduce((a,b)=>a+b,0);if(budget<=.000001)return 100;const overlap=guess.slice(0,3).reduce((n,v,i)=>n+Math.min(v,truth[i]),0);return Math.max(0,Math.min(100,Math.round(100*overlap/budget)));}
 function rebalanceShares(shares,index,value){
   if(!Number.isInteger(index)||index<0||index>2)return shares.slice();
   const budget=100-shares[3];value=Math.max(0,Math.min(budget,Number(value)));if(!Number.isFinite(value))return shares.slice();
@@ -53,13 +56,19 @@ function dailyClock(){
   const value=[Math.floor(seconds/3600),Math.floor(seconds%3600/60),seconds%60].map(n=>String(n).padStart(2,'0')).join(':');
   $('daily-countdown').textContent=value;$('daily-card-clock').textContent=value;
   const saved=loadDaily();$('mode-daily').classList.toggle('daily-done',saved.results.length===3);
-  $('daily-card-state').textContent=saved.results.length===3?'Повертайтесь завтра!':saved.results.length?'Продовжити сьогоднішній виклик':'Три розподіли. Одна спроба на день.';
+  $('daily-card-state').textContent=!saved.plan.length?'Нові випуски готуємо':saved.results.length===3?(day>=DAILY_SCHEDULE.end?'Сезон завершено':'Повертайтесь завтра!'):saved.results.length?'Продовжити сьогоднішній виклик':'Три розподіли. Одна спроба на день.';
+  $('daily-card-clock').hidden=day>=DAILY_SCHEDULE.end;
+  $('daily-return').textContent=DAILY_SCHEDULE.days[day]&&day===DAILY_SCHEDULE.end?'Сьогоднішній сезон завершено. Нові випуски готуємо!':'Повертайтесь завтра!';
+  $('daily-next-time').hidden=day>=DAILY_SCHEDULE.end;
   if(D&&D.day!==day&&!$('daily').hidden){D=null;showDaily();}
 }
 function showDaily(){
-  D=loadDaily();show('daily');saveDaily();renderDaily();dailyClock();
+  D=loadDaily();show('daily');if(D.plan.length)saveDaily();renderDaily();dailyClock();
 }
 function renderDaily(){
+  $('daily-date').textContent=new Intl.DateTimeFormat('uk-UA',{timeZone:'Europe/Kyiv',day:'numeric',month:'long',year:'numeric'}).format(new Date(D.day+'T12:00:00Z'));
+  $('daily-unavailable').hidden=!!D.plan.length;
+  if(!D.plan.length){$('daily-game').hidden=true;$('daily-finish').hidden=true;return;}
   const done=D.results.length===3&&!D.revealed,idx=Math.min(D.results.length,2),q=D.plan[idx];
   $('daily-game').hidden=done;$('daily-finish').hidden=!done;
   $('daily-date').textContent=new Intl.DateTimeFormat('uk-UA',{timeZone:'Europe/Kyiv',day:'numeric',month:'long',year:'numeric'}).format(new Date(D.day+'T12:00:00Z'));

@@ -1,0 +1,11 @@
+{
+  "pkce": true,
+  "googleRedirect": true,
+  "publicBrowse": true,
+  "untrustedTitlesAsText": true,
+  "publishOwnerAttached": true,
+  "staleEditPreservesDraft": true,
+  "accountSwitchClearsPrivateUI": true,
+  "foreignDraftSaveBlocked": true,
+  "signOut": true
+}

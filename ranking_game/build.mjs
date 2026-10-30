@@ -1,5 +1,9 @@
 import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
-const html=(await readFile(new URL('./index.html',import.meta.url),'utf8')).replace(/\r\n/g,'\n');
+let html=(await readFile(new URL('./index.html',import.meta.url),'utf8')).replace(/\r\n/g,'\n');
+const libraryConfig=JSON.parse(await readFile(new URL('./library-config.json',import.meta.url),'utf8'));
+if(libraryConfig.url&&!/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(libraryConfig.url))throw Error('Invalid Supabase project URL');
+if(libraryConfig.key&&!/^sb_publishable_[A-Za-z0-9_-]+$/.test(libraryConfig.key))throw Error('Use only a Supabase publishable key. Never include secret or service_role keys.');
+html=html.replace(/const LIBRARY_CONFIG = [^\n]+;/,'const LIBRARY_CONFIG = '+JSON.stringify({url:libraryConfig.url||'',key:libraryConfig.key||''})+';');
 const raw=html.split('const GROUPS = ')[1].split(';\n// Порядок тем')[0];
 const groups=JSON.parse(raw),quiz=JSON.parse(html.split('const QUIZ = ')[1].split(';\n')[0]);
 const bank=[...groups.flatMap(g=>g.cats.map(c=>({...c,topicFamily:g.name}))),...quiz.filter(c=>c.blitz).map(c=>({title:c.name,kind:'trivia',topicFamily:c.topicFamily,items:c.qs.map(q=>[q[0],q[1],[c.topicId],c.distractors?.[q[0]]])}))];

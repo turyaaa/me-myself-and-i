@@ -1,0 +1,18 @@
+{
+  "isotopes": {
+    "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=&all=all&ascii=html&isotype=some",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "zaf-agri": {
+    "url": "https://api.worldbank.org/v2/country/ZAF/indicator/NV.AGR.TOTL.ZS?date=2022&format=json",
+    "text": "[{\"page\":1,\"pages\":1,\"per_page\":50,\"total\":1,\"sourceid\":\"2\",\"lastupdated\":\"2026-10-08\"},[{\"indicator\":{\"id\":\"NV.AGR.TOTL.ZS\",\"value\":\"Agriculture, forestry, and fishing, value added (% of GDP)\"},\"country\":{\"id\":\"ZA\",\"value\":\"South Africa\"},\"countryiso3code\":\"ZAF\",\"date\":\"2022\",\"value\":2.60577484985618,\"unit\":\"\",\"obs_status\":\"\",\"decimal\":1}]]"
+  },
+  "zaf-industry": {
+    "url": "https://api.worldbank.org/v2/country/ZAF/indicator/NV.IND.TOTL.ZS?date=2022&format=json",
+    "text": "[{\"page\":1,\"pages\":1,\"per_page\":50,\"total\":1,\"sourceid\":\"2\",\"lastupdated\":\"2026-10-08\"},[{\"indicator\":{\"id\":\"NV.IND.TOTL.ZS\",\"value\":\"Industry (including construction), value added (% of GDP)\"},\"country\":{\"id\":\"ZA\",\"value\":\"South Africa\"},\"countryiso3code\":\"ZAF\",\"date\":\"2022\",\"value\":24.9820287872223,\"unit\":\"\",\"obs_status\":\"\",\"decimal\":1}]]"
+  },
+  "zaf-services": {
+    "url": "https://api.worldbank.org/v2/country/ZAF/indicator/NV.SRV.TOTL.ZS?date=2022&format=json",
+    "text": "[{\"page\":1,\"pages\":1,\"per_page\":50,\"total\":1,\"sourceid\":\"2\",\"lastupdated\":\"2026-10-08\"},[{\"indicator\":{\"id\":\"NV.SRV.TOTL.ZS\",\"value\":\"Services, value added (% of GDP)\"},\"country\":{\"id\":\"ZA\",\"value\":\"South Africa\"},\"countryiso3code\":\"ZAF\",\"date\":\"2022\",\"value\":62.2719610043357,\"unit\":\"\",\"obs_status\":\"\",\"decimal\":1}]]"
+  }
+}

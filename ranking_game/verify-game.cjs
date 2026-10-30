@@ -157,7 +157,7 @@ assert.equal(kyivDay(new Date('2026-10-24T21:30:00Z')),'2026-10-25');
 assert(Math.abs(nextKyivDay(new Date('2026-10-24T21:30:00Z'))-Date.parse('2026-10-25T22:00:00Z'))<1000);
 assert(Math.abs(nextKyivDay(new Date('2026-03-28T22:30:00Z'))-Date.parse('2026-03-29T21:00:00Z'))<1000);
 assert.equal(dailyAccuracy([25,25,25,25],[25,25,25,25]),100);
-assert.equal(dailyAccuracy([100,0,0,0],[0,100,0,0]),33);
+assert.equal(dailyAccuracy([100,0,0,0],[0,100,0,0]),0);
 assert(dailyAccuracy([0,0,0,100],[3,3,3,91])<25);
 for(const q of DAILY_BANK){assert.equal(q.values.length,4);assert(Math.abs(q.values.reduce((a,b)=>a+b,0)-100)<.001);assert(q.values.every(v=>v>=0));assert(q.source.startsWith('https://'));}
 for(let i=0;i<100;i++){const shares=rebalanceShares([25,25,25,25],i%3,i);assert(Math.abs(shares.reduce((a,b)=>a+b,0)-100)<1e-9);assert(shares.every(v=>v>=-1e-9));assert.equal(shares[i%3],Math.min(i,75));assert.equal(shares[3],25);}
@@ -175,7 +175,7 @@ results.dailySavedAttemptAndLock='passed';results.dailyKyivDST='passed';results.
 assert.deepEqual(CLUSTERS.map(c=>c[0]),['Світ','Наука','Природа','Спорт','Розваги','Література']);
 assert(GROUPS.find(g=>g.name==='Аніме').cats.length>=3);
 for(const [family,opts] of Object.entries(TOPIC_OPTIONS))for(const [id] of opts){
- const filtered=topicCats(GROUPS.find(g=>g.name===family),[id]);if(family!=='Серіали')assert(filtered.some(c=>new Set(c.items.map(i=>i[1])).size>=5),id);
+ const filtered=topicCats(GROUPS.find(g=>g.name===family),[id]);if(!['Серіали','Футбол'].includes(family))assert(filtered.some(c=>new Set(c.items.map(i=>i[1])).size>=5),id);
  assert(topicQuiz({family,ids:[id]}).reduce((n,c)=>n+c.qs.length,0)>=5,id);
 }
 const sample=GROUPS.find(g=>g.name==='Фільми');openTopicPicker(sample,'rank');topicPicker.ids=['starwars','potter'];renderTopicPicker();assert.equal($('topic-start').disabled,false);$('topic-start').onclick();assert(G.group.cats.every(c=>c.items.every(i=>i[2].some(id=>['starwars','potter'].includes(id)))));
@@ -212,6 +212,79 @@ for(const g of GROUPS){blitzSelection={family:g.name,ids:[]};assert.equal(makeBl
 B={phase:'end',online:false};show('blitz');$('bhome').onclick();assert.equal($('home').hidden,false);
 renderSidebar();const navLabels=$('sidebar').children.filter(x=>x.className?.startsWith('sbi')).map(x=>x.children[x.children.length-1].textContent);assert.equal(navLabels.slice(0,2).join('|'),'Головна|Поділи світ · Щодня');
 results.blitzMenuAndNavigation='passed';
+// Published Daily calendar: 90 new tasks, never a date-seeded repeat cycle.
+const seasonDays=Object.keys(DAILY_SCHEDULE.days).sort(),seasonIds=seasonDays.flatMap(day=>DAILY_SCHEDULE.days[day]);
+assert.equal(DAILY_BANK.length,101);assert.equal(seasonDays.length,30);assert.equal(seasonIds.length,90);assert.equal(new Set(seasonIds).size,90);
+const familyCounts=new Map();let previousFamilies=[];
+for(const [i,day] of seasonDays.entries()){
+ const plan=dailyPlan(day);assert.equal(plan.length,3);assert(plan.every(q=>q.edition==='daily-2026-10'));
+ const families=plan.map(q=>q.family);assert.equal(new Set(families).size,3);families.forEach(f=>familyCounts.set(f,(familyCounts.get(f)||0)+1));
+ if(i)assert(families.filter(f=>previousFamilies.includes(f)).length<=1);
+ if(i%2)assert.equal(new Set([...families,...previousFamilies]).size,6);
+ previousFamilies=families;
+}
+assert.equal(familyCounts.size,6);assert([...familyCounts.values()].every(n=>n===15));
+assert.equal(dailyPlan('2026-11-30').length,0);assert.equal(dailyPlan('2027-10-31').length,0);
+const currentDaily=D;D=loadDaily('2026-11-30');renderDaily();assert.equal($('daily-unavailable').hidden,false);assert.equal($('daily-game').hidden,true);D=currentDaily;renderDaily();
+// Five percentage points moved costs five points, even with tiny true sectors.
+assert.equal(dailyAccuracy([.1,20,79.9,0],[.1,25,74.9,0]),95);
+assert.equal(dailyAccuracy([25,25,25,25],[10,20,45,25]),73);
+assert.equal(dailyAccuracy([0,40,60,0],[1,40,59,0]),99);
+results.dailySeason={newTasks:90,days:30,noRepeats:true,balancedThemes:true,noLoopAfterEnd:true};results.dailyGentlerScoring='passed';
+// All football selections use curated text questions, with the same rule online.
+const football=QUIZ.filter(c=>c.topicFamily==='Футбол');assert.equal(football.length,10);assert.equal(football.reduce((n,c)=>n+c.qs.length,0),50);
+blitzSelection={family:'Футбол',ids:[]};assert.equal(makeBlitzPlan().length,15);assert(makeBlitzPlan().every(q=>q.options.every(v=>typeof v==='string')));
+blitzSelection={family:'Футбол',ids:['fb-offside','fb-referee','fb-data']};assert.equal(makeBlitzPlan().length,15);blitzSelection=null;
+results.footballCuratedQuiz={collections:10,questions:50};
+// Timed overlays hide exactly when answers become available, and on leaving.
+let countNow=0,timerTick,startedCount=0,expiredCount=0,popCount=0;performance.now=()=>countNow;
+setInterval=fn=>{timerTick=fn;return 1;};
+const oldDigitAdd=$('bcountdown-digit').classList.add;$('bcountdown-digit').classList.add=()=>popCount++;
+startBlitzClock(15000,()=>expiredCount++,5000,()=>startedCount++);
+assert.equal($('bcountdown').hidden,false);assert.equal($('bcountdown-digit').textContent,'5');assert.equal(popCount,1);
+startBlitzClock(15000,()=>expiredCount++,5000,()=>startedCount++);assert.equal(popCount,1);
+for(let second=1;second<5;second++){countNow=second*1000;timerTick();assert.equal($('bcountdown-digit').textContent,String(5-second));}
+countNow=5000;timerTick();assert.equal($('bcountdown').hidden,true);assert.equal(startedCount,1);assert.equal(expiredCount,0);
+countNow=15000;timerTick();assert.equal(expiredCount,1);showBlitzCountdown(3);stopBlitzClock();assert.equal($('bcountdown').hidden,true);
+$('bcountdown-digit').classList.add=oldDigitAdd;results.blitzBigCountdown='passed';
+// Secret triggers on click 15, ignores clicks during the spin, then resets.
+const previousSound=playSound,previousTimeout=setTimeout;let secretSounds=[],spinReset;
+playSound=kind=>secretSounds.push(kind);setTimeout=fn=>{spinReset=fn;return 1;};
+for(let i=0;i<14;i++)tapMainLogo();assert.equal(secretSounds.length,0);tapMainLogo();assert.equal(secretSounds.join('|'),'silly');assert.equal(logoSpinning,true);
+tapMainLogo();assert.equal(secretSounds.length,1);spinReset();assert.equal(logoSpinning,false);assert.equal(logoClicks,0);
+for(let i=0;i<15;i++)tapMainLogo();assert.equal(secretSounds.length,2);spinReset();playSound=previousSound;setTimeout=previousTimeout;
+results.logoSecret15Clicks='passed';
+const savedDailyForQA=D;
+for(const day of seasonDays){
+ const plan=dailyPlan(day);D={day,plan,results:[],shares:initialDailyShares(plan[0]),revealed:false};
+ for(let i=0;i<3;i++){
+  renderDaily();assert.equal($('daily-controls').children.length,3);
+  D.shares=plan[i].values.slice();D.results.push({guess:D.shares.slice(),score:dailyAccuracy(D.shares,plan[i].values)});D.revealed=true;renderDailyRound();
+  assert.equal(D.results[i].score,100);assert.equal($('daily-source').href,plan[i].source);D.revealed=false;
+  if(i<2)D.shares=initialDailyShares(plan[i+1]);
+ }
+ renderDaily();assert.equal($('daily-finish').hidden,false);assert.equal($('daily-total').textContent,'100%');
+}
+D=savedDailyForQA;results.dailyAll90RoundsRender='passed';
+// Selecting five exact categories must not randomize or duplicate them.
+openQuiz();chooseQuizCategories('std');
+const chooserBox=$('qsetup'),choiceGrid=chooserBox.children[3],choiceActions=chooserBox.children[4];
+assert.equal(choiceActions.children[0].disabled,true);
+for(let i=0;i<5;i++)choiceGrid.children[i].onclick();
+assert.equal(quizCategoryChoice.selected.length,5);assert.equal(choiceActions.children[0].disabled,false);assert.equal(choiceGrid.children[5].disabled,true);
+const expectedCategories=quizCategoryChoice.selected.map(i=>quizCategoryChoice.source[i].name).join('|');choiceActions.children[0].onclick();
+assert.equal(Q.cats.map(c=>c.name).join('|'),expectedCategories);assert.equal(Q.cats.length,5);
+openQuiz();chooseQuizCategories('std');$('qsetup').children[4].children[1].onclick();assert.equal(Q.cats.length,5);
+$('qend').hidden=false;$('qsetup').hidden=true;chooseQuizCategories('std');assert.equal($('qsetup').hidden,false);assert.equal($('qend').hidden,true);
+const libraryCats=Array.from({length:7},(_,i)=>({name:'Авторська '+i,qs:Array.from({length:5},(_,j)=>['Питання '+j,'Відповідь '+j])}));
+const libraryRow={title:'Гра для компанії',author_name:'Автор',description:'Опис',categories:libraryCats};
+assert.equal(cleanLibraryQuiz(libraryRow,true).categories.length,7);
+for(const bad of [{...libraryRow,categories:libraryCats.slice(0,4)},{...libraryRow,title:''},{...libraryRow,categories:[libraryCats[0],...libraryCats.slice(0,4)]},{...libraryRow,categories:libraryCats.map(c=>({...c,qs:[['q','a']]}))}])assert.throws(()=>cleanLibraryQuiz(bad,true));
+playLibraryQuiz(libraryRow);const libraryGrid=$('qsetup').children[3];for(let i=6;i>=2;i--)libraryGrid.children[i].onclick();$('qsetup').children[4].children[0].onclick();
+assert.equal(Q.cats.map(c=>c.name).join('|'),'Авторська 6|Авторська 5|Авторська 4|Авторська 3|Авторська 2');
+libraryQuizSource.categories[6].qs[0][0]='changed';assert.equal(libraryCats[6].qs[0][0],'Питання 0');
+L.user={id:'author-a'};L.draft={...libraryRow,owner_id:'author-a'};persistLibraryDraft();assert(store.get('ranking_library_draft_author-a'));L.user={id:'author-b'};composeLibraryQuiz();assert.notEqual(L.draft.owner_id,'author-a');
+results.quizManualFiveAndRandom='passed';results.libraryAuthorValidation='passed';results.libraryLocalMultiplayer='passed';results.libraryDraftAccountIsolation='passed';
 JSON.stringify(results,null,2);
 `,context);
 assert(html.indexOf('id="mode-blitz"')<html.indexOf('id="mode-rank"'));
