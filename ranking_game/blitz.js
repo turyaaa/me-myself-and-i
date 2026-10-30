@@ -91,7 +91,7 @@ function nextSoloBlitz() {
   renderBlitzPlayers([{name:'Твої бали',score:B.score}]);
   renderBlitzQuestion(B.plan[B.round-1],B.round,B.plan.length);
   $('bstatus').textContent='Обери правильну відповідь. На відповідь — 10 секунд.';
-  B.startsAt=performance.now()+(B.round===1?5000:0);
+  B.startsAt=performance.now()+(B.round===1?3000:0);
   B.deadline=B.startsAt+BLITZ_MS;
   if(performance.now()<B.startsAt)lockBlitzOptions();
   startBlitzClock(B.deadline,()=>finishSoloBlitz(null),B.startsAt,()=>{[...$('boptions').children].forEach(button=>button.disabled=false);});

@@ -58,7 +58,7 @@ function settle(room,now){
   for(const p of room.players)if(submissions[p.id]===correct)p.score+=100;
   room.ready=[];room.phase=room.round===room.plan.length?'end':'result';return true;
 }
-function beginRound(room,now){room.round++;room.phase='question';room.startsAt=now+(room.round===1?5000:2000);room.deadline=room.startsAt+LIMIT;room.ready=[];room.answers.push({});}
+function beginRound(room,now){room.round++;room.phase='question';room.startsAt=now+(room.round===1?3000:2000);room.deadline=room.startsAt+LIMIT;room.ready=[];room.answers.push({});}
 export function projectRoom(room,who,now){
   const current=room.plan[room.round-1],answers=room.answers[room.round-1]||{};
   const answered=Object.hasOwn(answers,who.id),revealed=['result','end'].includes(room.phase);

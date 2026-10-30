@@ -72,10 +72,7 @@ assert.equal(mixed.toVal(mixed.toPos(.015)),.015);
 SCREENS.forEach(n=>$(n).hidden=true);$('guess').hidden=false;
 V={phase:'guess',round:1,score:0,group:{name:'test'},cur:{cat:yearCat,item:['Event',2013],sc:yearScale,bounds:yearScale,whole:true}};
 $('gval').value='2018';updateGuessSlider(2018);
-const fullWidth=V.cur.sc.maxLabel-V.cur.sc.minLabel;
-refineGuessScale();assert(V.cur.sc.maxLabel-V.cur.sc.minLabel<fullWidth);assert(V.cur.sc.toVal(V.cur.sc.toPos(2018))===2018);
-refineGuessScale(true);assert.equal(V.cur.sc,yearScale);
-$('gval').value='1950';refineGuessScale();
+$('gval').value='1950';$('gval').events.input();assert.equal(V.cur.sc,yearScale);assert.equal(Number($('gslider').value),Math.round(yearScale.toPos(1950)*yearScale.ticks));
 $('gval').value='2020';$('gval').events.input();assert.equal(V.cur.sc,yearScale);
 $('gval').value='2018.5';confirmGuess();assert.equal(V.phase,'guess');
 $('gval').value='1800';confirmGuess();assert.equal(V.phase,'guess');
@@ -92,7 +89,7 @@ imported=importData(JSON.stringify({categories:[{name:'Тест',questions:[{poi
 assert.equal(imported.qn,1);assert.equal(imported.skipped,1);assert.equal(CUSTOM[0].qs[0][0],'Q');
 assert.throws(()=>importData('{"categories":{}}'));
 assert.throws(()=>parseCSV('"unclosed'));
-results.linearScales='passed';results.zoomAndReset='passed';results.answerValidation='passed';results.resultCards='passed';results.doubleSubmit='passed';results.navigationSafeguards='passed';results.importRegression='passed';
+results.linearScales='passed';results.fullRangeSlider='passed';results.answerValidation='passed';results.resultCards='passed';results.doubleSubmit='passed';results.navigationSafeguards='passed';results.importRegression='passed';
 assert.equal(GROUPS.filter(g=>['Література','Українська література'].includes(g.name)).reduce((n,g)=>n+g.cats.length,0),8);
 assert.equal(QUIZ.find(c=>c.name==='Література').qs.length,75);
 assert.equal(QUIZ.find(c=>c.name==='Українська література').qs.length,30);
@@ -137,7 +134,7 @@ results.literatureExpansion='passed';results.iconCoverage='passed';results.sound
 // Blitz uses a monotonic ten-second deadline, rejects double submits, and ends after fifteen questions.
 let blitzNow=1000;performance.now=()=>blitzNow;soundEnabled=false;
 showBlitzSetup();assert.equal(B.phase,'setup');startSoloBlitz();
-assert.equal(B.plan.length,15);assert.equal(B.startsAt-blitzNow,5000);assert.equal(B.deadline-B.startsAt,10000);submitBlitz(B.plan[0].correct);assert.equal(B.score,0);assert.equal(B.phase,'question');
+assert.equal(B.plan.length,15);assert.equal(B.startsAt-blitzNow,3000);assert.equal(B.deadline-B.startsAt,10000);submitBlitz(B.plan[0].correct);assert.equal(B.score,0);assert.equal(B.phase,'question');
 assert(B.plan.every(q=>q.options.length===4&&new Set(q.options).size===4));
 assert.equal(new Set(B.plan.map(q=>q.id)).size,15);
 assert.equal(inProgress(),true);
@@ -210,7 +207,7 @@ assert.equal(blitzPlan([{title:'Unreviewed',kind:'trivia',items:[['a','1'],['b',
 results.curatedPlausibleDistractors='passed';results.allSeriesNumericPlayable='passed';results.newFilmCollections='passed';results.blitzAllTopics='passed';
 for(const g of GROUPS){blitzSelection={family:g.name,ids:[]};assert.equal(makeBlitzPlan().length,15,g.name);}blitzSelection=null;
 B={phase:'end',online:false};show('blitz');$('bhome').onclick();assert.equal($('home').hidden,false);
-renderSidebar();const navLabels=$('sidebar').children.filter(x=>x.className?.startsWith('sbi')).map(x=>x.children[x.children.length-1].textContent);assert.equal(navLabels.slice(0,2).join('|'),'Головна|Поділи світ · Щодня');
+renderSidebar();const navLabels=$('sidebar').children.filter(x=>x.className?.startsWith('sbi')).map(x=>x.children[x.children.length-1].textContent);assert.equal(navLabels.slice(0,3).join('|'),'Головна|Профіль|Поділи світ · Щодня');assert.equal(navLabels.filter(x=>x==='Профіль').length,1);
 results.blitzMenuAndNavigation='passed';
 // Published Daily calendar: 90 new tasks, never a date-seeded repeat cycle.
 const seasonDays=Object.keys(DAILY_SCHEDULE.days).sort(),seasonIds=seasonDays.flatMap(day=>DAILY_SCHEDULE.days[day]);
@@ -240,12 +237,12 @@ results.footballCuratedQuiz={collections:10,questions:50};
 let countNow=0,timerTick,startedCount=0,expiredCount=0,popCount=0;performance.now=()=>countNow;
 setInterval=fn=>{timerTick=fn;return 1;};
 const oldDigitAdd=$('bcountdown-digit').classList.add;$('bcountdown-digit').classList.add=()=>popCount++;
-startBlitzClock(15000,()=>expiredCount++,5000,()=>startedCount++);
-assert.equal($('bcountdown').hidden,false);assert.equal($('bcountdown-digit').textContent,'5');assert.equal(popCount,1);
-startBlitzClock(15000,()=>expiredCount++,5000,()=>startedCount++);assert.equal(popCount,1);
-for(let second=1;second<5;second++){countNow=second*1000;timerTick();assert.equal($('bcountdown-digit').textContent,String(5-second));}
-countNow=5000;timerTick();assert.equal($('bcountdown').hidden,true);assert.equal(startedCount,1);assert.equal(expiredCount,0);
-countNow=15000;timerTick();assert.equal(expiredCount,1);showBlitzCountdown(3);stopBlitzClock();assert.equal($('bcountdown').hidden,true);
+startBlitzClock(13000,()=>expiredCount++,3000,()=>startedCount++);
+assert.equal($('bcountdown').hidden,false);assert.equal($('bcountdown-digit').textContent,'3');assert.equal(popCount,1);
+startBlitzClock(13000,()=>expiredCount++,3000,()=>startedCount++);assert.equal(popCount,1);
+for(let second=1;second<3;second++){countNow=second*1000;timerTick();assert.equal($('bcountdown-digit').textContent,String(3-second));}
+countNow=3000;timerTick();assert.equal($('bcountdown').hidden,true);assert.equal(startedCount,1);assert.equal(expiredCount,0);
+countNow=13000;timerTick();assert.equal(expiredCount,1);showBlitzCountdown(3);stopBlitzClock();assert.equal($('bcountdown').hidden,true);
 $('bcountdown-digit').classList.add=oldDigitAdd;results.blitzBigCountdown='passed';
 // Secret triggers on click 15, ignores clicks during the spin, then resets.
 const previousSound=playSound,previousTimeout=setTimeout;let secretSounds=[],spinReset;
@@ -285,8 +282,13 @@ assert.equal(Q.cats.map(c=>c.name).join('|'),'Авторська 6|Авторс�
 libraryQuizSource.categories[6].qs[0][0]='changed';assert.equal(libraryCats[6].qs[0][0],'Питання 0');
 L.user={id:'author-a'};L.draft={...libraryRow,owner_id:'author-a'};persistLibraryDraft();assert(store.get('ranking_library_draft_author-a'));L.user={id:'author-b'};composeLibraryQuiz();assert.notEqual(L.draft.owner_id,'author-a');
 results.quizManualFiveAndRandom='passed';results.libraryAuthorValidation='passed';results.libraryLocalMultiplayer='passed';results.libraryDraftAccountIsolation='passed';
+L.user=null;A.profile=null;renderAccountLinks();assert.equal($('home-auth-actions').hidden,false);assert.equal($('lib-auth-actions').hidden,false);assert($('profile-toggle').attributes['aria-label'].includes('Увійти'));
+show('quiz');Q.used=1;$('profile-toggle').onclick();assert.equal($('quiz').hidden,false);Q.used=0;$('profile-toggle').onclick();assert.equal($('account').hidden,false);
+L.user={id:'icon-test'};A.profile={id:'icon-test',nickname:'Мій нік'};renderAccountLinks();assert.equal($('home-auth-actions').hidden,true);assert.equal($('lib-auth-actions').hidden,true);assert.equal($('profile-toggle').attributes['title'],'Профіль · Мій нік');
+results.profileIconAndNavigation='passed';
 JSON.stringify(results,null,2);
 `,context);
 assert(html.indexOf('id="mode-blitz"')<html.indexOf('id="mode-rank"'));
 assert(html.indexOf('id="mode-rank"')<html.indexOf('id="mode-guess"'));
+assert(!html.includes('id="gzoom"'));assert(!html.includes('id="greset"'));assert(!html.includes('refineGuessScale'));assert(!html.includes('id="home-profile"'));assert(!html.includes('id="lib-profile"'));assert(html.includes('id="profile-toggle"'));
 console.log(results);

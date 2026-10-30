@@ -20,7 +20,7 @@ async function run(){
  while(round<15){
   readBarrier=[];
   await Promise.all([call(input('ready',a,{round})),call(input('ready',b,{round}))]);round++;
-  const state=await call(input('state',a));assert.equal(state.round,round);assert.equal(state.total,15);assert.equal(state.startsAt-now,round===1?5000:2000);assert.equal(state.phase,'question');assert(!Object.hasOwn(state,'correct'));assert.equal(state.deadline-state.startsAt,10000);
+  const state=await call(input('state',a));assert.equal(state.round,round);assert.equal(state.total,15);assert.equal(state.startsAt-now,round===1?3000:2000);assert.equal(state.phase,'question');assert(!Object.hasOwn(state,'correct'));assert.equal(state.deadline-state.startsAt,10000);
   assert.equal(new Set(state.question.options).size,4);
   await assert.rejects(()=>call(input('answer',a,{round,index:0}))); // synchronized start not yet reached
   now=state.startsAt;
@@ -43,7 +43,7 @@ async function run(){
  await call(input('answer',a,{round:15,index:0}));assert.equal((await call(input('state',a))).players[0].score,1400);
  const oldPlan=structuredClone(records.get('room/'+a.room).data.plan);
  const voting=await call(input('rematch',a,{match:1}));assert.equal(voting.phase,'end');assert.equal(voting.rematch,true);assert.equal(voting.players[0].rematch,true);
- const rematch=await call(input('rematch',b,{match:1}));assert.equal(rematch.room,a.room);assert.equal(rematch.match,2);assert.equal(rematch.round,1);assert.equal(rematch.phase,'question');assert.equal(rematch.startsAt-now,5000);assert(rematch.players.every(p=>p.score===0));
+ const rematch=await call(input('rematch',b,{match:1}));assert.equal(rematch.room,a.room);assert.equal(rematch.match,2);assert.equal(rematch.round,1);assert.equal(rematch.phase,'question');assert.equal(rematch.startsAt-now,3000);assert(rematch.players.every(p=>p.score===0));
  assert.equal(rematch.players.map(p=>p.name).join(','),'Аня,Богдан');
  assert(records.get('room/'+a.room).data.plan.every(q=>!oldPlan.some(old=>old.category===q.category&&old.prompt===q.prompt)));
  now=rematch.startsAt;

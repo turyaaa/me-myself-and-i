@@ -2,9 +2,9 @@
 const A={mode:'login',profile:null,admin:false,userId:null,revision:0,loading:null,busy:false,recovery:false};
 function accountMessage(id,message,error=false){$(id).textContent=message;$(id).className=error?'sub lib-status-error':'sub';}
 function renderAccountLinks(){
- for(const [register,login,profile] of [['home-register','home-login','home-profile'],['lib-register','lib-account','lib-profile']]){
-  $(register).hidden=!!L.user;$(login).hidden=!!L.user;$(profile).hidden=!L.user;$(profile).textContent=A.profile?.nickname?'Профіль · '+A.profile.nickname:'Мій профіль';
- }
+ for(const id of ['home-auth-actions','lib-auth-actions'])$(id).hidden=!!L.user;
+ const label=L.user?(A.profile?.nickname?'Профіль · '+A.profile.nickname:'Мій профіль'):'Увійти або створити профіль';
+ const button=$('profile-toggle');button.setAttribute('aria-label',label);button.setAttribute('title',label);button.classList.toggle('signed-in',!!L.user);
 }
 function accountIdentityChanged(event,user){
  if(A.userId!==(user?.id||null)){A.userId=user?.id||null;A.profile=null;A.admin=false;A.loading=null;A.revision++;A.recovery=false;
@@ -113,7 +113,7 @@ async function loadModerationQueue(){
 function initAccounts(){
  for(const id of ['home-register','lib-register','profile-register','auth-tab-register'])$(id).onclick=()=>showAuth('register');
  for(const id of ['home-login','lib-account','profile-login','auth-tab-login'])$(id).onclick=()=>showAuth('login');
- for(const id of ['home-profile','lib-profile'])$(id).onclick=()=>showProfile();
+ $('profile-toggle').onclick=()=>navigate(()=>L.user?showProfile():showAuth('login'));
  $('auth-switch').onclick=()=>showAuth(A.mode==='login'?'register':'login');$('auth-forgot').onclick=()=>showAuth('forgot');$('auth-form').onsubmit=submitAccountForm;$('auth-google').onclick=accountGoogle;
  $('profile-form').onsubmit=saveProfile;$('profile-password-form').onsubmit=saveAccountPassword;$('profile-change-password').onclick=()=>{$('profile-password-form').hidden=false;$('profile-password').focus();};
  $('profile-copy-id').onclick=async()=>{try{await navigator.clipboard.writeText(L.user.id);accountMessage('profile-message','ID скопійовано.');}catch(_){accountMessage('profile-message','Не вдалося скопіювати ID.',true);}};

@@ -5,7 +5,7 @@
   "quizTopics": 61,
   "quizQuestions": 1115,
   "linearScales": "passed",
-  "zoomAndReset": "passed",
+  "fullRangeSlider": "passed",
   "answerValidation": "passed",
   "resultCards": "passed",
   "doubleSubmit": "passed",
@@ -54,5 +54,6 @@
   "quizManualFiveAndRandom": "passed",
   "libraryAuthorValidation": "passed",
   "libraryLocalMultiplayer": "passed",
-  "libraryDraftAccountIsolation": "passed"
+  "libraryDraftAccountIsolation": "passed",
+  "profileIconAndNavigation": "passed"
 }
