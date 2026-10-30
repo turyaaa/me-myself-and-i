@@ -71,6 +71,12 @@ async function run(){
  await assert.rejects(()=>call({action:'create',name:'Bad',selection:{family:'Фільми',ids:['injected']}}));
  const rap=await call({action:'create',name:'Rap',selection:{family:'Музика',ids:['rap']}});assert.equal(rap.total,15);
  const story=await call({action:'create',name:'BB',selection:{family:'Серіали',ids:['breakingbad']}});assert.equal(story.total,15);assert(records.get('room/'+story.room).data.plan.every(q=>q.category.includes('Breaking Bad')));
+ const allSeries=await call({action:'create',name:'All series',selection:{family:'Серіали',ids:['breakingbad','got','friends','stranger','saul','office']}});assert.equal(allSeries.total,15);
+ const geo=await call({action:'create',name:'Geo',selection:{family:'Географія',ids:[]}});assert.equal(geo.total,15);
+ for(const record of records.values())for(const question of record.data.plan||[]){
+  const c=bank.find(c=>c.title===question.category),item=c?.items.find(i=>i[0]===question.prompt);
+  if(c?.kind==='trivia')assert.deepEqual([...question.options].sort(),[item[1],...item[3]].sort());
+ }
  // Exercise the actual HTTP adapter with injected storage, without Netlify credentials.
  ctx.getStore=()=>store;ctx.bank=bank;
  ctx.Response=class {constructor(body,options){this.body=body;this.status=options.status;this.headers=options.headers;}json(){return JSON.parse(this.body);}};

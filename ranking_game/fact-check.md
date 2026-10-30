@@ -158,3 +158,14 @@
 Зріст Star Wars: офіційні сторінки Databank — [Luke](https://www.starwars.com/databank/luke-skywalker), [Yoda](https://www.starwars.com/databank/yoda), [Chewbacca](https://www.starwars.com/databank/chewbacca), [Vader](https://www.starwars.com/databank/darth-vader), [C-3PO](https://www.starwars.com/databank/c-3po), [R2-D2](https://www.starwars.com/databank/r2-d2), [Leia](https://www.starwars.com/databank/leia-organa), [Han](https://www.starwars.com/databank/han-solo). Це зріст персонажів у довіднику, не акторів.
 
 Сюжетні добірки написані за каноном екранізацій. Допоміжні джерела: [Star Wars Databank](https://www.starwars.com/databank/), [Harry Potter Fact Files](https://www.harrypotter.com/fact-file), [Disney — Wakanda](https://news.disney.com/black-panther-wakanda-forever), [Sony — Breaking Bad](https://www.sonypictures.com/tv/breakingbad), [AMC — Gus](https://www.amc.com/blogs/relive-the-height-of-guss-empire-on-breaking-bad--1008864), [Sony — Better Call Saul](https://www.sonypictures.com/tv/bettercallsaul), [Netflix — персонажі Stranger Things](https://www.netflix.com/tudum/articles/stranger-things-season-5-cast-character-guide), [HBO — Game of Thrones](https://www.hbomaxlapress.com/programming/series/94). Посилання на оглядові сторінки не означають окремої зовнішньої перевірки кожної сюжетної деталі; назви й переклади редакційні, відповіді показуються ведучому у вікторині.
+
+
+## Нові добірки й виправлення дистракторів
+
+Додано 17 числових категорій (139 карток) і 55 сюжетних питань. Підсумок — 133 числові категорії, 1648 карток, 1080 питань вікторини.
+
+Для нових кінодобірок роки означають першу прем’єру, а не прокат в окремій країні. [Фільмографія Нолана](https://www.imdb.com/name/nm0634240/) і [огляд Тарантіно](https://en.wikipedia.org/wiki/Quentin_Tarantino). Роки сезонів означають рік прем’єри першого епізоду сезону; [Гра престолів, епізоди](https://awoiaf.westeros.org/index.php/List_of_Game_of_Thrones_episodes). Тривалості фільмів Середзем’я наведено тільки для кінотеатральних версій.
+
+Роки народження 47 акторів перевірені за TVmaze API, пошук за точним ім’ям. Отримані дати та прямі посилання на профілі збережені в `actor-sources.json`; ці дати використані у шести серіальних числових добірках. Дані: [TVmaze](https://www.tvmaze.com/), API [умови використання](https://www.tvmaze.com/api).
+
+440 текстових питань Бліцу тепер мають затверджені набори хибних відповідей. Вони збережені окремо від пар «питання—правильна відповідь», щоб вікторина й експорт власних питань працювали як раніше. Редакційний список — `blitz-distractors.json`. Сюжетні добірки орієнтовані на фільми/серіали, не на відмінності книжкового канону.

@@ -32,15 +32,16 @@ function blitzLabels(values,unit){
  return labels;
 }
 
+function validTrivia(item){return Array.isArray(item[3])&&item[3].length===3&&item[3].every(v=>typeof v==='string'&&v.trim())&&new Set([item[1],...item[3]]).size===4;}
 function blitzPlan(cats,previous=[]){
- const eligible=shuffle(cats.filter(c=>new Set(c.items.map(i=>i[1])).size>=4)),chosen=[],seen=new Set();
+ const eligible=shuffle(cats.filter(c=>c.kind==='trivia'?c.items.some(validTrivia):new Set(c.items.map(i=>i[1])).size>=4)),chosen=[],seen=new Set();
  while(chosen.length<15){let added=false;
   for(const c of eligible){
-   const available=c.items.filter(i=>!seen.has(c.title+'|'+i[0]));
+   const available=c.items.filter(i=>!seen.has(c.title+'|'+i[0])&&(c.kind!=='trivia'||validTrivia(i)));
    const fresh=available.filter(i=>!previous.some(q=>q.category===c.title&&q.prompt===i[0]));
    if(!available.length)continue;
    const item=shuffle(fresh.length?fresh:available)[0];seen.add(c.title+'|'+item[0]);
-   const values=c.kind==='trivia'?shuffle([item[1],...shuffle([...new Set(c.items.map(i=>i[1]))].filter(v=>v!==item[1])).slice(0,3)]):blitzValues(c.items,item[1],c.unit==='р.');
+   const values=c.kind==='trivia'?shuffle([item[1],...item[3]]):blitzValues(c.items,item[1],c.unit==='р.');
    chosen.push({id:c.title+'|'+item[0],category:c.title,prompt:item[0],options:c.kind==='trivia'?values:blitzLabels(values,c.unit),correct:values.indexOf(item[1])});added=true;
    if(chosen.length===15)break;
   }if(!added)break;
@@ -55,7 +56,7 @@ function renderBlitzQuestion(q,round,total) {
   $('bround').hidden=false; $('bprogress').textContent='Питання '+round+' з '+total;
   $('bcategory').textContent=q.category; $('bquestion').textContent=q.prompt;
   $('bquestion').classList.toggle('long-question',q.prompt.length>50);
-  $('bfeedback').textContent=''; $('bnext').hidden=true; $('breplay').hidden=true;
+  $('bhome').hidden=true;$('bfeedback').textContent=''; $('bnext').hidden=true; $('breplay').hidden=true;
   const box=$('boptions');box.replaceChildren();
   q.options.forEach((label,i)=>{const button=document.createElement('button');button.className='boption';button.textContent=label;button.onclick=()=>submitBlitz(i);box.append(button);});
 }
@@ -82,7 +83,7 @@ function nextSoloBlitz() {
   B.round++;B.phase='question'; B.selected=null;
   renderBlitzPlayers([{name:'Твої бали',score:B.score}]);
   renderBlitzQuestion(B.plan[B.round-1],B.round,B.plan.length);
-  $('bstatus').textContent='Обери правильне значення. На відповідь — 10 секунд.';
+  $('bstatus').textContent='Обери правильну відповідь. На відповідь — 10 секунд.';
   B.startsAt=performance.now()+(B.round===1?5000:0);
   B.deadline=B.startsAt+BLITZ_MS;
   if(performance.now()<B.startsAt)lockBlitzOptions();
@@ -102,7 +103,7 @@ function finishSoloBlitz(index) {
     B.phase='end';const key='bestb_Всі',best=Number(store.get(key)||0),percent=Math.round(B.score/B.plan.length);
     if(percent>best)store.set(key,percent);
     $('bstatus').textContent='Блітз завершено: '+B.score+' з '+B.plan.length*100+' балів.';
-    $('breplay').hidden=false;
+    $('breplay').hidden=false;$('bhome').hidden=false;
   }else {$('bnext').hidden=false;$('bnext').textContent='Наступне питання';}
 }
 function submitBlitz(index) {
@@ -142,7 +143,7 @@ function scheduleDuelPoll() {
   blitzPoll=setTimeout(async()=>{
     if(epoch!==blitzEpoch||!B?.online)return;
     try {const data=await duelRequest('state',{room:B.room,token:B.token});if(epoch!==blitzEpoch)return;renderDuel(data);$('berror').textContent='';}
-    catch(error){if(epoch===blitzEpoch){$('berror').textContent=error.message;if([401,404,410].includes(error.status)){B.phase='cancelled';closeBlitzOutcome();stopBlitzClock();$('bnext').hidden=true;$('breplay').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);}}}
+    catch(error){if(epoch===blitzEpoch){$('berror').textContent=error.message;if([401,404,410].includes(error.status)){B.phase='cancelled';closeBlitzOutcome();stopBlitzClock();$('bnext').hidden=true;$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);}}}
     if(epoch===blitzEpoch&&B?.online)scheduleDuelPoll();
   },['waiting','end'].includes(B?.phase)?1800:1000);
 }
@@ -162,7 +163,7 @@ function renderDuel(data) {
     stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent=data.players.length<2?'Надішли другу запрошення. Очікуємо другого гравця.':data.ready?'Ти готовий. Чекаємо суперника.':'Обидва гравці мають підтвердити готовність.';
     $('bnext').hidden=data.players.length<2||data.ready;$('bnext').textContent='Готовий';return;
   }
-  if(data.phase==='cancelled'){closeBlitzOutcome();stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent='Суперник вийшов із дуелі.';$('breplay').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);return;}
+  if(data.phase==='cancelled'){closeBlitzOutcome();stopBlitzClock();$('bround').hidden=true;$('bstatus').textContent='Суперник вийшов із дуелі.';$('breplay').hidden=false;$('bhome').hidden=false;$('breplay').disabled=false;$('breplay').textContent='Зіграти ще раз';rememberDuel(null);return;}
   if(changed&&data.question){B.selected=null;renderBlitzQuestion(data.question,data.round,data.total);}
   if(data.phase==='question'){
     // Anchor to server time; repeated snapshots cannot extend the same deadline.
@@ -182,7 +183,7 @@ function renderDuel(data) {
   if(data.phase==='end'){
     const high=Math.max(...data.players.map(p=>p.score)),winners=data.players.filter(p=>p.score===high);
     $('bstatus').textContent=winners.length===2?'Дуель завершено — нічия!':'Переможець: '+winners[0].name+'!';
-    $('breplay').hidden=false;$('breplay').textContent=data.rematch?'Очікуємо реваншу…':'Реванш';$('breplay').disabled=!!data.rematch;
+    $('breplay').hidden=false;$('bhome').hidden=false;$('breplay').textContent=data.rematch?'Очікуємо реваншу…':'Реванш';$('breplay').disabled=!!data.rematch;
     $('boutcome-replay').textContent=data.rematch?'Очікуємо суперника…':'Реванш';$('boutcome-replay').disabled=!!data.rematch;
     if(changed)showBlitzOutcome(data.players);
   }else {$('bstatus').textContent=data.ready?'Ти готовий до наступного раунду. Чекаємо суперника.':'Результати раунду';$('bnext').hidden=data.ready;$('bnext').textContent='Готовий далі';}
@@ -203,16 +204,19 @@ function showBlitzOutcome(players){
 }
 $('boutcome-close').onclick=closeBlitzOutcome;
 $('boutcome-replay').onclick=()=>duelAction('rematch');
+$('boutcome-home').onclick=()=>navigate(showHome);
 $('boutcome').addEventListener('click',event=>{if(event.target===$('boutcome')){const r=$('boutcome').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeBlitzOutcome();}});
 $('boutcome').addEventListener('close',()=>{if(B?.phase==='end')$('breplay').focus();});
 function renderBlitzTopics(){
  const box=$('blitz-topic-buttons');box.replaceChildren();
  [['','Усі теми'],['Фільми','Фільми'],['Музика','Музика'],['Серіали','Серіали'],['Аніме','Аніме']].forEach(([name,label])=>{const b=document.createElement('button');b.textContent=label;b.setAttribute('aria-pressed',name?blitzSelection?.family===name:!blitzSelection);b.onclick=()=>{if(!name){blitzSelection=null;renderBlitzTopics();}else if(name==='Аніме'){blitzSelection={family:name,ids:[]};renderBlitzTopics();}else openTopicPicker(GROUPS.find(g=>g.name===name),'blitz');};box.append(b);});
- $('blitz-topic-label').textContent=blitzSelection?blitzSelection.family+(blitzSelection.ids.length?' · '+blitzSelection.ids.map(id=>TOPIC_OPTIONS[blitzSelection.family].find(x=>x[0]===id)[1]).join(' + '):' · усе разом'):'Питання з усіх тем. У дуелі добірку обирає автор кімнати.';
+ const more=document.createElement('button');more.textContent='Усі категорії';more.onclick=()=>showMenu('blitz');box.append(more);
+ $('blitz-topic-label').textContent=blitzSelection?blitzSelection.family+(blitzSelection.ids.length?' · '+blitzSelection.ids.map(id=>TOPIC_OPTIONS[blitzSelection.family]?.find(x=>x[0]===id)?.[1]||id).join(' + '):' · усе разом'):'Питання з усіх тем. У дуелі добірку обирає автор кімнати.';
 }
 $('bsolo').onclick=startSoloBlitz;
 $('bcreate').onclick=()=>connectDuel('create');$('bjoin').onclick=()=>connectDuel('join');$('bresume').onclick=()=>connectDuel('resume');
 $('bnext').onclick=()=>B?.online?duelAction('ready',{round:B.snapshot.round}):nextSoloBlitz();
+$('bhome').onclick=()=>navigate(showHome);
 $('breplay').onclick=()=>B?.online&&B.phase==='end'?duelAction('rematch'):showBlitzSetup();
 $('bcopy').onclick=async()=>{const link=new URL(location.href);link.search='';link.hash='';link.searchParams.set('duel',B.room);try{await navigator.clipboard.writeText(link.href);toast('Запрошення скопійовано');}catch(_){$('berror').textContent='Код для друга: '+B.room;}};
 $('mode-blitz').onclick=showBlitzSetup;

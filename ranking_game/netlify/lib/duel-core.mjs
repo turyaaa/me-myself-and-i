@@ -28,15 +28,16 @@ function blitzLabels(values,unit){
  return labels;
 }
 
+function validTrivia(item){return Array.isArray(item[3])&&item[3].length===3&&item[3].every(v=>typeof v==='string'&&v.trim())&&new Set([item[1],...item[3]]).size===4;}
 function blitzPlan(cats,previous=[]){
- const eligible=shuffle(cats.filter(c=>new Set(c.items.map(i=>i[1])).size>=4)),chosen=[],seen=new Set();
+ const eligible=shuffle(cats.filter(c=>c.kind==='trivia'?c.items.some(validTrivia):new Set(c.items.map(i=>i[1])).size>=4)),chosen=[],seen=new Set();
  while(chosen.length<15){let added=false;
   for(const c of eligible){
-   const available=c.items.filter(i=>!seen.has(c.title+'|'+i[0]));
+   const available=c.items.filter(i=>!seen.has(c.title+'|'+i[0])&&(c.kind!=='trivia'||validTrivia(i)));
    const fresh=available.filter(i=>!previous.some(q=>q.category===c.title&&q.prompt===i[0]));
    if(!available.length)continue;
    const item=shuffle(fresh.length?fresh:available)[0];seen.add(c.title+'|'+item[0]);
-   const values=c.kind==='trivia'?shuffle([item[1],...shuffle([...new Set(c.items.map(i=>i[1]))].filter(v=>v!==item[1])).slice(0,3)]):blitzValues(c.items,item[1],c.unit==='р.');
+   const values=c.kind==='trivia'?shuffle([item[1],...item[3]]):blitzValues(c.items,item[1],c.unit==='р.');
    chosen.push({id:c.title+'|'+item[0],category:c.title,prompt:item[0],options:c.kind==='trivia'?values:blitzLabels(values,c.unit),correct:values.indexOf(item[1])});added=true;
    if(chosen.length===15)break;
   }if(!added)break;
@@ -45,8 +46,8 @@ function blitzPlan(cats,previous=[]){
 export function makePlan(bank,previous=[]){return blitzPlan(bank,previous).map(q=>({...q,id:crypto.randomUUID()}));}
 function selectBank(bank,selection){
  if(selection===null||selection===undefined)return bank;
- const allowed={"Фільми":['potter','starwars','marvel'],"Музика":['rock','rap','pop'],"Аніме":[],"Серіали":["breakingbad","got","friends","stranger","saul","office"]};
- if(!selection||typeof selection!=='object'||!Object.hasOwn(allowed,selection.family)||!Array.isArray(selection.ids)||selection.ids.length>4||selection.ids.some(id=>!allowed[selection.family].includes(id)))throw new DuelError('Некоректна добірка.');
+ const allowed={};for(const c of bank){if(!c.topicFamily)continue;allowed[c.topicFamily]=allowed[c.topicFamily]||[];for(const i of c.items)for(const id of i[2]||[])if(id&&!allowed[c.topicFamily].includes(id))allowed[c.topicFamily].push(id);}
+ if(!selection||typeof selection!=='object'||!Object.hasOwn(allowed,selection.family)||!Array.isArray(selection.ids)||selection.ids.length>allowed[selection.family].length||selection.ids.some(id=>!allowed[selection.family].includes(id)))throw new DuelError('Некоректна добірка.');
  return bank.filter(c=>c.topicFamily===selection.family).map(c=>({...c,items:c.items.filter(i=>!selection.ids.length||selection.ids.some(id=>i[2]?.includes(id)))}));
 }
 function settle(room,now){

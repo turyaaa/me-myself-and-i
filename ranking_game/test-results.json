@@ -1,9 +1,9 @@
 {
-  "categories": 116,
-  "cards": 1509,
-  "rankingRounds": 1160,
-  "quizTopics": 47,
-  "quizQuestions": 1025,
+  "categories": 133,
+  "cards": 1648,
+  "rankingRounds": 1330,
+  "quizTopics": 52,
+  "quizQuestions": 1080,
   "linearScales": "passed",
   "zoomAndReset": "passed",
   "answerValidation": "passed",
@@ -30,5 +30,10 @@
   "dailyFixedRemainder": "passed",
   "dailySummaryBars": "passed",
   "exactGuessFeedback": "passed",
-  "storyBlitzAndShortFilmTitles": "passed"
+  "storyBlitzAndShortFilmTitles": "passed",
+  "curatedPlausibleDistractors": "passed",
+  "allSeriesNumericPlayable": "passed",
+  "newFilmCollections": "passed",
+  "blitzAllTopics": "passed",
+  "blitzMenuAndNavigation": "passed"
 }

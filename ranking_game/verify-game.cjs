@@ -196,6 +196,24 @@ V.phase='guess';$('gval').value='2014';confirmGuess();assert(!$('gtext').childre
 assert(GROUPS.find(g=>g.name==='Фільми').cats.every(c=>c.items.every(i=>! /^(Star Wars|Marvel):/.test(i[0]))));
 blitzSelection={family:'Серіали',ids:['breakingbad']};const bbPlan=makeBlitzPlan();assert.equal(bbPlan.length,15);assert(bbPlan.every(q=>q.category.includes('Breaking Bad')));assert(bbPlan.every(q=>q.options.every(v=>typeof v==='string')));blitzSelection=null;
 results.dailyFixedRemainder='passed';results.dailySummaryBars='passed';results.exactGuessFeedback='passed';results.storyBlitzAndShortFilmTitles='passed';
+for(const c of QUIZ.filter(c=>c.blitz))for(const [question,answer] of c.qs){const wrong=c.distractors[question];assert.equal(wrong.length,3);assert.equal(new Set([answer,...wrong]).size,4);}
+const friends=QUIZ.find(c=>c.name==='Друзі · персонажі та історії');
+assert(friends.distractors['У якому місті переважно живуть головні герої?'].every(v=>['Бостон','Чикаго','Сіетл'].includes(v)));
+assert(friends.distractors['Як звати дружину Чендлера?'].every(v=>['Рейчел Ґрін','Фібі Буффе','Дженіс'].includes(v)));
+for(const [id] of TOPIC_OPTIONS['Серіали']){
+ const group=GROUPS.find(g=>g.name==='Серіали');
+ for(const kind of ['rank','guess']){openTopicPicker(group,kind);topicPicker.ids=[id];renderTopicPicker();assert.equal($('topic-start').disabled,false,id+' '+kind);}
+}
+for(const [family,ids] of [['Фільми',['lotr','nolan','tarantino','spielberg']],['Серіали',TOPIC_OPTIONS['Серіали'].map(x=>x[0])]]){blitzSelection={family,ids};assert.equal(makeBlitzPlan().length,15);}
+blitzSelection={family:'Географія',ids:[]};assert.equal(makeBlitzPlan().length,15);blitzSelection=null;
+assert.equal(blitzPlan([{title:'Unreviewed',kind:'trivia',items:[['a','1'],['b','2'],['c','3'],['d','4']]}]).length,0);
+results.curatedPlausibleDistractors='passed';results.allSeriesNumericPlayable='passed';results.newFilmCollections='passed';results.blitzAllTopics='passed';
+for(const g of GROUPS){blitzSelection={family:g.name,ids:[]};assert.equal(makeBlitzPlan().length,15,g.name);}blitzSelection=null;
+B={phase:'end',online:false};show('blitz');$('bhome').onclick();assert.equal($('home').hidden,false);
+renderSidebar();const navLabels=$('sidebar').children.filter(x=>x.className?.startsWith('sbi')).map(x=>x.children[x.children.length-1].textContent);assert.equal(navLabels.slice(0,2).join('|'),'Головна|Поділи світ · Щодня');
+results.blitzMenuAndNavigation='passed';
 JSON.stringify(results,null,2);
 `,context);
+assert(html.indexOf('id="mode-blitz"')<html.indexOf('id="mode-rank"'));
+assert(html.indexOf('id="mode-rank"')<html.indexOf('id="mode-guess"'));
 console.log(results);
